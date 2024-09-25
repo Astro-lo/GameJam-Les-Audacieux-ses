@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cpne4omrsy2at"]
+
+[ext_resource type="Shader" path="res://environmentMaterial.gdshader" id="1_s4r2k"]
+[ext_resource type="Texture2D" uid="uid://25b1lhfcgc2a" path="res://sourceData/BackgroundRight.png" id="2_a6h2d"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_s4r2k")
+shader_parameter/screenMode = true
+shader_parameter/env = ExtResource("2_a6h2d")
