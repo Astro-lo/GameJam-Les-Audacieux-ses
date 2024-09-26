@@ -15,7 +15,6 @@ run/main_scene="res://Level.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://textures/icon.svg"
 
-
 [display]
 
 window/size/mode=2
