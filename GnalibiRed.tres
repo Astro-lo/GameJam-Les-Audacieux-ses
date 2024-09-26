@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bq1yneasqfnu"]
+
+[ext_resource type="Shader" path="res://Gnalibi.gdshader" id="1_8gc77"]
+[ext_resource type="Texture2D" uid="uid://c7piv5vbbf3pt" path="res://sourceData/brush.png" id="2_gws07"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_8gc77")
+shader_parameter/mainColour = Color(0.780392, 0.223529, 0.0666667, 1)
+shader_parameter/pattern = ExtResource("2_gws07")

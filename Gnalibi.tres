@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cj1cdt72um4af"]
+
+[ext_resource type="Shader" path="res://Gnalibi.gdshader" id="1_shabl"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_shabl")
+shader_parameter/mainColour = Color(0.224427, 0.32, 0.1152, 1)
