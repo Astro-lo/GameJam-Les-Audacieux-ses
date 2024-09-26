@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b2mcwtjx6a5n2"]
 
-[ext_resource type="PackedScene" uid="uid://dbxcv2kbb1ajo" path="res://player.tscn" id="1_crtac"]
+[ext_resource type="PackedScene" uid="uid://dbxcv2kbb1ajo" path="res://Scenes/player.tscn" id="1_q4jvb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1h178"]
 sky_horizon_color = Color(0.633782, 0.644768, 0.661492, 1)
@@ -70,7 +70,7 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall2/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_4iadj")
 
-[node name="Player" parent="." instance=ExtResource("1_crtac")]
+[node name="Player" parent="." instance=ExtResource("1_q4jvb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51472, -2)
 
 [node name="Camera3D" type="Camera3D" parent="."]
