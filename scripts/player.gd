@@ -2,9 +2,14 @@ extends RigidBody3D
 
 @export var speed := 1200
 @export var gravity := -9.8
+@export var level: LevelLogic
 
 var velocity:Vector3;
 var direction:Vector3;
+
+func _ready() -> void:
+	level = %LevelLogic
+	assert(level) # check its here
 
 # Appelé chaque frame (pour l'input) 
 func _process(delta: float) -> void:
