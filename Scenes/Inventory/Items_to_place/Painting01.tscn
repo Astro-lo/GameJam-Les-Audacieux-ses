@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://by8ubact61157"]
+
+[ext_resource type="Script" path="res://Scripts/item.gd" id="1_c2arm"]
+[ext_resource type="ArrayMesh" uid="uid://dji8n5xeam3tp" path="res://Meshes/MeshesTres/Painting01_Mesh.tres" id="1_gaufu"]
+[ext_resource type="Material" uid="uid://dw2l786jjthou" path="res://Meshes/MeshesTres/Painting01_Material.tres" id="2_merj5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3gwks"]
+size = Vector3(1.3168, 3.33215, 2.66406)
+
+[node name="Item" type="MeshInstance3D"]
+mesh = ExtResource("1_gaufu")
+surface_material_override/0 = ExtResource("2_merj5")
+script = ExtResource("1_c2arm")
+pathToObject = "res://Scenes/Inventory/Item_placed/Painting01_placed.tscn"
+howToClean = 2
+objectType = "Painting"
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00916775, 0)
+shape = SubResource("BoxShape3D_3gwks")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

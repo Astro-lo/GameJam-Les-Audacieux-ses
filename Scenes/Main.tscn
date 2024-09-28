@@ -1,11 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://bterhtq23066f"]
+[gd_scene load_steps=12 format=3 uid="uid://d1exo1njgamaf"]
 
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
 [ext_resource type="Script" path="res://scripts/CameraMan.gd" id="2_52ic4"]
 [ext_resource type="PackedScene" uid="uid://ymg8ovdjk8my" path="res://Scenes/GnalibiPlayer.tscn" id="3_m8kfh"]
+[ext_resource type="Resource" uid="uid://blxsl3bx0dtpl" path="res://Scenes/Inventory/inventory.tres" id="4_6iq4u"]
 [ext_resource type="PackedScene" uid="uid://df32k6tqhar77" path="res://Scenes/VisualScene.tscn" id="4_b4wwx"]
 [ext_resource type="PackedScene" uid="uid://cprsl7dsv6aho" path="res://Scenes/Collisions.tscn" id="5_2qmqt"]
 [ext_resource type="Script" path="res://Scripts/LevelLogic.gd" id="5_fyvlw"]
+[ext_resource type="PackedScene" uid="uid://b4nxirh3dkuge" path="res://Scenes/Inventory/Item_spots/item_spot.tscn" id="7_vikw7"]
+[ext_resource type="PackedScene" uid="uid://jdb82gbsj61" path="res://Scenes/Inventory/Items_to_place/item.tscn" id="8_fnnra"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
 size = Vector3(14, 7, 8.11)
@@ -44,6 +47,7 @@ shape = SubResource("BoxShape3D_vo8c8")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.12708, 0, -4.47058)
 collision_layer = 3
 collision_mask = 3
+inv = ExtResource("4_6iq4u")
 
 [node name="VisualScene" parent="." instance=ExtResource("4_b4wwx")]
 
@@ -52,6 +56,14 @@ collision_mask = 3
 [node name="LevelLogic" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("5_fyvlw")
+
+[node name="ItemSpots" type="Node" parent="."]
+
+[node name="ItemSpot" parent="ItemSpots" instance=ExtResource("7_vikw7")]
+transform = Transform3D(0.999447, 0, -0.0332424, 0, 1, 0, 0.0332424, 0, 0.999447, 0.0643162, 0.309236, -1.54253)
+
+[node name="Item" parent="." instance=ExtResource("8_fnnra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30461, -4.79274)
 
 [editable path="Cameras"]
 [editable path="VisualScene"]

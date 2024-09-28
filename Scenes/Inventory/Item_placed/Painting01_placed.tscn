@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpoikuev6t7wi"]
+
+[ext_resource type="ArrayMesh" uid="uid://dji8n5xeam3tp" path="res://Meshes/MeshesTres/Painting01_Mesh.tres" id="1_bmhki"]
+
+[node name="item_placed" type="MeshInstance3D"]
+mesh = ExtResource("1_bmhki")

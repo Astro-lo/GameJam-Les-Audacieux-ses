@@ -12,7 +12,6 @@ mesh = SubResource("BoxMesh_7114t")
 script = ExtResource("1_38nog")
 pathToObject = "res://Scenes/Inventory/Item_placed/item_placed.tscn"
 howToClean = 2
-objectType = "Item"
 
 [node name="Area3D" type="Area3D" parent="."]
 

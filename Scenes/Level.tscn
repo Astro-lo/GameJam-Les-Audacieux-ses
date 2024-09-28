@@ -1,12 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://b2mcwtjx6a5n2"]
+[gd_scene load_steps=13 format=3 uid="uid://b2mcwtjx6a5n2"]
 
-[ext_resource type="PackedScene" uid="uid://b3gyjw8lfobj5" path="res://Scenes/Hud.tscn" id="1_bs7we"]
+[ext_resource type="PackedScene" path="res://Scenes/Hud.tscn" id="1_bs7we"]
 [ext_resource type="PackedScene" uid="uid://dbxcv2kbb1ajo" path="res://Scenes/player.tscn" id="1_q4jvb"]
 [ext_resource type="Script" path="res://Scripts/LevelLogic.gd" id="1_uf75q"]
-[ext_resource type="PackedScene" uid="uid://jdb82gbsj61" path="res://Scenes/Inventory/Items_to_place/item.tscn" id="4_5kkjn"]
 [ext_resource type="Resource" uid="uid://blxsl3bx0dtpl" path="res://Scenes/Inventory/inventory.tres" id="4_xah2f"]
 [ext_resource type="PackedScene" uid="uid://ymg8ovdjk8my" path="res://Scenes/GnalibiPlayer.tscn" id="5_u7cde"]
-[ext_resource type="PackedScene" uid="uid://b4nxirh3dkuge" path="res://Scenes/Inventory/item_spot.tscn" id="8_nh6tj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1h178"]
 sky_horizon_color = Color(0.633782, 0.644768, 0.661492, 1)
@@ -92,12 +90,3 @@ inv = ExtResource("4_xah2f")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 2, 2, 4)
-
-[node name="Item" parent="." instance=ExtResource("4_5kkjn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30461, 3.05918)
-
-[node name="ItemSpots" type="Node" parent="."]
-
-[node name="ItemSpot" parent="ItemSpots" instance=ExtResource("8_nh6tj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.44594, 0.280065, 0)
-skeleton = NodePath("../..")

@@ -1,13 +1,14 @@
 extends MeshInstance3D
 
-#Books, Painting, etc... this is simply to see where the item can be placed specificaly
 @export var pathToObject: String
 @export var howToClean: int
-#When the player walks over the item it will be put into the player's inventory
+@export var objectType: String
 
+#When the player walks over the item it will be put into the player's inventory
 func add_to_inv(plr):
 	var theItemInTheInv = InvItem.new()
 	theItemInTheInv.name = self.name
+	theItemInTheInv.objectType = objectType
 	theItemInTheInv.object = load(pathToObject)
 	
 	plr.inv.Items.append(theItemInTheInv)
@@ -15,8 +16,13 @@ func add_to_inv(plr):
 
 func pick_up(plr):
 	add_to_inv(plr)
-	#start a function that highlights where it can be placed
+	showSpots()
 	self.queue_free()
+
+func showSpots():
+	for i in get_node("../ItemSpots").get_children():
+		if i.object == self.name:
+			i.visible = true
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.get_class() == "CharacterBody3D":
