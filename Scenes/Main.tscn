@@ -27,15 +27,14 @@ current = true
 
 [node name="LeftTrigger" type="Area3D" parent="Cameras"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68835, 3.09372, -5.33561)
-collision_layer = 0
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/LeftTrigger"]
 shape = SubResource("BoxShape3D_ijq4h")
 
 [node name="RightTrigger" type="Area3D" parent="Cameras"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49337, 2.76297, 5.45111)
-collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/RightTrigger"]
@@ -44,6 +43,7 @@ shape = SubResource("BoxShape3D_vo8c8")
 [node name="Player" parent="." instance=ExtResource("3_m8kfh")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.12708, 0, -4.47058)
 collision_layer = 3
+collision_mask = 3
 
 [node name="VisualScene" parent="." instance=ExtResource("4_b4wwx")]
 

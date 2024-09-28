@@ -8,8 +8,14 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	triggerLeft.area_entered.connect(entered_area_left);
-	triggerRight.area_entered.connect(entered_area_right);
+	assert(triggerLeft)
+	assert(triggerRight)
+	
+	assert(cameraLeft)
+	assert(cameraRight)
+	
+	triggerLeft.body_entered.connect(entered_area_left);
+	triggerRight.body_entered.connect(entered_area_right);
 	pass # Replace with function body.
 
 
@@ -17,10 +23,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func entered_area_left() ->void:
-	cameraLeft.make_current();
+func entered_area_left(body: Node3D) ->void:
+	cameraRight.make_current();
 	pass
 
-func entered_area_right() ->void:
-	cameraRight.make_current();
+func entered_area_right(body: Node3D) ->void:
+	cameraLeft.make_current();
 	pass
