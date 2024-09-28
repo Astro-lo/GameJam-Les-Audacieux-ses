@@ -44,7 +44,8 @@ func showSpots():
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body.get_class() == "CharacterBody3D":
+	if body.get_class() == "RigidBody3D":
+		print("player entered")
 		if howToClean == 0:
 			if body.inv.Items.size() <1:
 				pick_up(body)

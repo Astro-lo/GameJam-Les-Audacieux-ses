@@ -20,6 +20,6 @@ func check_plr_inv(plr):
 	plr.inv.Items.remove_at(0)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body.get_class() == "CharacterBody3D":
+	if body.get_class() == "RigidBody3D":
 		if self.visible == true:
 			put_back_item(body)

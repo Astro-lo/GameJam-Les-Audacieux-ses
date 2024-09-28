@@ -12,6 +12,9 @@ var current_surface_normal: Vector3 = Vector3.UP  # Normale de la surface actuel
 @export var ground : Area3D
 @export var wall : Area3D
 
+@onready var THROWNOBJECT = preload("res://Scenes/throwed_object.tscn")
+var isThrowing = false
+
 func _ready() -> void:
 	level = %LevelLogic
 	assert(level)  # Vérifie que le niveau est défini
@@ -21,13 +24,12 @@ func _ready() -> void:
 	ground.body_exited.connect(floor_exited)
 	wall.body_entered.connect(wall_entered)
 	wall.body_exited.connect(wall_exited)
-	
-	
+
 # Appelé chaque frame (pour l'input)
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var input := Vector3.ZERO
-	input.x = Input.get_axis("move_left", "move_right")  # Axe horizontal
-	input.z = Input.get_axis("move_forward", "move_back")  # Axe vertical
+	input.z = Input.get_axis("move_right","move_left")  # Axe horizontal
+	input.x = Input.get_axis("move_forward","move_back")  # Axe vertical
 
 	# Récupère la caméra
 	var camera = get_viewport().get_camera_3d()
@@ -67,7 +69,7 @@ func move(delta: float) -> void:
 	position += velocity * delta
 	velocity = Vector3.ZERO
 
-func look_at_direction(delta: float) -> void:
+func look_at_direction(_delta: float) -> void:
 	# Faire tourner le personnage en fonction de la direction
 	if direction.length() > 0:
 		# Tourner le personnage vers la direction de mouvement
@@ -99,3 +101,26 @@ func wall_exited(body: Node3D) -> void:
 		on_wall = false  # Le joueur quitte le mur
 		current_surface_normal = Vector3.UP  # Réinitialiser la normale à celle du sol
 		print("Leaving wall")
+
+func _on_lancer_par_la_fenetre_body_entered(body: Node3D) -> void:
+	if body.get_class() == "RigidBody3D":
+		for i in self.inv.Items:
+			if i.HowToClean == 0:
+				_throw(i.object,Vector3(0,3,-20))
+				self.inv.Items.remove_at(0)
+				print("c'est lancé")
+
+func _throw(object: PackedScene,tp: Vector3):
+	if isThrowing == false:
+		print("C LANCEE")
+		isThrowing = true
+		var targetPosition = tp
+
+		var thrownObject = THROWNOBJECT.instantiate()
+		
+		thrownObject.TargetPosition = targetPosition
+		thrownObject.thrownItem = object
+		
+		get_parent().add_child(thrownObject)
+		
+		thrownObject.position = self.position

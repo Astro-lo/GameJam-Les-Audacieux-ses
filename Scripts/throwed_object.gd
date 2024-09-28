@@ -1,6 +1,6 @@
 extends Path3D
 
-@export var speed = 10
+@export var speed = 20
 @export var TargetPosition: Vector3
 @export var thrownItem: PackedScene
 

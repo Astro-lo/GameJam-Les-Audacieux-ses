@@ -15,5 +15,5 @@ curve = SubResource("Curve3D_reqyf")
 script = ExtResource("1_4egmw")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="."]
-transform = Transform3D(-0.999999, -7.81932e-08, -3.90965e-08, 0, 0.447213, -0.894425, 8.74226e-08, -0.894425, -0.447212, 0, 0, 0)
+transform = Transform3D(-0.999999, -7.81931e-08, -3.90965e-08, 0, 0.447212, -0.894425, 8.74227e-08, -0.894425, -0.447212, 0, 0, 0)
 loop = false
