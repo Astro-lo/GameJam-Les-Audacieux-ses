@@ -11,15 +11,13 @@ func put_back_item(plr):
 	self.queue_free()
 
 func check_plr_inv(plr):
-	for i in plr.inv.Items.size():
-		if plr.inv.Items[i].objectType == object:
-			var Item_instance = plr.inv.Items[i].object.instantiate()
+	var Item_instance = plr.inv.Items[0].object.instantiate()
 			
-			get_tree().root.add_child(Item_instance)
-			Item_instance.position = self.position
-			Item_instance.rotation = self.rotation
+	get_tree().root.add_child(Item_instance)
+	Item_instance.position = self.position
+	Item_instance.rotation = self.rotation
 
-			plr.inv.Items.remove_at(i)
+	plr.inv.Items.remove_at(0)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.get_class() == "CharacterBody3D":

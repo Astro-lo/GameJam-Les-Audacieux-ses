@@ -5,6 +5,8 @@ extends CharacterBody3D
 @export var speed := 1200
 @export var gravity := -9.8
 
+@onready var THROWNOBJECT = preload("res://Scenes/throwed_object.tscn")
+var isThrowing = false
 # Appelle la méthode _physics_process chaque frame
 func _physics_process(delta: float) -> void:
 	var input := Vector3.ZERO
@@ -34,3 +36,28 @@ func _physics_process(delta: float) -> void:
 	if direction.length() > 0:
 		# Tourner le personnage vers la direction de mouvement
 		look_at(global_transform.origin + direction, Vector3.UP)
+
+
+func _on_lancer_par_la_fenetre_body_entered(body: Node3D) -> void:
+	if body.get_class() == "CharacterBody3D":
+		for i in self.inv.Items:
+			if i.HowToClean == 0:
+				#i.object
+				_throw(i.object,Vector3(-1,1,-1))
+				self.inv.Items.remove_at(0)
+				print("c'est lancé")
+				pass
+
+func _throw(object: PackedScene,tp: Vector3):
+	if isThrowing == false:
+		isThrowing = true
+		var targetPosition = tp
+
+		var thrownObject = THROWNOBJECT.instantiate()
+		
+		thrownObject.TargetPosition = targetPosition
+		thrownObject.thrownItem = object
+		
+		get_parent().add_child(thrownObject)
+		thrownObject.position = self.position
+		

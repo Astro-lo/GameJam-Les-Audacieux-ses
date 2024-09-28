@@ -28,13 +28,13 @@ func pick_up(plr):
 func add_to_inv(plr):
 	var theItemInTheInv = InvItem.new()
 	theItemInTheInv.name = self.name
+	theItemInTheInv.HowToClean = howToClean
 	theItemInTheInv.objectType = objectType
 	theItemInTheInv.object = load(pathToObject)
 	
 	plr.inv.Items.append(theItemInTheInv)
 func showSpots():
 	for i in get_node("../ItemSpots").get_children():
-		print(i.object, objectType)
 		if i.object == objectType:
 			i.scale = Vector3()
 			i.visible = true
@@ -46,11 +46,12 @@ func showSpots():
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.get_class() == "CharacterBody3D":
 		if howToClean == 0:
-			pass
+			if body.inv.Items.size() <1:
+				pick_up(body)
 		elif howToClean == 1:
 			clean()
 		elif howToClean == 2:
-			if body.inv.Items.size() <=1:
+			if body.inv.Items.size() <1:
 				pick_up(body)
 		elif howToClean == 3:
 			pass

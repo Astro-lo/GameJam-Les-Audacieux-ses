@@ -24,7 +24,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _swapRoom(input: MeshInstance3D, leftSide: bool, screenmode: bool = false) -> void:
@@ -33,7 +33,7 @@ func _swapRoom(input: MeshInstance3D, leftSide: bool, screenmode: bool = false) 
 	m.set("roomSideLeft", leftSide)
 	m.set("screenMode", screenmode)
 
-func entered_area_left(node: Node3D) ->void:
+func entered_area_left(_node: Node3D) ->void:
 	cameraRight.make_current()
 	_swapRoom(fireplace, true)
 	_swapRoom(chimney, true)
@@ -41,7 +41,7 @@ func entered_area_left(node: Node3D) ->void:
 	_swapRoom(ground, true, true)
 	
 
-func entered_area_right(node: Node3D) ->void:
+func entered_area_right(_node: Node3D) ->void:
 	cameraLeft.make_current();
 	_swapRoom(fireplace, false)
 	_swapRoom(chimney, false)
