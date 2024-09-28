@@ -3,17 +3,19 @@
 [ext_resource type="Script" path="res://Scripts/GnalibiPlayer.gd" id="1_hcf5a"]
 [ext_resource type="PackedScene" uid="uid://db0hc8by5ni61" path="res://sourceData/Gnalibi.glb" id="2_sbmns"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_t3t2y"]
-size = Vector3(0.692505, 0.809082, 0.748535)
+[sub_resource type="BoxShape3D" id="BoxShape3D_tp80m"]
+size = Vector3(1.5, 1.5, 1.5)
 
-[node name="Player" type="CharacterBody3D"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+[node name="GnalibiPlayer" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+gravity_scale = 0.0
+lock_rotation = true
 script = ExtResource("1_hcf5a")
 speed = 5
 
-[node name="Gnalibi" parent="." instance=ExtResource("2_sbmns")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.156311, 0.407929, 0.301248)
-shape = SubResource("BoxShape3D_t3t2y")
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_tp80m")
+
+[node name="Gnalibi" parent="." instance=ExtResource("2_sbmns")]
+transform = Transform3D(1, 0, 4.26326e-14, 0, 1, 0, -4.26326e-14, 0, 1, 0, -0.519162, 0)
