@@ -1,0 +1,92 @@
+[gd_scene load_steps=11 format=3 uid="uid://bterhtq23066f"]
+
+[ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
+[ext_resource type="Script" path="res://scripts/CameraMan.gd" id="2_52ic4"]
+[ext_resource type="PackedScene" uid="uid://ymg8ovdjk8my" path="res://Scenes/GnalibiPlayer.tscn" id="3_m8kfh"]
+[ext_resource type="PackedScene" uid="uid://df32k6tqhar77" path="res://Scenes/VisualScene.tscn" id="4_b4wwx"]
+[ext_resource type="PackedScene" uid="uid://cprsl7dsv6aho" path="res://Scenes/Collisions.tscn" id="5_2qmqt"]
+[ext_resource type="Script" path="res://Scripts/LevelLogic.gd" id="5_fyvlw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
+size = Vector3(14, 7, 8.11)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vo8c8"]
+size = Vector3(14, 7, 8.11)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1tg5p"]
+size = Vector3(17, 1, 17.4287)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sfhx2"]
+size = Vector3(4.153, 1, 6.48)
+
+[node name="Main" type="Node3D"]
+
+[node name="Cameras" parent="." node_paths=PackedStringArray("cameraLeft", "cameraRight", "triggerLeft", "triggerRight") instance=ExtResource("1_jxroj")]
+script = ExtResource("2_52ic4")
+cameraLeft = NodePath("CameraLeft")
+cameraRight = NodePath("CameraRight")
+triggerLeft = NodePath("LeftTrigger")
+triggerRight = NodePath("RightTrigger")
+
+[node name="CameraRight" parent="Cameras" index="1"]
+current = true
+
+[node name="LeftTrigger" type="Area3D" parent="Cameras"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68835, 3.09372, -5.33561)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/LeftTrigger"]
+shape = SubResource("BoxShape3D_ijq4h")
+
+[node name="RightTrigger" type="Area3D" parent="Cameras"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49337, 2.76297, 5.45111)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/RightTrigger"]
+shape = SubResource("BoxShape3D_vo8c8")
+
+[node name="Player" parent="." instance=ExtResource("3_m8kfh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.12708, 0, -4.47058)
+collision_layer = 3
+
+[node name="VisualScene" parent="." instance=ExtResource("4_b4wwx")]
+
+[node name="Collisions" parent="." instance=ExtResource("5_2qmqt")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Collisions"]
+
+[node name="Floor" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.461965, 0)
+shape = SubResource("BoxShape3D_1tg5p")
+
+[node name="WallRight" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.461965, -8)
+shape = SubResource("BoxShape3D_1tg5p")
+
+[node name="WallOpposite" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -4.42157, -0.461965, 0.126785)
+shape = SubResource("BoxShape3D_1tg5p")
+
+[node name="WallFront" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 7.32584, -0.461965, 0.126785)
+shape = SubResource("BoxShape3D_1tg5p")
+
+[node name="WallFront1" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
+transform = Transform3D(-0.5, 0.866025, 3.78552e-08, 0, -4.37114e-08, 1, 0.866025, 0.5, 2.18557e-08, 6.26692, 2.53803, -1.52005)
+shape = SubResource("BoxShape3D_sfhx2")
+
+[node name="WallFront2" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
+transform = Transform3D(0.5, 0.866025, 3.78552e-08, 0, -4.37114e-08, 1, 0.866025, -0.5, -2.18557e-08, 6.26692, 2.53803, 1.47995)
+shape = SubResource("BoxShape3D_sfhx2")
+
+[node name="WallLeft" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.461965, 8.42317)
+shape = SubResource("BoxShape3D_1tg5p")
+
+[node name="LevelLogic" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_fyvlw")
+
+[editable path="Cameras"]

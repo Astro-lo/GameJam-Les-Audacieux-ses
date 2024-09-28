@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3gyjw8lfobj5"]
+
+[ext_resource type="FontFile" uid="uid://tqjgycbqdeyw" path="res://fonts/BRITANIC.TTF" id="1_d743i"]
+[ext_resource type="Script" path="res://scripts/label.gd" id="2_y88ji"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7vu82"]
+font = ExtResource("1_d743i")
+font_size = 60
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -63.5
+offset_top = 30.0
+offset_right = 63.5
+offset_bottom = 91.0
+grow_horizontal = 2
+text = "3:00"
+label_settings = SubResource("LabelSettings_7vu82")
+horizontal_alignment = 1
+justification_flags = 160
+script = ExtResource("2_y88ji")
