@@ -10,7 +10,8 @@ size = Vector3(1.3168, 1.14888, 1.28333)
 [node name="Item" type="MeshInstance3D"]
 mesh = SubResource("BoxMesh_7114t")
 script = ExtResource("1_38nog")
-pathToObject = "res://Scenes/Inventory/Items/item.tscn"
+pathToObject = "res://Scenes/Inventory/Item_placed/item_placed.tscn"
+howToClean = 2
 
 [node name="Area3D" type="Area3D" parent="."]
 

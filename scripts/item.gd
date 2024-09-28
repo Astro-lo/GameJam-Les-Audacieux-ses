@@ -2,20 +2,29 @@ extends MeshInstance3D
 
 #Books, Painting, etc... this is simply to see where the item can be placed specificaly
 @export var pathToObject: String
-
-var player_inv = preload("res://Scenes/Inventory/inventory.tres")
-
+@export var howToClean: int
 #When the player walks over the item it will be put into the player's inventory
+
+func add_to_inv(plr):
+	var theItemInTheInv = InvItem.new()
+	theItemInTheInv.name = self.name
+	theItemInTheInv.object = load(pathToObject)
+	
+	plr.inv.Items.append(theItemInTheInv)
+	print(plr.inv.Items[0].name)
+
 func pick_up(plr):
-	var object = load(pathToObject)
-	plr.inv.Items.append(object)
-	print(plr.inv.Items)
+	add_to_inv(plr)
 	#start a function that highlights where it can be placed
 	self.queue_free()
 
-func add_to_inv(item):
-	pass
-
-
-func _on_area_3d_body_entered(body: CharacterBody3D) -> void:
-	pick_up(body)
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.get_class() == "CharacterBody3D":
+		if howToClean == 0:
+			pass
+		elif howToClean == 1:
+			pass
+		elif howToClean == 2:
+			pick_up(body)
+		elif howToClean == 3:
+			pass
