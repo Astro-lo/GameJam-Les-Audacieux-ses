@@ -4,10 +4,10 @@
 [ext_resource type="Material" uid="uid://cck4ak67jsqy8" path="res://Scenes/Inventory/Item_spots/spot_Material.tres" id="2_eh6tm"]
 [ext_resource type="Script" path="res://Scripts/item_spot.gd" id="3_tbqx0"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tbi46"]
-size = Vector3(1.3168, 3.33215, 2.66406)
+[sub_resource type="BoxShape3D" id="BoxShape3D_nb3mx"]
+size = Vector3(1.3168, 2.81934, 4.15625)
 
-[node name="Painting01Spot" type="MeshInstance3D"]
+[node name="Painting02Spot" type="MeshInstance3D"]
 mesh = ExtResource("1_730vd")
 surface_material_override/0 = ExtResource("2_eh6tm")
 script = ExtResource("3_tbqx0")
@@ -17,6 +17,4 @@ object = "Painting"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00916775, 0)
-shape = SubResource("BoxShape3D_tbi46")
-
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+shape = SubResource("BoxShape3D_nb3mx")
