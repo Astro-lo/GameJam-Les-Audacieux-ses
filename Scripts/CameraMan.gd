@@ -22,7 +22,6 @@ func _ready() -> void:
 	triggerLeft.body_entered.connect(entered_area_left);
 	triggerRight.body_entered.connect(entered_area_right);
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
@@ -40,7 +39,6 @@ func entered_area_left(_node: Node3D) ->void:
 	_swapRoom(frontBox, true)
 	_swapRoom(ground, true, true)
 	
-
 func entered_area_right(_node: Node3D) ->void:
 	cameraLeft.make_current();
 	_swapRoom(fireplace, false)
