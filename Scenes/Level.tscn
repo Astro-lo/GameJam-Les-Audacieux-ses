@@ -113,3 +113,4 @@ justification_flags = 160
 script = ExtResource("5_6ct5u")
 
 [node name="Item" parent="." instance=ExtResource("4_5kkjn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30461, 3.05918)
