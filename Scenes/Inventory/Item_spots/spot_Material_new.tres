@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c2lqvej5qt5ry"]
+
+[ext_resource type="Shader" path="res://Scenes/Inventory/Item_spots/breathe.gdshader" id="1_yeaba"]
+
+[resource]
+render_priority = 1
+shader = ExtResource("1_yeaba")
+shader_parameter/color1 = Color(1, 1, 1, 1)
+shader_parameter/color2 = Color(1, 0.775872, 0.403046, 1)
+shader_parameter/breathe_speed = 8.0
