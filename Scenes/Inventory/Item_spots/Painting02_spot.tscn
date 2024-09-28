@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://djxqetlagf5dp"]
+
+[ext_resource type="ArrayMesh" uid="uid://b4wvqdukxai75" path="res://Meshes/MeshesTres/Painting02_Mesh.tres" id="1_730vd"]
+[ext_resource type="Material" uid="uid://c2lqvej5qt5ry" path="res://Scenes/Inventory/Item_spots/spot_Material_new.tres" id="2_eh6tm"]
+[ext_resource type="Script" path="res://Scripts/item_spot.gd" id="3_tbqx0"]
+
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nb3mx"]
+size = Vector3(1.3168, 2.81934, 4.15625)
+
+[node name="Painting02Spot" type="MeshInstance3D"]
+mesh = ExtResource("1_730vd")
+surface_material_override/0 = ExtResource("2_eh6tm")
+script = ExtResource("3_tbqx0")
+object = "Painting"
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00916775, 0)
+shape = SubResource("BoxShape3D_nb3mx")

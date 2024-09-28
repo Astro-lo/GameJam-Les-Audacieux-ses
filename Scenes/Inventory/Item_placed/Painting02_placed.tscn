@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckx104k82dsyl"]
+
+[ext_resource type="ArrayMesh" uid="uid://b4wvqdukxai75" path="res://Meshes/MeshesTres/Painting02_Mesh.tres" id="1_0toga"]
+[ext_resource type="Material" uid="uid://bqcwittsgng3a" path="res://Meshes/MeshesTres/Painting02_Material.tres" id="2_80e11"]
+[ext_resource type="Script" path="res://Scripts/item_placed.gd" id="3_tmbtu"]
+
+[node name="Painting02" type="MeshInstance3D"]
+mesh = ExtResource("1_0toga")
+surface_material_override/0 = ExtResource("2_80e11")
+script = ExtResource("3_tmbtu")

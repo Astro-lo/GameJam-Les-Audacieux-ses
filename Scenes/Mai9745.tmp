@@ -1,0 +1,127 @@
+[gd_scene load_steps=15 format=4 uid="uid://d1exo1njgamaf"]
+
+[ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
+[ext_resource type="Script" path="res://scripts/CameraMan.gd" id="2_52ic4"]
+[ext_resource type="PackedScene" uid="uid://ymg8ovdjk8my" path="res://Scenes/GnalibiPlayer.tscn" id="3_m8kfh"]
+[ext_resource type="Resource" uid="uid://blxsl3bx0dtpl" path="res://Scenes/Inventory/inventory.tres" id="4_6iq4u"]
+[ext_resource type="PackedScene" uid="uid://df32k6tqhar77" path="res://Scenes/VisualScene.tscn" id="4_b4wwx"]
+[ext_resource type="PackedScene" uid="uid://cprsl7dsv6aho" path="res://Scenes/Collisions.tscn" id="5_2qmqt"]
+[ext_resource type="Script" path="res://Scripts/LevelLogic.gd" id="5_fyvlw"]
+[ext_resource type="PackedScene" uid="uid://bxq43uo3ajn3p" path="res://Scenes/Inventory/Item_spots/Painting01_spot.tscn" id="8_lqsvn"]
+[ext_resource type="PackedScene" uid="uid://by8ubact61157" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
+size = Vector3(14, 7, 8.11)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vo8c8"]
+size = Vector3(14, 7, 8.11)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gpco7"]
+_surfaces = [{
+"aabb": AABB(-0.0558218, -1.65, -1.3, 0.111644, 3.3, 2.6),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAAAAMAAwAFAAQABgAEAAUABQAHAAYAAQAGAAcABwACAAEABwAFAAMAAwACAAcAAQAAAAQABAAGAAEA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("YKVkvTQz0z9mZqa/YKVkvTQz0z9mZqY/YKVkvTQz079mZqY/YKVkvTQz079mZqa/YKVkPTQz0z9mZqa/YKVkPTQz079mZqa/YKVkPTQz0z9mZqY/YKVkPTQz079mZqY/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nkhc0"]
+resource_local_to_scene = true
+resource_name = "Cube_003"
+_surfaces = [{
+"aabb": AABB(-0.0558218, -1.65, -1.3, 0.111644, 3.3, 2.6),
+"attribute_data": PackedByteArray("/2gzPwBj6DsDLso+AGPoOwMuyj6wcco+/2gzP7Bxyj7L9Pc+fEgAP8v09z58SAA/y/T3PnxIAD/L9Pc+fEgAPzDgijwAY+g7/lGlPgBj6Dv+UaU+sHHKPjDgijywcco+y/T3PnxIAD/L9Pc+fEgAP8v09z58SAA/y/T3PnxIAD/L9Pc+fEgAP8v09z58SAA/y/T3PnxIAD/L9Pc+fEgAP8v09z58SAA/y/T3PnxIAD/L9Pc+fEgAP8v09z58SAA/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"name": "Painting01_Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("YKVkvTQz0z9mZqa/YKVkvTQz0z9mZqY/YKVkvTQz079mZqY/YKVkvTQz079mZqa/YKVkPTQz0z9mZqa/YKVkvTQz0z9mZqa/YKVkvTQz079mZqa/YKVkPTQz079mZqa/YKVkPTQz0z9mZqY/YKVkPTQz0z9mZqa/YKVkPTQz079mZqa/YKVkPTQz079mZqY/YKVkvTQz0z9mZqY/YKVkPTQz0z9mZqY/YKVkPTQz079mZqY/YKVkvTQz079mZqY/YKVkPTQz079mZqY/YKVkPTQz079mZqa/YKVkvTQz079mZqa/YKVkvTQz079mZqY/YKVkvTQz0z9mZqY/YKVkvTQz0z9mZqa/YKVkPTQz0z9mZqa/YKVkPTQz0z9mZqY/AAD/f///AAAAAP9///8AAAAA/3///wAAAAD/f///AAD/////////v/////////+//////////7//////////v////3//////////f/////////9//////////3///////3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9///////+//3///////7//f///////v/9///////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_gpco7")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1ovbt"]
+resource_local_to_scene = true
+resource_name = "Cube_003"
+_surfaces = [{
+"aabb": AABB(-0.0558218, -1.65, -1.3, 0.111644, 3.3, 2.6),
+"attribute_data": PackedByteArray("/2gzPwBj6DsDLso+AGPoOwMuyj6wcco+/2gzP7Bxyj7L9Pc+fEgAP8v09z58SAA/y/T3PnxIAD/L9Pc+fEgAPzDgijwAY+g7/lGlPgBj6Dv+UaU+sHHKPjDgijywcco+y/T3PnxIAD/L9Pc+fEgAP8v09z58SAA/y/T3PnxIAD/L9Pc+fEgAP8v09z58SAA/y/T3PnxIAD/L9Pc+fEgAP8v09z58SAA/y/T3PnxIAD/L9Pc+fEgAP8v09z58SAA/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"name": "Painting01_Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("YKVkvTQz0z9mZqa/YKVkvTQz0z9mZqY/YKVkvTQz079mZqY/YKVkvTQz079mZqa/YKVkPTQz0z9mZqa/YKVkvTQz0z9mZqa/YKVkvTQz079mZqa/YKVkPTQz079mZqa/YKVkPTQz0z9mZqY/YKVkPTQz0z9mZqa/YKVkPTQz079mZqa/YKVkPTQz079mZqY/YKVkvTQz0z9mZqY/YKVkPTQz0z9mZqY/YKVkPTQz079mZqY/YKVkvTQz079mZqY/YKVkPTQz079mZqY/YKVkPTQz079mZqa/YKVkvTQz079mZqa/YKVkvTQz079mZqY/YKVkvTQz0z9mZqY/YKVkvTQz0z9mZqa/YKVkPTQz0z9mZqa/YKVkPTQz0z9mZqY/AAD/f///AAAAAP9///8AAAAA/3///wAAAAD/f///AAD/////////v/////////+//////////7//////////v////3//////////f/////////9//////////3///////3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9///////+//3///////7//f///////v/9///////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_gpco7")
+
+[node name="Main" type="Node3D"]
+
+[node name="Cameras" parent="." node_paths=PackedStringArray("cameraLeft", "cameraRight", "triggerLeft", "triggerRight", "fireplace", "chimney", "ground", "frontBox") instance=ExtResource("1_jxroj")]
+script = ExtResource("2_52ic4")
+cameraLeft = NodePath("CameraLeft")
+cameraRight = NodePath("CameraRight")
+triggerLeft = NodePath("LeftTrigger")
+triggerRight = NodePath("RightTrigger")
+fireplace = NodePath("../VisualScene/mainRoom/Cube_007")
+chimney = NodePath("../VisualScene/mainRoom/Cube_005")
+ground = NodePath("../VisualScene/mainRoom/Plane_006")
+frontBox = NodePath("../VisualScene/mainRoom/Cube_006")
+
+[node name="CameraRight" parent="Cameras" index="1"]
+current = true
+
+[node name="LeftTrigger" type="Area3D" parent="Cameras"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68835, 3.09372, -5.33561)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/LeftTrigger"]
+shape = SubResource("BoxShape3D_ijq4h")
+
+[node name="RightTrigger" type="Area3D" parent="Cameras"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49337, 2.76297, 5.45111)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/RightTrigger"]
+shape = SubResource("BoxShape3D_vo8c8")
+
+[node name="Player" parent="." instance=ExtResource("3_m8kfh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.12708, 0, -4.47058)
+collision_layer = 3
+collision_mask = 3
+inv = ExtResource("4_6iq4u")
+
+[node name="VisualScene" parent="." instance=ExtResource("4_b4wwx")]
+
+[node name="Collisions" parent="." instance=ExtResource("5_2qmqt")]
+
+[node name="LevelLogic" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_fyvlw")
+
+[node name="ItemSpots" type="Node" parent="."]
+
+[node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
+transform = Transform3D(0.976878, -0.213798, 0, 0.213798, 0.976878, 0, 0, 0, 1, -3.43236, 1.65458, -3)
+mesh = SubResource("ArrayMesh_nkhc0")
+
+[node name="Painting01" parent="." instance=ExtResource("9_aog87")]
+transform = Transform3D(-3.84052e-08, -0.878609, -0.477542, 1, -4.37114e-08, 0, -2.0874e-08, -0.477542, 0.878609, 1.1629, 0.0119252, -4.61027)
+mesh = SubResource("ArrayMesh_1ovbt")
+
+[editable path="Cameras"]
+[editable path="VisualScene"]
+[editable path="VisualScene/mainRoom"]
+[editable path="Collisions"]

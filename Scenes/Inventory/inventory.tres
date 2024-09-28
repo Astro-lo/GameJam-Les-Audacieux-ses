@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Inv" load_steps=2 format=3 uid="uid://blxsl3bx0dtpl"]
+[gd_resource type="Resource" script_class="Inv" load_steps=3 format=3 uid="uid://blxsl3bx0dtpl"]
 
+[ext_resource type="Script" path="res://Scripts/inv_item.gd" id="1_h3c0j"]
 [ext_resource type="Script" path="res://Scripts/inventory.gd" id="1_s118r"]
 
 [resource]
 resource_name = "Inventory"
 script = ExtResource("1_s118r")
-Items = Array[PackedScene]([])
+Test = "AHHH"
+Items = Array[ExtResource("1_h3c0j")]([])

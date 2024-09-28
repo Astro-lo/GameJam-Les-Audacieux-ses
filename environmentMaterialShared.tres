@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://bi3c2xnq0whsw"]
+
+[ext_resource type="Shader" path="res://environmentMaterial.gdshader" id="1_phixt"]
+[ext_resource type="Texture2D" uid="uid://c2jqm1582dsq2" path="res://sourceData/brush.png" id="2_hvlb1"]
+[ext_resource type="Texture2D" uid="uid://bv7v8pup2utjw" path="res://sourceData/backgroundLeft.png" id="3_6qy8p"]
+[ext_resource type="Texture2D" uid="uid://bsnu0fv2ebddp" path="res://sourceData/BackgroundRight.png" id="4_tcrnm"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_phixt")
+shader_parameter/screenMode = false
+shader_parameter/roomSideLeft = false
+shader_parameter/secondUVSet = false
+shader_parameter/gamma = 2.2
+shader_parameter/envRight = ExtResource("4_tcrnm")
+shader_parameter/envLeft = ExtResource("3_6qy8p")
+shader_parameter/brush = ExtResource("2_hvlb1")

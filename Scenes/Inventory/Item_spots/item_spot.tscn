@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4nxirh3dkuge"]
+
+[ext_resource type="Material" uid="uid://c2lqvej5qt5ry" path="res://Scenes/Inventory/Item_spots/spot_Material_new.tres" id="1_nybxw"]
+[ext_resource type="Script" path="res://Scripts/item_spot.gd" id="1_u60ut"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ugujm"]
+material = ExtResource("1_nybxw")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c064f"]
+size = Vector3(1.3168, 1.15238, 1.28333)
+
+[node name="ItemSpot" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_ugujm")
+script = ExtResource("1_u60ut")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0100846, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0627932, 0)
+shape = SubResource("BoxShape3D_c064f")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

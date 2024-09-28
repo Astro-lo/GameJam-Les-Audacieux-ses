@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctywme4264v6t"]
+
+[ext_resource type="PackedScene" uid="uid://bpoikuev6t7wi" path="res://Scenes/Inventory/Item_placed/Painting01_placed.tscn" id="1_8qaib"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ecbgv"]
+viewport_path = NodePath("Control/SubViewportContainer/SubViewport")
+
+[sub_resource type="Environment" id="Environment_64cfb"]
+background_mode = 1
+background_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.94
+
+[sub_resource type="World3D" id="World3D_e4qh0"]
+environment = SubResource("Environment_64cfb")
+
+[node name="Bulle" type="Sprite3D"]
+transform = Transform3D(0.0537909, 0, 0, 0, 0.0560868, 0, 0, 0, 0.921518, 0, 0, 0)
+billboard = 1
+double_sided = false
+fixed_size = true
+texture = SubResource("ViewportTexture_ecbgv")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
+own_world_3d = true
+world_3d = SubResource("World3D_e4qh0")
+transparent_bg = true
+handle_input_locally = false
+render_target_clear_mode = 1
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Control/SubViewportContainer/SubViewport"]
+fov = 79.3219
+
+[node name="Painting01" parent="Control/SubViewportContainer/SubViewport" instance=ExtResource("1_8qaib")]
+transform = Transform3D(0.0539424, -0.0420746, -0.495298, 0.00248725, 0.498222, -0.0420521, 0.497076, 0.00207293, 0.0539599, 0, 0, -1.90599)
+surface_material_override/0 = null
