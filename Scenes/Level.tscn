@@ -97,7 +97,7 @@ transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="CanvasLayer" node_paths=PackedStringArray("level")]
+[node name="Label" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
