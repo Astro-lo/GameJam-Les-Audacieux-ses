@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2mcwtjx6a5n2"]
+[gd_scene load_steps=11 format=3 uid="uid://b2mcwtjx6a5n2"]
 
-[ext_resource type="PackedScene" path="res://Scenes/Hud.tscn" id="1_bs7we"]
-[ext_resource type="PackedScene" uid="uid://dbxcv2kbb1ajo" path="res://Scenes/player.tscn" id="1_q4jvb"]
+[ext_resource type="PackedScene" uid="uid://b3gyjw8lfobj5" path="res://Scenes/Hud.tscn" id="1_bs7we"]
 [ext_resource type="Script" path="res://Scripts/LevelLogic.gd" id="1_uf75q"]
 [ext_resource type="Resource" uid="uid://blxsl3bx0dtpl" path="res://Scenes/Inventory/inventory.tres" id="4_xah2f"]
 [ext_resource type="PackedScene" uid="uid://ymg8ovdjk8my" path="res://Scenes/GnalibiPlayer.tscn" id="5_u7cde"]
@@ -23,14 +22,11 @@ tonemap_mode = 2
 [sub_resource type="PlaneMesh" id="PlaneMesh_43vij"]
 size = Vector2(20, 20)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sifgi"]
-data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+[sub_resource type="BoxShape3D" id="BoxShape3D_6njwx"]
+size = Vector3(20, 20, 1)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jorvy"]
-data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4iadj"]
-data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+[sub_resource type="BoxShape3D" id="BoxShape3D_cnoll"]
+size = Vector3(20, 20, 1)
 
 [node name="Level" type="Node3D"]
 
@@ -51,15 +47,6 @@ directional_shadow_split_2 = 0.238
 
 [node name="Room" type="Node3D" parent="."]
 
-[node name="Floor" type="MeshInstance3D" parent="Room"]
-mesh = SubResource("PlaneMesh_43vij")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Room/Floor"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Floor/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_sifgi")
-
 [node name="Wall" type="MeshInstance3D" parent="Room"]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -8.26106, 6.33453, 0)
 mesh = SubResource("PlaneMesh_43vij")
@@ -68,25 +55,53 @@ skeleton = NodePath("../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_jorvy")
+transform = Transform3D(1, 4.37114e-08, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 4.37114e-08, -1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("BoxShape3D_6njwx")
+
+[node name="Area3D" type="Area3D" parent="Room/Wall"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall/Area3D"]
+shape = SubResource("BoxShape3D_cnoll")
 
 [node name="Wall2" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, -0.460746, 6.15844, -8.11625)
+transform = Transform3D(-5.73206e-15, 1.31134e-07, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, 1.31134e-07, 0, 6.335, -8.00915)
 mesh = SubResource("PlaneMesh_43vij")
 skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall2/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_4iadj")
+transform = Transform3D(1, 4.37114e-08, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 4.37114e-08, -1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("BoxShape3D_6njwx")
 
-[node name="Player" parent="." instance=ExtResource("1_q4jvb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51472, -2)
-inv = ExtResource("4_xah2f")
-speed = 2
+[node name="Area3D" type="Area3D" parent="Room/Wall2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
-[node name="GnalibiPlayer" parent="." instance=ExtResource("5_u7cde")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall2/Area3D"]
+shape = SubResource("BoxShape3D_cnoll")
+
+[node name="Floor" type="MeshInstance3D" parent="Room"]
+mesh = SubResource("PlaneMesh_43vij")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Room/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Floor/StaticBody3D"]
+transform = Transform3D(1, 4.37114e-08, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 4.37114e-08, -1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("BoxShape3D_6njwx")
+
+[node name="Area3D" type="Area3D" parent="Room/Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Floor/Area3D"]
+shape = SubResource("BoxShape3D_cnoll")
+
+[node name="GnalibiPlayer" parent="." node_paths=PackedStringArray("ground", "wall") instance=ExtResource("5_u7cde")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 3.98572, 0)
 inv = ExtResource("4_xah2f")
+ground = NodePath("../Room/Floor/Area3D")
+wall = NodePath("../Room/Wall/Area3D")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 2, 2, 4)

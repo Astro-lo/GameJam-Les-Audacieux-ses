@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://celewk1u44l6l"]
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://cpne4omrsy2at"]
 
 [ext_resource type="Shader" path="res://environmentMaterial.gdshader" id="1_phixt"]
 [ext_resource type="Texture2D" uid="uid://c2jqm1582dsq2" path="res://sourceData/brush.png" id="2_hvlb1"]
