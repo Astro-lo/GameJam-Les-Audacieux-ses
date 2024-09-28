@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://b2mcwtjx6a5n2"]
+[gd_scene load_steps=14 format=3 uid="uid://b2mcwtjx6a5n2"]
 
+[ext_resource type="Script" path="res://scripts/LevelLogic.gd" id="1_1u1qr"]
 [ext_resource type="PackedScene" uid="uid://dbxcv2kbb1ajo" path="res://Scenes/player.tscn" id="1_q4jvb"]
 [ext_resource type="FontFile" uid="uid://tqjgycbqdeyw" path="res://fonts/BRITANIC.TTF" id="3_1kjq3"]
+[ext_resource type="Script" path="res://scripts/label.gd" id="5_6ct5u"]
 [ext_resource type="PackedScene" uid="uid://ymg8ovdjk8my" path="res://Scenes/GnalibiPlayer.tscn" id="5_u7cde"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1h178"]
@@ -41,6 +43,7 @@ environment = SubResource("Environment_3wuui")
 
 [node name="LevelLogic" type="Node" parent="."]
 unique_name_in_owner = true
+script = ExtResource("1_1u1qr")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 10.0816, 0)
@@ -103,3 +106,4 @@ text = "3:00"
 label_settings = SubResource("LabelSettings_gqian")
 horizontal_alignment = 1
 justification_flags = 160
+script = ExtResource("5_6ct5u")
