@@ -108,7 +108,6 @@ func _on_lancer_par_la_fenetre_body_entered(body: Node3D) -> void:
 			if i.HowToClean == 0:
 				_throw(i.object,Vector3(0,3,-20))
 				self.inv.Items.remove_at(0)
-				print("c'est lancé")
 
 func _throw(object: PackedScene,tp: Vector3):
 	if isThrowing == false:
