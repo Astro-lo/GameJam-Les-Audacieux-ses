@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://2oqercnkw1yu"]
+[gd_scene load_steps=3 format=3 uid="uid://2oqercnkw1yu"]
+
+[ext_resource type="Script" path="res://Scripts/item_placed.gd" id="1_rljmn"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_w3smn"]
 
 [node name="item_placed" type="MeshInstance3D"]
 mesh = SubResource("BoxMesh_w3smn")
+script = ExtResource("1_rljmn")

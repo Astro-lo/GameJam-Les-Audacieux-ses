@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://d1exo1njgamaf"]
+[gd_scene load_steps=15 format=4 uid="uid://d1exo1njgamaf"]
 
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
 [ext_resource type="Script" path="res://scripts/CameraMan.gd" id="2_52ic4"]
@@ -66,9 +66,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gpco7")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_58ogr"]
-size = Vector3(3.98749, 6.56696, 2.0683)
-
 [node name="Main" type="Node3D"]
 
 [node name="Cameras" parent="." node_paths=PackedStringArray("cameraLeft", "cameraRight", "triggerLeft", "triggerRight", "fireplace", "chimney", "ground", "frontBox") instance=ExtResource("1_jxroj")]
@@ -123,12 +120,6 @@ mesh = SubResource("ArrayMesh_nkhc0")
 [node name="Painting01" parent="." instance=ExtResource("9_aog87")]
 transform = Transform3D(-3.84052e-08, -0.878609, -0.477542, 1, -4.37114e-08, 0, -2.0874e-08, -0.477542, 0.878609, 1.1629, 0.0119252, -4.61027)
 mesh = SubResource("ArrayMesh_1ovbt")
-
-[node name="LancerParLaFenetre" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LancerParLaFenetre"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0654, 2.78348, -7.20807)
-shape = SubResource("BoxShape3D_58ogr")
 
 [editable path="Cameras"]
 [editable path="VisualScene"]
