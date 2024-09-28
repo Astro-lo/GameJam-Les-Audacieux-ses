@@ -18,6 +18,7 @@ func check_plr_inv(plr):
 			get_tree().root.add_child(Item_instance)
 			Item_instance.position = self.position
 			Item_instance.rotation = self.rotation
+
 			plr.inv.Items.remove_at(i)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
