@@ -1,12 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://df32k6tqhar77"]
+[gd_scene load_steps=10 format=3 uid="uid://df32k6tqhar77"]
 
-[ext_resource type="PackedScene" uid="uid://junegcboq4uw" path="res://sourceData/Gnalibi.glb" id="1_4rld8"]
-[ext_resource type="PackedScene" uid="uid://b60k88l1f8bc0" path="res://sourceData/mainRoomRight.glb" id="1_64o80"]
+[ext_resource type="PackedScene" uid="uid://db0hc8by5ni61" path="res://sourceData/Gnalibi.glb" id="1_4rld8"]
 [ext_resource type="Material" uid="uid://cj1cdt72um4af" path="res://Gnalibi.tres" id="2_l03yr"]
 [ext_resource type="Material" uid="uid://curpevuurgkg5" path="res://environmentMaterial.tres" id="2_ux05q"]
-[ext_resource type="Material" uid="uid://cpne4omrsy2at" path="res://environmentMaterialScreen.tres" id="3_3uc46"]
 [ext_resource type="Material" uid="uid://bq1yneasqfnu" path="res://GnalibiRed.tres" id="3_88d7s"]
-[ext_resource type="VoxelGIData" uid="uid://l4ky02ym6brx" path="res://VisualScene.VoxelGI_data.res" id="7_6uhgv"]
+[ext_resource type="PackedScene" uid="uid://djd5682dmls6a" path="res://sourceData/mainRoom.glb" id="5_k453v"]
+[ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="6_gxhqu"]
+[ext_resource type="Script" path="res://scripts/CameraMan.gd" id="7_t4vsx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pc44l"]
+size = Vector3(14, 7, 8.11)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wsnr"]
+size = Vector3(14, 7, 8.11)
 
 [node name="VisualScene" type="Node3D"]
 
@@ -35,70 +41,6 @@ material_override = ExtResource("2_l03yr")
 [node name="Circle" parent="Gnalibi" index="4"]
 material_override = ExtResource("3_88d7s")
 
-[node name="mainRoomRight" parent="." instance=ExtResource("1_64o80")]
-
-[node name="Cube_001" parent="mainRoomRight" index="0"]
-material_override = ExtResource("2_ux05q")
-
-[node name="Cube_002" parent="mainRoomRight" index="1"]
-material_override = ExtResource("2_ux05q")
-
-[node name="Cube_005" parent="mainRoomRight" index="2"]
-transform = Transform3D(0.124942, 0, 0, 0, 2.35719, 0, 0, 0, 0.924336, -4.41915, 2.8514, 0.0174497)
-material_override = ExtResource("2_ux05q")
-
-[node name="Cube_006" parent="mainRoomRight" index="3"]
-material_override = ExtResource("2_ux05q")
-
-[node name="Cube_007" parent="mainRoomRight" index="4"]
-transform = Transform3D(0.346672, 0, 0, 0, 0.936814, 0, 0, 0, 1.47905, -4.42369, 1.06542, -0.017142)
-material_override = ExtResource("2_ux05q")
-
-[node name="Cube_013" parent="mainRoomRight" index="5"]
-material_override = ExtResource("2_ux05q")
-
-[node name="Circle" parent="mainRoomRight" index="6"]
-material_override = ExtResource("2_ux05q")
-
-[node name="Cube_008" parent="mainRoomRight" index="7"]
-material_override = ExtResource("2_ux05q")
-
-[node name="Cube_017" parent="mainRoomRight" index="8"]
-material_override = ExtResource("2_ux05q")
-
-[node name="Cube_018" parent="mainRoomRight" index="9"]
-transform = Transform3D(0.903417, 0, 0, 0, 0.903417, 0, 0, 0, 0.903417, -2.3458, 3.38632, -7.41081)
-material_override = ExtResource("2_ux05q")
-
-[node name="Cube_021" parent="mainRoomRight" index="10"]
-transform = Transform3D(0.903417, 0, 0, 0, 0.903417, 0, 0, 0, 0.903417, 4.82785, 3.5826, -7.54183)
-material_override = ExtResource("2_ux05q")
-
-[node name="Plane_003" parent="mainRoomRight" index="11"]
-material_override = ExtResource("2_ux05q")
-
-[node name="Plane_004" parent="mainRoomRight" index="12"]
-material_override = ExtResource("2_ux05q")
-
-[node name="Plane_005" parent="mainRoomRight" index="13"]
-transform = Transform3D(1.04787, 0, 0, 0, 1, 0, 0, 0, 1, 5.61308, 2.31874, -7.07969)
-material_override = ExtResource("2_ux05q")
-
-[node name="Cube_020" parent="mainRoomRight" index="14"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.84206, 0.921589, -4.21315)
-material_override = ExtResource("2_ux05q")
-
-[node name="Plane_001" parent="mainRoomRight" index="15"]
-material_override = ExtResource("2_ux05q")
-
-[node name="Plane" parent="mainRoomRight" index="16"]
-transform = Transform3D(0.906215, 0, 0, 0, 0.928033, 0, 0, 0, 0.861323, 0.699503, 3.55898, -9.29788)
-material_override = ExtResource("2_ux05q")
-
-[node name="Plane_006" parent="mainRoomRight" index="17"]
-transform = Transform3D(0.999997, 0.00232451, -0.00120203, -0.00232225, 0.999996, 0.00189276, 0.0012064, -0.00188997, 0.999997, 0.0748587, 0.0158948, -2.83173)
-material_override = ExtResource("3_3uc46")
-
 [node name="Candle00" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.41098, 3.92249, -7.09201)
 light_color = Color(1, 0.556863, 0.2, 1)
@@ -111,11 +53,109 @@ light_color = Color(1, 0.556863, 0.2, 1)
 light_energy = 12.083
 omni_range = 2.1538
 
-[node name="VoxelGI" type="VoxelGI" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.309692, 2.74432, -4.17584)
-subdiv = 0
-size = Vector3(11.3484, 5.63049, 10.2889)
-data = ExtResource("7_6uhgv")
+[node name="mainRoom" parent="." instance=ExtResource("5_k453v")]
+
+[node name="Cube_001" parent="mainRoom" index="0"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_002" parent="mainRoom" index="1"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_003" parent="mainRoom" index="2"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_004" parent="mainRoom" index="3"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_005" parent="mainRoom" index="4"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_006" parent="mainRoom" index="5"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_007" parent="mainRoom" index="6"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_013" parent="mainRoom" index="7"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Circle" parent="mainRoom" index="8"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_008" parent="mainRoom" index="9"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_017" parent="mainRoom" index="10"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_018" parent="mainRoom" index="11"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_021" parent="mainRoom" index="12"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Plane_003" parent="mainRoom" index="13"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Plane_004" parent="mainRoom" index="14"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Plane_005" parent="mainRoom" index="15"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_020" parent="mainRoom" index="16"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Plane_001" parent="mainRoom" index="17"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Plane" parent="mainRoom" index="18"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Plane_006" parent="mainRoom" index="19"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_011" parent="mainRoom" index="20"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Plane_002" parent="mainRoom" index="21"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Plane_007" parent="mainRoom" index="22"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cube_009" parent="mainRoom" index="23"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Plane_008" parent="mainRoom" index="24"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Plane_009" parent="mainRoom" index="25"]
+surface_material_override/0 = ExtResource("2_ux05q")
+
+[node name="Cameras" parent="." node_paths=PackedStringArray("cameraLeft", "cameraRight", "triggerLeft", "triggerRight") instance=ExtResource("6_gxhqu")]
+script = ExtResource("7_t4vsx")
+cameraLeft = NodePath("CameraLeft")
+cameraRight = NodePath("CameraRight")
+triggerLeft = NodePath("LeftTrigger")
+triggerRight = NodePath("RightTrigger")
+
+[node name="LeftTrigger" type="Area3D" parent="Cameras"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68835, 3.09372, -5.33561)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/LeftTrigger"]
+shape = SubResource("BoxShape3D_pc44l")
+
+[node name="RightTrigger" type="Area3D" parent="Cameras"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49337, 2.76297, 5.45111)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/RightTrigger"]
+shape = SubResource("BoxShape3D_5wsnr")
 
 [editable path="Gnalibi"]
-[editable path="mainRoomRight"]
+[editable path="mainRoom"]
+[editable path="Cameras"]
