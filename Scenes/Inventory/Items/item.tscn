@@ -10,10 +10,12 @@ size = Vector3(1.3168, 1.14888, 1.28333)
 [node name="Item" type="MeshInstance3D"]
 mesh = SubResource("BoxMesh_7114t")
 script = ExtResource("1_38nog")
-object = null
+pathToObject = "res://Scenes/Inventory/Items/item.tscn"
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0667239, 0)
 shape = SubResource("BoxShape3D_3gwks")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
