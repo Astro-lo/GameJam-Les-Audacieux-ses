@@ -4,6 +4,7 @@ extends MeshInstance3D
 @export var object: String
 
 var player_inv = preload("res://Scenes/Inventory/inventory.tres")
+
 #When the player walks over the item it will be put into the player's inventory
 func pick_up(plr):
 	print(plr.inv.Item.size())
