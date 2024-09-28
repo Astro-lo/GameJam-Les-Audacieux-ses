@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://df32k6tqhar77"]
+[gd_scene load_steps=10 format=3 uid="uid://df32k6tqhar77"]
 
 [ext_resource type="PackedScene" uid="uid://db0hc8by5ni61" path="res://sourceData/Gnalibi.glb" id="1_4rld8"]
 [ext_resource type="Material" uid="uid://cj1cdt72um4af" path="res://Gnalibi.tres" id="2_l03yr"]
@@ -6,6 +6,13 @@
 [ext_resource type="Material" uid="uid://bq1yneasqfnu" path="res://GnalibiRed.tres" id="3_88d7s"]
 [ext_resource type="PackedScene" uid="uid://djd5682dmls6a" path="res://sourceData/mainRoom.glb" id="5_k453v"]
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="6_gxhqu"]
+[ext_resource type="Script" path="res://scripts/CameraMan.gd" id="7_t4vsx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pc44l"]
+size = Vector3(14, 7, 8.11)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wsnr"]
+size = Vector3(14, 7, 8.11)
 
 [node name="VisualScene" type="Node3D"]
 
@@ -126,7 +133,28 @@ surface_material_override/0 = ExtResource("2_ux05q")
 [node name="Plane_009" parent="mainRoom" index="25"]
 surface_material_override/0 = ExtResource("2_ux05q")
 
-[node name="Cameras" parent="." instance=ExtResource("6_gxhqu")]
+[node name="Cameras" parent="." node_paths=PackedStringArray("cameraLeft", "cameraRight", "triggerLeft", "triggerRight") instance=ExtResource("6_gxhqu")]
+script = ExtResource("7_t4vsx")
+cameraLeft = NodePath("CameraLeft")
+cameraRight = NodePath("CameraRight")
+triggerLeft = NodePath("LeftTrigger")
+triggerRight = NodePath("RightTrigger")
+
+[node name="LeftTrigger" type="Area3D" parent="Cameras"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68835, 3.09372, -5.33561)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/LeftTrigger"]
+shape = SubResource("BoxShape3D_pc44l")
+
+[node name="RightTrigger" type="Area3D" parent="Cameras"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49337, 2.76297, 5.45111)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/RightTrigger"]
+shape = SubResource("BoxShape3D_5wsnr")
 
 [editable path="Gnalibi"]
 [editable path="mainRoom"]
