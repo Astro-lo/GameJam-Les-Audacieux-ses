@@ -26,23 +26,23 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-func _swapRoom(input: MeshInstance3D, leftSide: bool, screenmode: bool = false) -> void:
+func _swapRoom(input: MeshInstance3D, rightSide: bool, screenmode: bool = false) -> void:
 	var m = input.get_active_material(0)
-	m.set("secondUVSet", leftSide)
-	m.set("roomSideLeft", leftSide)
-	m.set("screenMode", screenmode)
+	m.set_shader_parameter("secondUVSet", rightSide)
+	m.set_shader_parameter("roomSideLeft", rightSide)
+	m.set_shader_parameter("screenMode", screenmode)
 
 func entered_area_left(_node: Node3D) ->void:
 	cameraRight.make_current()
-	_swapRoom(fireplace, true)
-	_swapRoom(chimney, true)
-	_swapRoom(frontBox, true)
-	_swapRoom(ground, true, true)
-	
-func entered_area_right(_node: Node3D) ->void:
-	cameraLeft.make_current();
 	_swapRoom(fireplace, false)
 	_swapRoom(chimney, false)
 	_swapRoom(frontBox, false)
-	_swapRoom(ground, false, true)
+	_swapRoom(ground, false, false)
+	
+func entered_area_right(_node: Node3D) ->void:
+	cameraLeft.make_current();
+	_swapRoom(fireplace, true)
+	_swapRoom(chimney, true)
+	_swapRoom(frontBox, true)
+	_swapRoom(ground, true, false)
 	

@@ -8,7 +8,7 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_phixt")
-shader_parameter/screenMode = true
+shader_parameter/screenMode = false
 shader_parameter/roomSideLeft = false
 shader_parameter/secondUVSet = false
 shader_parameter/gamma = 2.2
