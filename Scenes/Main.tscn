@@ -37,7 +37,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_v2t5l"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_x3evl"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -55,7 +55,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gpco7")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_evue2"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_fxbv5"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -78,16 +78,8 @@ size = Vector3(3.98749, 6.56696, 2.0683)
 
 [node name="Main" type="Node3D"]
 
-[node name="Cameras" parent="." node_paths=PackedStringArray("cameraLeft", "cameraRight", "triggerLeft", "triggerRight", "fireplace", "chimney", "ground", "frontBox") instance=ExtResource("1_jxroj")]
+[node name="Cameras" parent="." instance=ExtResource("1_jxroj")]
 script = ExtResource("2_52ic4")
-cameraLeft = NodePath("CameraLeft")
-cameraRight = NodePath("CameraRight")
-triggerLeft = NodePath("LeftTrigger")
-triggerRight = NodePath("RightTrigger")
-fireplace = NodePath("../VisualScene/mainRoom/Cube_007")
-chimney = NodePath("../VisualScene/mainRoom/Cube_005")
-ground = NodePath("../VisualScene/mainRoom/Plane_006")
-frontBox = NodePath("../VisualScene/mainRoom/Cube_006")
 
 [node name="CameraLeft" parent="Cameras" index="0"]
 fov = 22.6
@@ -144,11 +136,11 @@ script = ExtResource("5_fyvlw")
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(0.976878, -0.213798, 0, 0.213798, 0.976878, 0, 0, 0, 1, -3.43236, 1.65458, -3)
-mesh = SubResource("ArrayMesh_v2t5l")
+mesh = SubResource("ArrayMesh_x3evl")
 
 [node name="Painting01" parent="." instance=ExtResource("9_aog87")]
 transform = Transform3D(-3.84052e-08, -0.878609, -0.477542, 1, -4.37114e-08, 0, -2.0874e-08, -0.477542, 0.878609, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_evue2")
+mesh = SubResource("ArrayMesh_fxbv5")
 
 [node name="LancerParLaFenetre" type="Area3D" parent="."]
 

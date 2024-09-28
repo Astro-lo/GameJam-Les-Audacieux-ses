@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://glyvkbi68252"]
+
+[ext_resource type="ArrayMesh" uid="uid://uk7oivl2n303" path="res://Meshes/MeshesTres/Book1_Mesh.tres" id="1_ufiw0"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="1_xahbm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3gwks"]
+size = Vector3(0.00756836, 0.0114746, 0.0146484)
+
+[node name="Book1" type="MeshInstance3D"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, 0, 0, 0)
+mesh = ExtResource("1_ufiw0")
+script = ExtResource("1_xahbm")
+pathToObject = "res://Scenes/Inventory/Item_placed/Book1_placed.tscn"
+howToClean = 2
+objectType = "Book"
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("1_xahbm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_3gwks")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bva3a8o02qtdf"]
+
+[ext_resource type="ArrayMesh" uid="uid://cd1bme6csgy1m" path="res://Meshes/MeshesTres/Book2_Mesh.tres" id="1_ekgda"]
+[ext_resource type="Script" path="res://Scripts/item_placed.gd" id="2_k0c3l"]
+
+[node name="item_placed" type="MeshInstance3D"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, 0, 0, 0)
+mesh = ExtResource("1_ekgda")
+script = ExtResource("2_k0c3l")
