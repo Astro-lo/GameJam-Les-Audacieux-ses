@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2mcwtjx6a5n2"]
+[gd_scene load_steps=14 format=3 uid="uid://b2mcwtjx6a5n2"]
 
 [ext_resource type="PackedScene" uid="uid://dbxcv2kbb1ajo" path="res://Scenes/player.tscn" id="1_q4jvb"]
 [ext_resource type="Script" path="res://Scenes/LevelLogic.gd" id="2_a45sn"]
 [ext_resource type="FontFile" uid="uid://tqjgycbqdeyw" path="res://fonts/BRITANIC.TTF" id="3_1kjq3"]
 [ext_resource type="Script" path="res://Scenes/label.gd" id="4_qwygb"]
+[ext_resource type="PackedScene" uid="uid://ymg8ovdjk8my" path="res://Scenes/GnalibiPlayer.tscn" id="5_u7cde"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1h178"]
 sky_horizon_color = Color(0.633782, 0.644768, 0.661492, 1)
@@ -83,7 +84,10 @@ shape = SubResource("ConcavePolygonShape3D_4iadj")
 
 [node name="Player" parent="." instance=ExtResource("1_q4jvb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51472, -2)
+visible = false
 speed = 2
+
+[node name="GnalibiPlayer" parent="." instance=ExtResource("5_u7cde")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 2, 2, 4)
