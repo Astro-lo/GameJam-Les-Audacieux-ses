@@ -12,6 +12,7 @@ size = Vector3(1.3168, 1.15238, 1.28333)
 [node name="ItemSpot" type="MeshInstance3D"]
 mesh = SubResource("BoxMesh_ugujm")
 script = ExtResource("1_u60ut")
+object = "Item"
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0100846, 0)
