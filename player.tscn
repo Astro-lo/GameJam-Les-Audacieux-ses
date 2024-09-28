@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ymg8ovdjk8my"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_n0fxi"]
+[ext_resource type="PackedScene" uid="uid://db0hc8by5ni61" path="res://sourceData/Gnalibi.glb" id="2_6xp0g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t3t2y"]
+size = Vector3(0.692505, 0.809082, 0.748535)
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_n0fxi")
+speed = 5
+
+[node name="Gnalibi" parent="." instance=ExtResource("2_6xp0g")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.156311, 0.407929, 0.301248)
+shape = SubResource("BoxShape3D_t3t2y")
