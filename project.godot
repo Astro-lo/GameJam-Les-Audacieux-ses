@@ -50,10 +50,6 @@ move_back={
 ]
 }
 
-[layer_names]
-
-3d_physics/layer_2="Player"
-
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

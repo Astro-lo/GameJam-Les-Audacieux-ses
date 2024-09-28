@@ -91,6 +91,7 @@ inv = ExtResource("4_xah2f")
 speed = 2
 
 [node name="GnalibiPlayer" parent="." instance=ExtResource("5_u7cde")]
+inv = ExtResource("4_xah2f")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 2, 2, 4)
@@ -115,5 +116,8 @@ script = ExtResource("5_6ct5u")
 [node name="Item" parent="." instance=ExtResource("4_5kkjn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30461, 3.05918)
 
-[node name="ItemSpot" parent="." instance=ExtResource("8_nh6tj")]
+[node name="ItemSpots" type="Node" parent="."]
+
+[node name="ItemSpot" parent="ItemSpots" instance=ExtResource("8_nh6tj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.44594, 0.280065, 0)
+skeleton = NodePath("../..")

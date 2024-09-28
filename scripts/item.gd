@@ -2,7 +2,7 @@ extends MeshInstance3D
 
 #Books, Painting, etc... this is simply to see where the item can be placed specificaly
 @export var pathToObject: String
-
+@export var howToClean: int
 #When the player walks over the item it will be put into the player's inventory
 
 func add_to_inv(plr):
@@ -20,4 +20,11 @@ func pick_up(plr):
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.get_class() == "CharacterBody3D":
-		pick_up(body)
+		if howToClean == 0:
+			pass
+		elif howToClean == 1:
+			pass
+		elif howToClean == 2:
+			pick_up(body)
+		elif howToClean == 3:
+			pass
