@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bterhtq23066f"]
+[gd_scene load_steps=9 format=3 uid="uid://bterhtq23066f"]
 
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
 [ext_resource type="Script" path="res://scripts/CameraMan.gd" id="2_52ic4"]
@@ -12,12 +12,6 @@ size = Vector3(14, 7, 8.11)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vo8c8"]
 size = Vector3(14, 7, 8.11)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_1tg5p"]
-size = Vector3(17, 1, 17.4287)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_sfhx2"]
-size = Vector3(4.153, 1, 6.48)
 
 [node name="Main" type="Node3D"]
 
@@ -55,38 +49,11 @@ collision_layer = 3
 
 [node name="Collisions" parent="." instance=ExtResource("5_2qmqt")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Collisions"]
-
-[node name="Floor" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.461965, 0)
-shape = SubResource("BoxShape3D_1tg5p")
-
-[node name="WallRight" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.461965, -8)
-shape = SubResource("BoxShape3D_1tg5p")
-
-[node name="WallOpposite" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -4.42157, -0.461965, 0.126785)
-shape = SubResource("BoxShape3D_1tg5p")
-
-[node name="WallFront" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 7.32584, -0.461965, 0.126785)
-shape = SubResource("BoxShape3D_1tg5p")
-
-[node name="WallFront1" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
-transform = Transform3D(-0.5, 0.866025, 3.78552e-08, 0, -4.37114e-08, 1, 0.866025, 0.5, 2.18557e-08, 6.26692, 2.53803, -1.52005)
-shape = SubResource("BoxShape3D_sfhx2")
-
-[node name="WallFront2" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
-transform = Transform3D(0.5, 0.866025, 3.78552e-08, 0, -4.37114e-08, 1, 0.866025, -0.5, -2.18557e-08, 6.26692, 2.53803, 1.47995)
-shape = SubResource("BoxShape3D_sfhx2")
-
-[node name="WallLeft" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.461965, 8.42317)
-shape = SubResource("BoxShape3D_1tg5p")
-
 [node name="LevelLogic" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("5_fyvlw")
 
 [editable path="Cameras"]
+[editable path="VisualScene"]
+[editable path="VisualScene/mainRoom"]
+[editable path="Collisions"]
