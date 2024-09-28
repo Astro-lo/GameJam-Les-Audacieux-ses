@@ -1,5 +1,7 @@
 extends RigidBody3D
 
+@export var inv: Inv
+
 @export var speed := 1200
 @export var gravity := -9.8
 @export var level: LevelLogic

@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://b2mcwtjx6a5n2"]
 
 [ext_resource type="PackedScene" uid="uid://dbxcv2kbb1ajo" path="res://Scenes/player.tscn" id="1_q4jvb"]
-[ext_resource type="Script" path="res://Scenes/LevelLogic.gd" id="2_a45sn"]
+[ext_resource type="Script" path="res://scripts/LevelLogic.gd" id="2_a45sn"]
 [ext_resource type="FontFile" uid="uid://tqjgycbqdeyw" path="res://fonts/BRITANIC.TTF" id="3_1kjq3"]
-[ext_resource type="Script" path="res://Scenes/label.gd" id="4_qwygb"]
+[ext_resource type="Script" path="res://scripts/label.gd" id="4_qwygb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1h178"]
 sky_horizon_color = Color(0.633782, 0.644768, 0.661492, 1)
