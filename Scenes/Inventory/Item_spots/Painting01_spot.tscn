@@ -7,7 +7,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_tbi46"]
 size = Vector3(1.3168, 3.33215, 2.66406)
 
-[node name="ItemSpot" type="MeshInstance3D"]
+[node name="Painting01Spot" type="MeshInstance3D"]
 mesh = ExtResource("1_cpgbo")
 surface_material_override/0 = ExtResource("1_qho8c")
 script = ExtResource("2_jt0rm")
@@ -18,3 +18,5 @@ object = "Painting"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00916775, 0)
 shape = SubResource("BoxShape3D_tbi46")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

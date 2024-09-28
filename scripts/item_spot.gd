@@ -1,6 +1,6 @@
 extends MeshInstance3D
 
-@export var object = "Item"
+@export var object : String
 
 func _ready() -> void:
 	self.visible = false
@@ -9,16 +9,16 @@ func _ready() -> void:
 func put_back_item(plr):
 	check_plr_inv(plr)
 	self.queue_free()
-	pass
 
 func check_plr_inv(plr):
 	for i in plr.inv.Items.size():
 		if plr.inv.Items[i].objectType == object:
 			var Item_instance = plr.inv.Items[i].object.instantiate()
+			
 			get_tree().root.add_child(Item_instance)
 			Item_instance.position = self.position
+			Item_instance.rotation = self.rotation
 			plr.inv.Items.remove_at(i)
-			print(plr.inv.Items)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.get_class() == "CharacterBody3D":

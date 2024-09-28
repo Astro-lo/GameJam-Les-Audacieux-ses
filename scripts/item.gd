@@ -1,7 +1,10 @@
 extends MeshInstance3D
 
+#le FileSystem path a l'objet correspondant dans le fichier Item_placed
 @export var pathToObject: String
+#Sur le tableau excel des objets, comment cet objet est il rangé
 @export var howToClean: int
+#Painting,Item,Livres etc...
 @export var objectType: String
 
 #When the player walks over the item it will be put into the player's inventory
@@ -21,7 +24,8 @@ func pick_up(plr):
 
 func showSpots():
 	for i in get_node("../ItemSpots").get_children():
-		if i.object == self.name:
+		print(i.object, objectType)
+		if i.object == objectType:
 			i.visible = true
 
 func _on_area_3d_body_entered(body: Node3D) -> void:

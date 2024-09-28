@@ -7,7 +7,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_3gwks"]
 size = Vector3(1.3168, 3.33215, 2.66406)
 
-[node name="Item" type="MeshInstance3D"]
+[node name="Painting01" type="MeshInstance3D"]
 mesh = ExtResource("1_gaufu")
 surface_material_override/0 = ExtResource("2_merj5")
 script = ExtResource("1_c2arm")
