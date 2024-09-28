@@ -1,12 +1,16 @@
-[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://cpne4omrsy2at"]
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://cpne4omrsy2at"]
 
 [ext_resource type="Shader" path="res://environmentMaterial.gdshader" id="1_s4r2k"]
-[ext_resource type="Texture2D" uid="uid://25b1lhfcgc2a" path="res://sourceData/BackgroundRight.png" id="2_a6h2d"]
-[ext_resource type="Texture2D" uid="uid://c7piv5vbbf3pt" path="res://sourceData/brush.png" id="2_mo17k"]
+[ext_resource type="Texture2D" uid="uid://c2jqm1582dsq2" path="res://sourceData/brush.png" id="2_mo17k"]
+[ext_resource type="Texture2D" uid="uid://bv7v8pup2utjw" path="res://sourceData/backgroundLeft.png" id="3_o7jph"]
+[ext_resource type="Texture2D" uid="uid://bsnu0fv2ebddp" path="res://sourceData/BackgroundRight.png" id="4_h3s0q"]
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_s4r2k")
 shader_parameter/screenMode = true
-shader_parameter/env = ExtResource("2_a6h2d")
+shader_parameter/roomSideLeft = null
+shader_parameter/secondUVSet = null
+shader_parameter/envRight = ExtResource("4_h3s0q")
+shader_parameter/envLeft = ExtResource("3_o7jph")
 shader_parameter/brush = ExtResource("2_mo17k")
