@@ -1,5 +1,7 @@
 extends MeshInstance3D
 
+var player_inv = preload("res://Scenes/Inventory/inventory.tres")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,3 +14,7 @@ func put_back_item():
 	#takes the item out of the player's inventory
 	#destroys itself
 	pass
+
+func check_plr_inv():
+	for i in range(player_inv.item.size()):
+		pass

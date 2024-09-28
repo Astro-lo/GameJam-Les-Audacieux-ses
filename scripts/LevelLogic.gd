@@ -12,8 +12,6 @@ func _ready() -> void:
 	begin_game() # todo ecran titre
 	
 
-
-
 func get_time_seconds() -> float:
 	return timeRemaining
 

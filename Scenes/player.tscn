@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbxcv2kbb1ajo"]
+[gd_scene load_steps=7 format=3 uid="uid://dbxcv2kbb1ajo"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_n0fxi"]
-[ext_resource type="Resource" uid="uid://blxsl3bx0dtpl" path="res://Scenes/Inventory/inventory.tres" id="2_qvotl"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_n0fxi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5q5dt"]
 albedo_color = Color(0.682353, 1, 1, 1)
@@ -22,7 +21,6 @@ points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607,
 lock_rotation = true
 linear_damp = 3.0
 script = ExtResource("1_n0fxi")
-inv = ExtResource("2_qvotl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_o4gsm")
