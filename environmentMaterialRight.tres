@@ -11,6 +11,7 @@ shader = ExtResource("1_bppvi")
 shader_parameter/screenMode = false
 shader_parameter/roomSideLeft = false
 shader_parameter/secondUVSet = null
+shader_parameter/gamma = 2.2
 shader_parameter/envRight = ExtResource("2_mgx7h")
 shader_parameter/envLeft = ExtResource("3_3upnk")
 shader_parameter/brush = ExtResource("2_b3kjb")

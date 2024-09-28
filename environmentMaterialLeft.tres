@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://dq2baadxqop5d"]
+
+[ext_resource type="Shader" path="res://environmentMaterial.gdshader" id="1_85ur4"]
+[ext_resource type="Texture2D" uid="uid://c2jqm1582dsq2" path="res://sourceData/brush.png" id="2_gmrde"]
+[ext_resource type="Texture2D" uid="uid://bv7v8pup2utjw" path="res://sourceData/backgroundLeft.png" id="3_0cuxr"]
+[ext_resource type="Texture2D" uid="uid://bsnu0fv2ebddp" path="res://sourceData/BackgroundRight.png" id="4_t62bk"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_85ur4")
+shader_parameter/screenMode = false
+shader_parameter/roomSideLeft = true
+shader_parameter/secondUVSet = null
+shader_parameter/gamma = 2.2
+shader_parameter/envRight = ExtResource("4_t62bk")
+shader_parameter/envLeft = ExtResource("3_0cuxr")
+shader_parameter/brush = ExtResource("2_gmrde")

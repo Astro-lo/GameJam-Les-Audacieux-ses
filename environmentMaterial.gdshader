@@ -1,5 +1,5 @@
 shader_type spatial;
-//render_mode unshaded;
+render_mode unshaded;
 render_mode shadow_to_opacity;
 uniform sampler2D envRight;
 uniform sampler2D envLeft;
@@ -7,6 +7,7 @@ uniform sampler2D brush;
 uniform bool screenMode;
 uniform bool roomSideLeft;
 uniform bool secondUVSet;
+uniform float gamma = 2.2;
 
 void vertex() {
 	// Called for every vertex the material is visible on.
@@ -20,7 +21,8 @@ void fragment() {
 	vec4 sampleRight = texture(envRight, uv);
 
 	texture_color = roomSideLeft ? sampleLeft : sampleRight;
-	ALBEDO = pow(texture_color.xyz,vec3(2.2f));
+	ALBEDO = pow(texture_color.xyz,vec3(gamma));
+	//ALBEDO = vec3(sin(meshuvset.x * 255.0), sin(meshuvset.y*255.0f), 0.0f);
 }
 
 void light() {
