@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://df32k6tqhar77"]
+[gd_scene load_steps=2 format=3 uid="uid://df32k6tqhar77"]
 
-[ext_resource type="Material" uid="uid://curpevuurgkg5" path="res://environmentMaterial.tres" id="2_ux05q"]
 [ext_resource type="PackedScene" uid="uid://djd5682dmls6a" path="res://sourceData/mainRoom.glb" id="5_k453v"]
 
 [node name="VisualScene" type="Node3D"]
@@ -17,10 +16,6 @@ light_energy = 12.083
 shadow_enabled = true
 omni_range = 4.04609
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.583001, -0.240812, 0.775964, 3.76254e-06, 0.955067, 0.296392, -0.812471, -0.172794, 0.556806, 14.655, 6.9879, 5.89995)
-fov = 22.7
-
 [node name="Candle00" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.41098, 3.92249, -7.09201)
 light_color = Color(1, 0.556863, 0.2, 1)
@@ -34,83 +29,3 @@ light_energy = 12.083
 omni_range = 2.1538
 
 [node name="mainRoom" parent="." instance=ExtResource("5_k453v")]
-
-[node name="Cube_001" parent="mainRoom" index="0"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_002" parent="mainRoom" index="1"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_003" parent="mainRoom" index="2"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_004" parent="mainRoom" index="3"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_005" parent="mainRoom" index="4"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_006" parent="mainRoom" index="5"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_007" parent="mainRoom" index="6"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_013" parent="mainRoom" index="7"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Circle" parent="mainRoom" index="8"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_008" parent="mainRoom" index="9"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_017" parent="mainRoom" index="10"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_018" parent="mainRoom" index="11"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_021" parent="mainRoom" index="12"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Plane_003" parent="mainRoom" index="13"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Plane_004" parent="mainRoom" index="14"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Plane_005" parent="mainRoom" index="15"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_020" parent="mainRoom" index="16"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Plane_001" parent="mainRoom" index="17"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Plane" parent="mainRoom" index="18"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Plane_006" parent="mainRoom" index="19"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_011" parent="mainRoom" index="20"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Plane_002" parent="mainRoom" index="21"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Plane_007" parent="mainRoom" index="22"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Cube_009" parent="mainRoom" index="23"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Plane_008" parent="mainRoom" index="24"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[node name="Plane_009" parent="mainRoom" index="25"]
-surface_material_override/0 = ExtResource("2_ux05q")
-
-[editable path="mainRoom"]
