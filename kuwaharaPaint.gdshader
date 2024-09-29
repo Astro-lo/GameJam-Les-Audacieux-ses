@@ -7,6 +7,7 @@ void vertex() {
 
 uniform int radius = 2;
 uniform vec3 offset=vec3(0.0);
+uniform float darkening = 1.0;
 void fragment() 
  {
 	vec2 screenPixelSize = 1.0/VIEWPORT_SIZE;
@@ -86,6 +87,7 @@ void fragment()
          min_sigma2 = sigma2;
          ALBEDO = m3;
      }
+	ALBEDO *= darkening;
  }
 //void light() {
 	// Called for every pixel for every light affecting the material.

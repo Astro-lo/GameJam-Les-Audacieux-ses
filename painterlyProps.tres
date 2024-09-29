@@ -8,4 +8,5 @@ render_priority = 0
 shader = ExtResource("1_dbw2i")
 shader_parameter/radius = 3
 shader_parameter/offset = Vector3(0, 0, 0)
+shader_parameter/darkening = 0.36
 shader_parameter/diffuseTexture = ExtResource("2_3g8ua")
