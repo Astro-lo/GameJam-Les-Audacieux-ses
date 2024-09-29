@@ -11,7 +11,7 @@ var on_wall: bool = false  # Variable pour savoir si le joueur est contre un mur
 var current_movement_area: Area3D
 
 @export var ground : Area3D
-@export var wall : Area3D
+@export var walls : Array[Area3D]
 
 @onready var THROWNOBJECT = preload("res://Scenes/throwed_object.tscn")
 var isThrowing = false
@@ -20,11 +20,17 @@ func _ready() -> void:
 	level = %LevelLogic
 	assert(level)  # Vérifie que le niveau est défini
 	assert(ground)
-	assert(wall)
 	ground.body_entered.connect(floor_entered)
 	ground.body_exited.connect(floor_exited)
-	wall.body_entered.connect(wall_entered)
-	wall.body_exited.connect(wall_exited)
+	
+	for wall in walls:
+		assert(wall)
+		var callback = func(body: Node3D):
+			wall_entered(wall, body)
+			
+		wall.body_entered.connect(callback)
+		wall.body_exited.connect(wall_exited)
+		
 	animplayer.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
 	animplayer.get_animation("slidin").loop_mode = Animation.LOOP_LINEAR
 
@@ -126,7 +132,7 @@ func floor_exited(body: Node3D) -> void:
 		print("Leaving floor")
 	
 # Appelée lorsque le joueur entre dans l'Area3D (mur)
-func wall_entered(body: Node3D) -> void:
+func wall_entered(wall: Node3D, body: Node3D) -> void:
 	if body == self:
 		current_movement_area = wall
 		on_wall = true  # Le joueur est sur le mur
