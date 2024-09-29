@@ -6,16 +6,48 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_tp80m"]
 size = Vector3(1.5, 1.5, 1.5)
 
-[node name="GnalibiPlayer" type="RigidBody3D"]
+[node name="GnalibiPlayer" type="RigidBody3D" node_paths=PackedStringArray("animplayer")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 gravity_scale = 0.0
 lock_rotation = true
 script = ExtResource("1_hcf5a")
 speed = 5
+animplayer = NodePath("Gnalibi/AnimationPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_tp80m")
 
 [node name="Gnalibi" parent="." instance=ExtResource("2_sbmns")]
-transform = Transform3D(1, 0, 4.26326e-14, 0, 1, 0, -4.26326e-14, 0, 1, 0, -0.519162, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.880141, 0)
+
+[node name="Skeleton3D" parent="Gnalibi/Armature" index="0"]
+bones/0/position = Vector3(0, -0.100282, 0)
+bones/1/position = Vector3(0.0784411, -0.0198134, 0.00100517)
+bones/1/rotation = Quaternion(0.99999, 0.00254093, 1.1474e-05, -0.00363597)
+bones/2/rotation = Quaternion(-0.710615, -0.00180706, 0.00178616, 0.703577)
+bones/3/position = Vector3(-0.000434508, 0.223727, -0.000621769)
+bones/3/rotation = Quaternion(-0.710615, -0.00180706, 0.00178616, 0.703577)
+bones/4/position = Vector3(-0.000296574, 0.20549, 0.132115)
+bones/4/rotation = Quaternion(0.707107, 0, -0.707107, 0)
+bones/6/position = Vector3(0.0329363, 0.272484, -0.0557514)
+bones/6/rotation = Quaternion(0.696111, 0.323439, -0.635822, -0.0809157)
+bones/7/rotation = Quaternion(0.0225152, 0.000816078, 0.01871, 0.999571)
+bones/8/position = Vector3(-0.0557899, -0.0198134, 0.00100513)
+bones/8/rotation = Quaternion(0.99999, -0.00254094, -7.10047e-06, -0.00363595)
+bones/9/rotation = Quaternion(-0.710615, 0.00180431, -0.00178928, 0.703577)
+bones/10/position = Vector3(0.000433067, 0.223443, -0.000619701)
+bones/10/rotation = Quaternion(-0.710615, 0.00180431, -0.00178928, 0.703577)
+bones/11/position = Vector3(-0.0963696, 0.272484, -0.0557514)
+bones/11/rotation = Quaternion(-0.632266, -0.105717, 0.70641, 0.30008)
+bones/12/rotation = Quaternion(0.00125381, 0.0130796, 0.00531413, 0.9999)
+bones/13/rotation = Quaternion(-0.126546, -0.00636429, 0.308128, 0.942869)
+bones/14/rotation = Quaternion(-0.10936, -0.171125, 0.0748529, 0.976296)
+bones/15/rotation = Quaternion(0.673284, -0.20457, 0.666319, -0.246697)
+bones/16/rotation = Quaternion(-0.00478493, -0.000736537, -0.0372142, 0.999296)
+bones/17/rotation = Quaternion(0.750942, -0.183913, 0.632905, 0.0411476)
+bones/18/rotation = Quaternion(-0.115726, -0.0205967, 0.0258865, 0.99273)
+bones/19/rotation = Quaternion(0.737364, 0.00837828, 0.645302, -0.199522)
+bones/20/rotation = Quaternion(0.1207, -0.0309609, 0.0177076, 0.992048)
+
+[editable path="Gnalibi"]

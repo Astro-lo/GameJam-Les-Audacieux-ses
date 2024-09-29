@@ -3,6 +3,7 @@ extends RigidBody3D
 @export var inv: Inv
 @export var speed := 1200
 @export var level: LevelLogic
+@export var animplayer : AnimationPlayer
 
 var velocity: Vector3
 var direction: Vector3
@@ -24,6 +25,9 @@ func _ready() -> void:
 	ground.body_exited.connect(floor_exited)
 	wall.body_entered.connect(wall_entered)
 	wall.body_exited.connect(wall_exited)
+	animplayer.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
+	animplayer.get_animation("slidin").loop_mode = Animation.LOOP_LINEAR
+
 
 # Appelé chaque frame (pour l'input)
 func _process(_delta: float) -> void:
@@ -41,6 +45,11 @@ func _process(_delta: float) -> void:
 
 	# Calcule le déplacement du joueur en fonction de la surface sur laquelle il se trouve
 	velocity = calculate_movement(input)
+	if velocity.length_squared() < 1.:
+		animplayer.play("idle")
+	else:
+		animplayer.play("slidin")
+
 
 # Calcule le mouvement du joueur en fonction de la normale de la surface
 func calculate_movement(input: Vector3) -> Vector3:
