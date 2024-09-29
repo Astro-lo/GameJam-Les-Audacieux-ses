@@ -67,7 +67,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wi7pr"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_cjp04"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -93,7 +93,7 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_n1khl"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_dcyi3"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -207,7 +207,7 @@ unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
-mesh = SubResource("ArrayMesh_wi7pr")
+mesh = SubResource("ArrayMesh_cjp04")
 skeleton = NodePath("")
 
 [node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
@@ -274,7 +274,7 @@ level = NodePath("../../../LevelLogic")
 
 [node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
 transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_n1khl")
+mesh = SubResource("ArrayMesh_dcyi3")
 skeleton = NodePath("../..")
 
 [node name="Painting03" parent="Items" instance=ExtResource("15_j5l1y")]
