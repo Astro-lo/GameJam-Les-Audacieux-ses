@@ -8,7 +8,7 @@ func _ready():
 	credits_button.connect("pressed", Callable(self, "_on_CreditsButton_pressed"))
 
 func _on_PlayButton_pressed():
-	var game_scene_path = "res://Scenes/Main.tscn"
+	var game_scene_path = "res://Scenes/text_intro.tscn"
 	get_tree().change_scene_to_file(game_scene_path)
 	
 func _on_CreditsButton_pressed():
