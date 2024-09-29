@@ -1,0 +1,35 @@
+[gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://crleaddj05omi"]
+
+[ext_resource type="Material" uid="uid://dfnvnp0rlm5d4" path="res://Meshes/MeshesTres/Elements_Material.tres" id="1_ldym6"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k5dbi"]
+_surfaces = [{
+"aabb": AABB(-0.00306569, -0.019746, -0.000250769, 0.00313842, 0.019265, 0.0356449),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQABwABAAAAAAAEAAcABgACAAEAAQAHAAYABAAAAAMAAwAFAAQABQADAAIAAgAGAAUA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("w+lIu1fCobxk+RA9w+lIu1fCobyaeYO5w+lIu90p/LmaeYO5w+lIu90p/Llk+RA9CoeYOFfCobxk+RA9CoeYON0p/Llk+RA9CoeYON0p/LmaeYO5CoeYOFfCobyaeYO5")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "Cube_011"
+_surfaces = [{
+"aabb": AABB(-0.00306569, -0.019746, -0.000250769, 0.00313842, 0.019265, 0.0356449),
+"attribute_data": PackedByteArray("LTyXPshkEz7sSpg+hAGmPh8CnD7uN6Y+i+SbPiRqJT4tvJw+yOQZPovkxT4kaiA+H4LFPu63nz7sCp0+hMGlPuwKmz6EAaY+7AqbPoQBpj4tfJo+yGQbPi18mj7IZBs+H4LFPu63nz4fgsU+7refPuwKnT6EwaU+7AqdPoTBpT4tvJw+yOQZPi28nD7I5Bk+i+TFPiRqID6L5MU+JGogPovkxT4kaiA+i+TFPiRqID4fgsU+7refPh+CxT7ut58+"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": ExtResource("1_ldym6"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("w+lIu1fCobxk+RA9w+lIu1fCobyaeYO5w+lIu90p/LmaeYO5w+lIu90p/Llk+RA9CoeYOFfCobxk+RA9CoeYON0p/Llk+RA9CoeYON0p/LmaeYO5CoeYOFfCobyaeYO5CoeYOFfCobyaeYO5w+lIu1fCobyaeYO5w+lIu1fCobxk+RA9CoeYOFfCobxk+RA9CoeYON0p/LmaeYO5w+lIu90p/LmaeYO5w+lIu1fCobyaeYO5CoeYOFfCobyaeYO5CoeYOFfCobxk+RA9w+lIu1fCobxk+RA9w+lIu90p/Llk+RA9CoeYON0p/Llk+RA9CoeYON0p/Llk+RA9w+lIu90p/Llk+RA9w+lIu90p/LmaeYO5CoeYON0p/LmaeYO5AAD/f/9/uAcAAP9//39FAAAA/3//f+gDAAD/f/9/pgr///9//381/////3//f3v7////f3eH//////9/TI7///9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//////////7//////////v/////////+//////////7//f/9/////P/9//3////8//3//f////z//f/9/////P/9///////+//3///////7//f///////v/9///////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_k5dbi")

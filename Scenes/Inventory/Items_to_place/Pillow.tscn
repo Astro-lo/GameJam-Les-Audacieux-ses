@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://do2p43n2b2l8u"]
+
+[ext_resource type="ArrayMesh" uid="uid://3cun1bgqb3uw" path="res://Meshes/MeshesTres/Pillow_Mesh.tres" id="1_b1rcm"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="3_qgh4d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_803lg"]
+size = Vector3(0.0178223, 0.0332031, 0.0224609)
+
+[node name="Pillow" type="MeshInstance3D"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0)
+mesh = ExtResource("1_b1rcm")
+script = ExtResource("3_qgh4d")
+pathToObject = "res://Scenes/Inventory/Item_placed/Pillow_placed.tscn"
+howToClean = 2
+objectType = "Pillow"
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_803lg")

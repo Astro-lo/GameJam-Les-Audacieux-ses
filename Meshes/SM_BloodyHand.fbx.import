@@ -3,7 +3,11 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<< HEAD
 uid="uid://dybrvfukwcpme"
+=======
+uid="uid://cx7d4igamd5ye"
+>>>>>>> caf6a20d1236035c38770694b813426a01bac135
 path="res://.godot/imported/SM_BloodyHand.fbx-60a91eeec073f94e897a42bc1579b5fc.scn"
 
 [deps]
