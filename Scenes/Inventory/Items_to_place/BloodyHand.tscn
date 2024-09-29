@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cyruqcj14qe42"]
+[gd_scene load_steps=8 format=3 uid="uid://vnrp0os0cm00"]
 
 [ext_resource type="Script" path="res://Scripts/item.gd" id="2_lrgqt"]
 [ext_resource type="PackedScene" uid="uid://c2kvvr3k0bm4n" path="res://Meshes/SM_BloodyHand.fbx" id="2_w0jq1"]
