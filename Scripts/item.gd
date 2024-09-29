@@ -38,7 +38,7 @@ func add_to_inv(plr):
 	plr.inv.Items.append(theItemInTheInv)
 func showSpots():
 	for i in %ItemSpots.get_children():
-		if i is item_spot and i.object == objectType:
+		if i.object == objectType:
 			i.scale = Vector3()
 			i.visible = true
 			var tween = create_tween()

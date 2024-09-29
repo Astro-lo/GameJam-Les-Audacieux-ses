@@ -1,5 +1,4 @@
 extends MeshInstance3D
-class_name item_spot
 
 @export var object : String
 
@@ -13,12 +12,11 @@ func put_back_item(plr):
 
 func check_plr_inv(plr):
 	if plr.inv.Items[0].objectType == object:
-		
 		var Item_instance = plr.inv.Items[0].object.instantiate()
-			
+		
 		get_tree().root.add_child(Item_instance)
 		Item_instance.position = self.position
-			
+		
 		plr.inv.Items.remove_at(0)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
