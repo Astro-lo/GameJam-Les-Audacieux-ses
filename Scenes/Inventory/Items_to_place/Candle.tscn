@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv3b35wfp5tkv"]
+
+[ext_resource type="ArrayMesh" uid="uid://cn3maqw64nfsm" path="res://Meshes/MeshesTres/Candle_Mesh.tres" id="1_kyeow"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="2_0e6s5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kpmcs"]
+size = Vector3(0.00756836, 0.00756836, 0.0158691)
+
+[node name="Candle" type="MeshInstance3D"]
+transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, 0, 0, 0)
+mesh = ExtResource("1_kyeow")
+script = ExtResource("2_0e6s5")
+pathToObject = "res://Scenes/Inventory/Item_placed/Candle_placed.tscn"
+howToClean = 2
+objectType = "Candle"
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.05188e-05, 0.00476075)
+shape = SubResource("BoxShape3D_kpmcs")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
