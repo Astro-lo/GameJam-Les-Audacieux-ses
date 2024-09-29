@@ -20,4 +20,3 @@ func _process(delta: float) -> void:
 		thrownItem = null
 		self.queue_free()
 	path_follow_3d.progress += speed*delta
-	print(path_follow_3d.get_child(0).scale)

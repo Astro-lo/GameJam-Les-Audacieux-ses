@@ -7,8 +7,11 @@ extends MeshInstance3D
 #Painting,Item,Livres etc...
 @export var objectType: String
 
-#When the player walks over the item it will be put into the player's inventory
+var Sx = self.scale.x
+var Sy = self.scale.y
+var Sz = self.scale.z
 
+#When the player walks over the item it will be put into the player's inventory
 func destroyed():
 	#c'est pour les tween et touuut
 	self.queue_free()
@@ -20,8 +23,8 @@ func pick_up(plr):
 	showSpots()
 	#rajouter score
 	var tween = create_tween()
-	tween.tween_property(self, "scale",Vector3(1.1,1.1,1.1),0.2).set_trans(Tween.TRANS_SINE)
-	tween.tween_property(self, "scale",Vector3(0.5,0.5,0.5),0.1).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(self, "scale",Vector3(Sx*1.1, Sy*1.1, Sz*1.1),0.2).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(self, "scale",Vector3(Sx*0.5, Sy*0.5, Sz*0.5),0.1).set_trans(Tween.TRANS_SINE)
 	await get_tree().create_timer(0.25).timeout
 	self.queue_free()
 

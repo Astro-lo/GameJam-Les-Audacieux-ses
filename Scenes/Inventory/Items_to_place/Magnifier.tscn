@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhqmhhi1303nr"]
+
+[ext_resource type="ArrayMesh" uid="uid://dg0jshadvcmsj" path="res://Meshes/MeshesTres/Magnifier_Mesh.tres" id="1_encqh"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="3_hf46c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2wb2r"]
+size = Vector3(0.19165, 0.118164, 0.0619507)
+
+[node name="Magnifier" type="MeshInstance3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 16.2, 0, 0, 0)
+mesh = ExtResource("1_encqh")
+script = ExtResource("3_hf46c")
+pathToObject = "res://Scenes/Inventory/Item_placed/Magnifier_placed.tscn"
+howToClean = 2
+objectType = "Magnifier"
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00916775, 0.011261)
+shape = SubResource("BoxShape3D_2wb2r")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
