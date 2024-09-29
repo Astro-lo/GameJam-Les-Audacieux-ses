@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ymg8ovdjk8my"]
+[gd_scene load_steps=5 format=3 uid="uid://ymg8ovdjk8my"]
 
 [ext_resource type="Script" path="res://Scripts/GnalibiPlayer.gd" id="1_hcf5a"]
 [ext_resource type="PackedScene" uid="uid://db0hc8by5ni61" path="res://sourceData/Gnalibi.glb" id="2_sbmns"]
+[ext_resource type="Texture2D" uid="uid://b2dlgsd0msngx" path="res://sourceData/shadowBlob.png" id="3_bk4qt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tp80m"]
 size = Vector3(1.5, 1.5, 1.5)
@@ -49,5 +50,32 @@ bones/17/rotation = Quaternion(0.750942, -0.183913, 0.632905, 0.0411476)
 bones/18/rotation = Quaternion(-0.115726, -0.0205967, 0.0258865, 0.99273)
 bones/19/rotation = Quaternion(0.737364, 0.00837828, 0.645302, -0.199522)
 bones/20/rotation = Quaternion(0.1207, -0.0309609, 0.0177076, 0.992048)
+
+[node name="shadowBlobs" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211677, -0.835262, -0.253545)
+
+[node name="ground" type="Decal" parent="shadowBlobs"]
+size = Vector3(0.847805, 0.065155, 0.724598)
+texture_albedo = ExtResource("3_bk4qt")
+
+[node name="front" type="Decal" parent="shadowBlobs"]
+transform = Transform3D(1, 0, 0, 0, -0.0367135, 0.999326, 0, -0.999326, -0.0367135, 0.0740308, 0.307559, 0.281772)
+size = Vector3(0.847805, 0.106289, 0.524897)
+texture_albedo = ExtResource("3_bk4qt")
+
+[node name="back" type="Decal" parent="shadowBlobs"]
+transform = Transform3D(1, 0, 0, 0, -0.0367135, 0.999326, 0, -0.999326, -0.0367135, 0.0740308, 0.302192, -0.4537)
+size = Vector3(0.847805, 0.106289, 0.535639)
+texture_albedo = ExtResource("3_bk4qt")
+
+[node name="Left" type="Decal" parent="shadowBlobs"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.428639, 0.330667, -0.0812048)
+size = Vector3(0.575171, 0.065155, 0.724598)
+texture_albedo = ExtResource("3_bk4qt")
+
+[node name="Right" type="Decal" parent="shadowBlobs"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.316632, 0.342093, -0.0812048)
+size = Vector3(0.55232, 0.065155, 0.724598)
+texture_albedo = ExtResource("3_bk4qt")
 
 [editable path="Gnalibi"]
