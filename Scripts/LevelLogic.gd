@@ -1,7 +1,7 @@
 extends Node
 class_name LevelLogic
 
-@export var totalTimeSeconds := 5
+@export var totalTimeSeconds := 130
 @export var Animplayer : AnimationPlayer
 
 signal animNow

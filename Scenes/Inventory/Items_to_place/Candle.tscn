@@ -12,10 +12,11 @@ mesh = ExtResource("1_kyeow")
 script = ExtResource("2_0e6s5")
 pathToObject = "res://Scenes/Inventory/Item_placed/Candle_placed.tscn"
 howToClean = 2
-objectType = "Candle"
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(0.999998, -2.23517e-08, 9.85878e-14, 2.23517e-08, 0.999998, 5.82534e-12, 3.33067e-16, -5.66193e-13, 1, 5.24754e-17, 3.10196e-15, 0.000549316)
 shape = SubResource("BoxShape3D_k6lfr")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

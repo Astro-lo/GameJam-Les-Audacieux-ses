@@ -76,7 +76,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_mojhs"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_piy3y"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -102,7 +102,7 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_cqp5s"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_7ci2f"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -258,7 +258,7 @@ unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
-mesh = SubResource("ArrayMesh_mojhs")
+mesh = SubResource("ArrayMesh_piy3y")
 skeleton = NodePath("")
 
 [node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
@@ -267,6 +267,10 @@ skeleton = NodePath("../../Items")
 
 [node name="BookSpot3" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
 transform = Transform3D(-2.76169e-06, -63.18, 2.76169e-06, 0, -2.76169e-06, -63.18, 63.18, -2.76169e-06, 1.20717e-13, -3.92157, 4.12077, -4.94133)
+skeleton = NodePath("../../Items")
+
+[node name="BookSpot6" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
+transform = Transform3D(-2.76169e-06, -63.18, 2.76169e-06, 0, -2.76169e-06, -63.18, 63.18, -2.76169e-06, 1.20717e-13, -3.92157, 1.37566, -4.94133)
 skeleton = NodePath("../../Items")
 
 [node name="BookSpot4" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
@@ -280,6 +284,7 @@ skeleton = NodePath("../../Items")
 [node name="PillowSpot" parent="ItemSpots" instance=ExtResource("10_dvyls")]
 transform = Transform3D(-7.15801, -73.6979, 1.73435, 17.4409, -3.21865e-06, 71.9822, -71.6254, 7.36512, 17.3545, -2.4163, 1.76493, 7.38517)
 skeleton = NodePath("../../Items")
+surface_material_override/0 = null
 
 [node name="BottleSpot" parent="ItemSpots" instance=ExtResource("23_a56hu")]
 transform = Transform3D(75, 0, 0, 0, 6.70227, 74.6999, 0, -74.6999, 6.70227, -3.16062, 1.85398, -6.82094)
@@ -304,18 +309,15 @@ skeleton = NodePath("../../Items")
 [node name="Painting03Spot" parent="ItemSpots" instance=ExtResource("13_15ex5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.68632, 3.78245, 5.9415)
 skeleton = NodePath("../Painting02Spot")
-surface_material_override/0 = null
 
 [node name="Painting02Spot" parent="ItemSpots" instance=ExtResource("13_48ska")]
 transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, -4.61332, 3.44655, 3.73764)
 
 [node name="CandleSpot" parent="ItemSpots" instance=ExtResource("17_qdvqb")]
 transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, -1.96364, 1.90671, -7.26305)
-surface_material_override/0 = null
 
 [node name="MagnifierSpot" parent="ItemSpots" instance=ExtResource("19_nqabd")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 16.2, -2.11364, 1.71847, -7.13921)
-surface_material_override/0 = null
 
 [node name="Hud" parent="." instance=ExtResource("11_t2oe3")]
 
@@ -328,7 +330,7 @@ level = NodePath("../../../LevelLogic")
 
 [node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
 transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_cqp5s")
+mesh = SubResource("ArrayMesh_7ci2f")
 skeleton = NodePath("../..")
 ObjectType = "Painting"
 
@@ -398,7 +400,7 @@ transform = Transform3D(0.0223454, 0.643375, -0.202965, -0.67463, 0.0212011, -0.
 ObjectType = "Painting"
 
 [node name="Candle" parent="Items" instance=ExtResource("33_4q6gf")]
-transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, -3.07192, 0.038035, -5.85654)
+transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, -1.31832, 0.038035, -4.07214)
 skeleton = NodePath("../..")
 ObjectType = "Candle"
 

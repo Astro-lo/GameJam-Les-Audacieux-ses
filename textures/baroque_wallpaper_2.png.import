@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhm3djuyios8u"
-path="res://.godot/imported/baroque_wallpaper_2.png-1aed0c2937f1560f8466f80515ede19f.ctex"
+path="res://.godot/imported/baroque_wallpaper_2.png-49dc8ba35ac51eba1a3dbd40858de70d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/baroque_wallpaper_2.png"
-dest_files=["res://.godot/imported/baroque_wallpaper_2.png-1aed0c2937f1560f8466f80515ede19f.ctex"]
+source_file="res://Textures/baroque_wallpaper_2.png"
+dest_files=["res://.godot/imported/baroque_wallpaper_2.png-49dc8ba35ac51eba1a3dbd40858de70d.ctex"]
 
 [params]
 
