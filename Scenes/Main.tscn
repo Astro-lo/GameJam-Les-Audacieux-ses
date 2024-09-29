@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://d1exo1njgamaf"]
+[gd_scene load_steps=35 format=4 uid="uid://d1exo1njgamaf"]
 
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
 [ext_resource type="Script" path="res://Scripts/CameraMan.gd" id="2_52ic4"]
@@ -8,10 +8,23 @@
 [ext_resource type="PackedScene" uid="uid://cprsl7dsv6aho" path="res://Scenes/Collisions.tscn" id="5_2qmqt"]
 [ext_resource type="Script" path="res://Scripts/LevelLogic.gd" id="5_fyvlw"]
 [ext_resource type="PackedScene" uid="uid://bxq43uo3ajn3p" path="res://Scenes/Inventory/Item_spots/Painting01_spot.tscn" id="8_lqsvn"]
-[ext_resource type="PackedScene" uid="uid://by8ubact61157" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
-[ext_resource type="PackedScene" uid="uid://cgsd3sxo0fmgj" path="res://Scenes/Inventory/Items_to_place/Knife.tscn" id="10_sawtw"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
+[ext_resource type="PackedScene" uid="uid://c06os01m0jbu4" path="res://Scenes/Inventory/Item_spots/Pillow_spot.tscn" id="10_dvyls"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Knife.tscn" id="10_sawtw"]
 [ext_resource type="PackedScene" uid="uid://b3gyjw8lfobj5" path="res://Scenes/Hud.tscn" id="11_t2oe3"]
 [ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="12_3qwve"]
+[ext_resource type="PackedScene" uid="uid://di71l8xefs5gg" path="res://Scenes/Inventory/Item_spots/Books_spot.tscn" id="13_cx0g4"]
+[ext_resource type="PackedScene" uid="uid://glyvkbi68252" path="res://Scenes/Inventory/Items_to_place/Book1.tscn" id="14_wmvq4"]
+[ext_resource type="PackedScene" uid="uid://i6rvnwdiioom" path="res://Scenes/Inventory/Items_to_place/Book2.tscn" id="15_rh1l6"]
+[ext_resource type="PackedScene" uid="uid://dekiu2bkjykoh" path="res://Scenes/Inventory/Items_to_place/Book3.tscn" id="16_h2j3x"]
+[ext_resource type="PackedScene" uid="uid://b8t56y2nos1fu" path="res://Scenes/Inventory/Items_to_place/Book4.tscn" id="17_a4sqe"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle1.tscn" id="18_qntls"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle2.tscn" id="19_pxrk7"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle3.tscn" id="20_5brma"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle4.tscn" id="21_g0upo"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle5.tscn" id="22_xvt32"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Bottle_spot.tscn" id="23_a56hu"]
+[ext_resource type="PackedScene" uid="uid://tuugmxl08kc0" path="res://Scenes/Inventory/Item_placed/Pillow_placed.tscn" id="24_sx74o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
 size = Vector3(14, 7, 8.11)
@@ -39,7 +52,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_feq65"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_pso8p"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -57,7 +70,15 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gpco7")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_imgpp"]
+[sub_resource type="LabelSettings" id="LabelSettings_hhpv6"]
+font = ExtResource("12_3qwve")
+font_size = 39
+font_color = Color(0.835294, 0, 0, 1)
+outline_color = Color(1, 1, 1, 0)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4apj4"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -77,14 +98,6 @@ shadow_mesh = SubResource("ArrayMesh_gpco7")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_58ogr"]
 size = Vector3(3.98749, 6.56696, 2.0683)
-
-[sub_resource type="LabelSettings" id="LabelSettings_hhpv6"]
-font = ExtResource("12_3qwve")
-font_size = 39
-font_color = Color(0.835294, 0, 0, 1)
-outline_color = Color(1, 1, 1, 0)
-shadow_size = 8
-shadow_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node3D"]
 
@@ -159,9 +172,49 @@ script = ExtResource("5_fyvlw")
 unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
-transform = Transform3D(0.976878, -0.213798, 0, 0.213798, 0.976878, 0, 0, 0, 1, -3.43236, 1.65458, -3)
-mesh = SubResource("ArrayMesh_feq65")
+transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
+mesh = SubResource("ArrayMesh_pso8p")
 skeleton = NodePath("")
+
+[node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
+transform = Transform3D(-2.76169e-06, -63.18, 2.76169e-06, 0, -2.76169e-06, -63.18, 63.18, -2.76169e-06, 1.20717e-13, -3.92157, 3.40158, -3.42752)
+skeleton = NodePath("../../Items")
+
+[node name="BookSpot3" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
+transform = Transform3D(-2.76169e-06, -63.18, 2.76169e-06, 0, -2.76169e-06, -63.18, 63.18, -2.76169e-06, 1.20717e-13, -3.92157, 4.12077, -4.94133)
+skeleton = NodePath("../../Items")
+
+[node name="BookSpot4" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
+transform = Transform3D(-2.76169e-06, -63.18, 2.76169e-06, 0, -2.76169e-06, -63.18, 63.18, -2.76169e-06, 1.20717e-13, -3.92157, 2.06082, -2.85615)
+skeleton = NodePath("../../Items")
+
+[node name="BookSpot5" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
+transform = Transform3D(-2.76169e-06, -63.18, 2.76169e-06, 0, -2.76169e-06, -63.18, 63.18, -2.76169e-06, 1.20717e-13, -3.92157, 4.09025, -3.57806)
+skeleton = NodePath("../../Items")
+
+[node name="PillowSpot" parent="ItemSpots" instance=ExtResource("10_dvyls")]
+transform = Transform3D(-7.15801, -73.6979, 1.73435, 17.4409, -3.21865e-06, 71.9822, -71.6254, 7.36512, 17.3545, -2.4163, 1.76493, 7.38517)
+skeleton = NodePath("../../Items")
+
+[node name="BottleSpot" parent="ItemSpots" instance=ExtResource("23_a56hu")]
+transform = Transform3D(75, 0, 0, 0, 6.70227, 74.6999, 0, -74.6999, 6.70227, -3.16062, 1.85398, -6.82094)
+skeleton = NodePath("../../Items")
+
+[node name="BottleSpot2" parent="ItemSpots" instance=ExtResource("23_a56hu")]
+transform = Transform3D(75, 0, 0, 0, 6.70227, 74.6999, 0, -74.6999, 6.70227, -2.44647, 1.86762, -6.97294)
+skeleton = NodePath("../../Items")
+
+[node name="BottleSpot3" parent="ItemSpots" instance=ExtResource("23_a56hu")]
+transform = Transform3D(75, 0, 0, 0, 6.70227, 74.6999, 0, -74.6999, 6.70227, -4.35486, 1.85739, -6.85889)
+skeleton = NodePath("../../Items")
+
+[node name="BottleSpot4" parent="ItemSpots" instance=ExtResource("23_a56hu")]
+transform = Transform3D(75, 0, 0, 0, 6.70227, 74.6999, 0, -74.6999, 6.70227, -2.9916, 1.88353, -7.15029)
+skeleton = NodePath("../../Items")
+
+[node name="BottleSpot5" parent="ItemSpots" instance=ExtResource("23_a56hu")]
+transform = Transform3D(75, 0, 0, 0, 6.70227, 74.6999, 0, -74.6999, 6.70227, -4.21116, 2.38616, 1.48212)
+skeleton = NodePath("../../Items")
 
 [node name="Hud" parent="." instance=ExtResource("11_t2oe3")]
 
@@ -173,12 +226,45 @@ level = NodePath("../../../LevelLogic")
 [node name="Items" type="Node" parent="."]
 
 [node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
-transform = Transform3D(-3.84052e-08, -0.878609, -0.477542, 1, -4.37114e-08, 0, -2.0874e-08, -0.477542, 0.878609, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_imgpp")
+transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
+mesh = SubResource("ArrayMesh_4apj4")
 skeleton = NodePath("../..")
 
 [node name="Knife" parent="Items" instance=ExtResource("10_sawtw")]
-transform = Transform3D(-1.09278e-05, 1.09278e-05, -250, 250, 4.77669e-13, -1.09278e-05, 0, -250, -1.09278e-05, 0, 0.1265, -1.6878)
+transform = Transform3D(-1.09278e-05, 1.09278e-05, -250, 250, 4.77669e-13, -1.09278e-05, 0, -250, -1.09278e-05, 0.454128, 0.1265, 4.8065)
+
+[node name="Book1" parent="Items" instance=ExtResource("14_wmvq4")]
+transform = Transform3D(-8.23212, -56.2877, 82.2431, 99.6606, -4.64946, 6.7934, 4.0718e-06, 82.5232, 56.4794, -2.41682, 0.038035, -0.6323)
+
+[node name="Book2" parent="Items" instance=ExtResource("15_rh1l6")]
+transform = Transform3D(-8.23212, 67.0188, 73.7612, 99.6606, 5.53585, 6.09279, 4.65472e-06, 74.0124, -67.247, 1.4776, 0.038035, -1.44022)
+
+[node name="Book3" parent="Items" instance=ExtResource("16_h2j3x")]
+transform = Transform3D(-8.23212, 7.10543e-15, 99.6606, 99.6606, -4.37114e-06, 8.23212, 4.3563e-06, 100, 3.59838e-07, -0.291781, 0.038035, -3.30512)
+
+[node name="Book4" parent="Items" instance=ExtResource("17_a4sqe")]
+transform = Transform3D(-8.23212, 75.8119, 64.69, 99.6606, 6.26217, 5.34349, 4.2582e-06, 64.9103, -76.0701, -0.964051, 0.038035, -5.88441)
+
+[node name="Book5" parent="Items" instance=ExtResource("16_h2j3x")]
+transform = Transform3D(-8.23212, -21.4142, 97.3328, 99.6606, -1.76885, 8.03983, 4.13025e-06, 97.6642, 21.4872, -2.49968, 0.038035, -2.2656)
+
+[node name="Bottle1" parent="Items" instance=ExtResource("18_qntls")]
+transform = Transform3D(76.44, 0, 0, 0, 1.17933, 76.4309, 0, -76.4309, 1.17933, 0.290576, 0.275896, -0.810036)
+
+[node name="Bottle2" parent="Items" instance=ExtResource("19_pxrk7")]
+transform = Transform3D(76.44, 0, 0, 0, 76.44, 0, 0, 0, 76.44, -0.240204, 0.038035, -6.45191)
+
+[node name="Bottle3" parent="Items" instance=ExtResource("20_5brma")]
+transform = Transform3D(56.0673, 0, 51.9571, 0, 76.44, 0, -51.9571, 0, 56.0673, -0.530544, 0.038035, 6.47715)
+
+[node name="Bottle4" parent="Items" instance=ExtResource("21_g0upo")]
+transform = Transform3D(-15.7074, 0, -74.8088, 0, 76.44, 0, 74.8088, 0, -15.7074, 2.13557, 0.038035, 3.79854)
+
+[node name="Bottle5" parent="Items" instance=ExtResource("22_xvt32")]
+transform = Transform3D(76.44, 0, 0, 0, 76.44, 0, 0, 0, 76.44, -3.48545, 0.038035, -3.41379)
+
+[node name="Pillow_placed" parent="Items" instance=ExtResource("24_sx74o")]
+transform = Transform3D(61.0812, -17.3173, -42.5079, 43.6437, -3.33786e-06, 62.7132, -14.214, -74.4166, 9.89189, -0.85719, 0.42257, 3.36494)
 
 [node name="LancerParLaFenetre" type="Area3D" parent="."]
 
