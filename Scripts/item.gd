@@ -23,6 +23,16 @@ func _process(_delta: float) -> void:
 func clean():
 	Score.Objets_nettoyés_score =+ 10
 	Score.Objets_nettoyés_combiens =+ 1
+	var Sx = self.scale.x
+	var Sy = self.scale.y
+	var Sz = self.scale.z
+	
+	var tween = create_tween()
+	
+	tween.tween_property(self, "scale",Vector3(Sx*1.1, Sy*1.1, Sz*1.1),0.2).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(self, "scale",Vector3(Sx*0.5, Sy*0.5, Sz*0.5),0.1).set_trans(Tween.TRANS_SINE)
+	await get_tree().create_timer(0.25).timeout
+	
 	self.queue_free()
 
 func pick_up(plr):
@@ -77,17 +87,18 @@ func add_to_inv(plr):
 	
 	plr.inv.Items.append(theItemInTheInv)
 func showSpots():
-	for i in get_parent().get_node("../ItemSpots").get_children():
-		if i.object == ObjectType:
-			var Sx = self.scale.x
-			var Sy = self.scale.y
-			var Sz = self.scale.z
-			
-			i.scale = Vector3()
-			i.visible = true
-			var tween = create_tween()
-			tween.tween_property(i, "scale",Vector3(Sx*1.1,Sy*1.1,Sz*1.1),0.3).set_trans(Tween.TRANS_SINE)
-			tween.tween_property(i, "scale",Vector3(Sx,Sy,Sz),0.1).set_trans(Tween.TRANS_SINE)
+	if get_parent().get_node("../ItemSpots").get_children() != null:
+		for i in get_parent().get_node("../ItemSpots").get_children():
+			if i.object == ObjectType:
+				var Sx = self.scale.x
+				var Sy = self.scale.y
+				var Sz = self.scale.z
+				
+				i.scale = Vector3()
+				i.visible = true
+				var tween = create_tween()
+				tween.tween_property(i, "scale",Vector3(Sx*1.1,Sy*1.1,Sz*1.1),0.3).set_trans(Tween.TRANS_SINE)
+				tween.tween_property(i, "scale",Vector3(Sx,Sy,Sz),0.1).set_trans(Tween.TRANS_SINE)
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:

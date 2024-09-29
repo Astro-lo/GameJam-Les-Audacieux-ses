@@ -12,9 +12,10 @@ mesh = ExtResource("1_b1rcm")
 script = ExtResource("3_qgh4d")
 pathToObject = "res://Scenes/Inventory/Item_placed/Pillow_placed.tscn"
 howToClean = 2
-objectType = "Pillow"
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_803lg")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
