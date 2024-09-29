@@ -1,6 +1,6 @@
 [gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://b2wn7ofqu11pk"]
 
-[ext_resource type="Material" uid="uid://dfnvnp0rlm5d4" path="res://Meshes/MeshesTres/Elements_Material.tres" id="1_rv6sn"]
+[ext_resource type="Material" path="res://Meshes/MeshesTres/Elements_Material.tres" id="1_rv6sn"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mgpqc"]
 _surfaces = [{
