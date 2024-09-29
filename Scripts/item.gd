@@ -114,7 +114,6 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 				pick_up_lancer(body)
 				SoundManGlobal.play(self, SoundManGlobal.pickUp)
 		elif howToClean == 1:
-			SoundManGlobal.play_random_laugh(self)
 			clean()
 		elif howToClean == 2:
 			if body.inv.Items.size() <1:
