@@ -95,8 +95,11 @@ func get_current_area_transform() -> Transform3D:
 	return (current_movement_area.get_child(0) as CollisionShape3D).global_transform
 
 func get_current_surface_normal() -> Vector3:
+	if current_movement_area:
 		return get_current_area_transform().basis.y
-
+	else:
+		return Vector3.UP
+	
 func move(delta: float) -> void:
 	# Applique le mouvement basé sur la vélocité
 	var target_position = global_position + velocity * delta

@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1cisi7e42hmx"]
+[gd_scene load_steps=4 format=3 uid="uid://57o8yfalkast"]
 
 [ext_resource type="Script" path="res://Scenes/text_intro.gd" id="1_lskwd"]
-[ext_resource type="Texture2D" uid="uid://bhm3djuyios8u" path="res://textures/baroque_wallpaper_2.png" id="1_rj162"]
+[ext_resource type="Texture2D" uid="uid://bhm3djuyios8u" path="res://Textures/baroque_wallpaper_2.png" id="1_rj162"]
 [ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="2_6x0ag"]
 
 [node name="textIntro" type="Node3D"]
@@ -21,18 +21,24 @@ scale = Vector2(1.0365, 0.881714)
 texture = ExtResource("1_rj162")
 
 [node name="Label" type="Label" parent="Control/CanvasLayer"]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 54.0
-offset_top = 50.0
-offset_right = -60.0
-offset_bottom = -46.0
+offset_left = 79.0
+offset_top = -19.0
+offset_right = -92.0
+offset_bottom = 23.0
 grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.6, 0.6, 0, 1)
 theme_override_fonts/font = ExtResource("2_6x0ag")
-theme_override_font_sizes/font_size = 35
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac odio auctor, ultricies lectus id, finibus purus. Nulla lacinia ornare felis a pretium. Nulla feugiat nisl at magna efficitur pellentesque. Morbi malesuada eleifend lobortis. Praesent et accumsan neque. Vestibulum in sapien fermentum, varius quam in, vehicula ex. Nam pellentesque sit amet enim eget interdum. Suspendisse ligula leo, pharetra sit amet nulla ac, interdum tincidunt ante. Nulla non est sapien. Vestibulum tempor augue nunc, eu cursus arcu bibendum at."
+theme_override_font_sizes/font_size = 55
+text = "Un crime sanglant a été commis au palais !
+
+Le coupable a prié Gnalibi, la fée des meurtres, de couvrir ses traces.
+
+A vous de jouer !
+Vous avez TROIS MINUTES pour nettoyer la scène de crime avant l'arrivée des gardes."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
