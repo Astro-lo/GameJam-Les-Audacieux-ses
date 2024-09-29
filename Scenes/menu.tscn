@@ -1,0 +1,91 @@
+[gd_scene load_steps=11 format=3 uid="uid://cn44dctxh0krp"]
+
+[ext_resource type="Script" path="res://Scenes/menuControl.gd" id="1_67icd"]
+[ext_resource type="Texture2D" uid="uid://bhm3djuyios8u" path="res://textures/baroque_wallpaper_2.png" id="1_yoj58"]
+[ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="2_v4jqw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yv4fd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j6s1t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ntwo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bf4be"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nonxm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6wp6r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cesn8"]
+
+[node name="Menu" type="Node3D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 645.0
+script = ExtResource("1_67icd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/CanvasLayer"]
+position = Vector2(593.5, 268.5)
+scale = Vector2(0.8975, 0.881714)
+texture = ExtResource("1_yoj58")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 577.0
+offset_bottom = 373.0
+grow_horizontal = 2
+
+[node name="Title" type="Label" parent="Control/CanvasLayer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.835294, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("2_v4jqw")
+theme_override_font_sizes/font_size = 160
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yv4fd")
+text = "Magic Alibi"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -575.0
+offset_top = -224.0
+offset_right = 575.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PlayButton" type="Button" parent="Control/CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_hover_color = Color(0.835294, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.559523, 8.90419e-07, 3.36915e-07, 1)
+theme_override_colors/font_color = Color(0.6, 0.6, 0, 1)
+theme_override_fonts/font = ExtResource("2_v4jqw")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j6s1t")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4ntwo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_bf4be")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nonxm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6wp6r")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cesn8")
+text = "Play Game
+"

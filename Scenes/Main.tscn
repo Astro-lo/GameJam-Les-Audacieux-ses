@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://d1exo1njgamaf"]
+[gd_scene load_steps=22 format=4 uid="uid://d1exo1njgamaf"]
 
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
 [ext_resource type="Script" path="res://Scripts/CameraMan.gd" id="2_52ic4"]
@@ -8,9 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://cprsl7dsv6aho" path="res://Scenes/Collisions.tscn" id="5_2qmqt"]
 [ext_resource type="Script" path="res://Scripts/LevelLogic.gd" id="5_fyvlw"]
 [ext_resource type="PackedScene" uid="uid://bxq43uo3ajn3p" path="res://Scenes/Inventory/Item_spots/Painting01_spot.tscn" id="8_lqsvn"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
+[ext_resource type="PackedScene" uid="uid://by8ubact61157" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
 [ext_resource type="PackedScene" uid="uid://jdb82gbsj61" path="res://Scenes/Inventory/Items_to_place/item.tscn" id="10_reo6c"]
 [ext_resource type="PackedScene" uid="uid://b3gyjw8lfobj5" path="res://Scenes/Hud.tscn" id="11_t2oe3"]
+[ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="12_3qwve"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
 size = Vector3(14, 7, 8.11)
@@ -38,7 +39,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wo53h"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_xbx5h"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -56,7 +57,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gpco7")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_jnlb7"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ddmbu"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -76,6 +77,14 @@ shadow_mesh = SubResource("ArrayMesh_gpco7")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_58ogr"]
 size = Vector3(3.98749, 6.56696, 2.0683)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hhpv6"]
+font = ExtResource("12_3qwve")
+font_size = 39
+font_color = Color(0.835294, 0, 0, 1)
+outline_color = Color(1, 1, 1, 0)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node3D"]
 
@@ -151,16 +160,15 @@ unique_name_in_owner = true
 
 [node name="Item" parent="ItemSpots" instance=ExtResource("10_reo6c")]
 skeleton = NodePath("../..")
-howToClean = null
 
 [node name="Painting01" parent="ItemSpots" instance=ExtResource("9_aog87")]
 transform = Transform3D(-3.84052e-08, -0.878609, -0.477542, 1, -4.37114e-08, 0, -2.0874e-08, -0.477542, 0.878609, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_wo53h")
+mesh = SubResource("ArrayMesh_xbx5h")
 skeleton = NodePath("../..")
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(0.976878, -0.213798, 0, 0.213798, 0.976878, 0, 0, 0, 1, -3.43236, 1.65458, -3)
-mesh = SubResource("ArrayMesh_jnlb7")
+mesh = SubResource("ArrayMesh_ddmbu")
 skeleton = NodePath("")
 
 [node name="LancerParLaFenetre" type="Area3D" parent="ItemSpots"]
@@ -172,6 +180,8 @@ shape = SubResource("BoxShape3D_58ogr")
 [node name="Hud" parent="." instance=ExtResource("11_t2oe3")]
 
 [node name="Label" parent="Hud/CanvasLayer" index="0" node_paths=PackedStringArray("level")]
+theme_override_fonts/font = ExtResource("12_3qwve")
+label_settings = SubResource("LabelSettings_hhpv6")
 level = NodePath("../../../LevelLogic")
 
 [connection signal="body_entered" from="ItemSpots/LancerParLaFenetre" to="Player" method="_on_lancer_par_la_fenetre_body_entered"]
