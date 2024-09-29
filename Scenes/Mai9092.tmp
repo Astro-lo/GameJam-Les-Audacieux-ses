@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://d1exo1njgamaf"]
+[gd_scene load_steps=20 format=4 uid="uid://d1exo1njgamaf"]
 
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
 [ext_resource type="Script" path="res://Scripts/CameraMan.gd" id="2_52ic4"]
@@ -9,9 +9,8 @@
 [ext_resource type="Script" path="res://Scripts/LevelLogic.gd" id="5_fyvlw"]
 [ext_resource type="PackedScene" uid="uid://bxq43uo3ajn3p" path="res://Scenes/Inventory/Item_spots/Painting01_spot.tscn" id="8_lqsvn"]
 [ext_resource type="PackedScene" uid="uid://by8ubact61157" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
-[ext_resource type="PackedScene" uid="uid://cgsd3sxo0fmgj" path="res://Scenes/Inventory/Items_to_place/Knife.tscn" id="10_sawtw"]
+[ext_resource type="PackedScene" uid="uid://jdb82gbsj61" path="res://Scenes/Inventory/Items_to_place/item.tscn" id="10_reo6c"]
 [ext_resource type="PackedScene" uid="uid://b3gyjw8lfobj5" path="res://Scenes/Hud.tscn" id="11_t2oe3"]
-[ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="12_3qwve"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
 size = Vector3(14, 7, 8.11)
@@ -39,7 +38,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_feq65"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_bnidt"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -57,7 +56,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gpco7")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_imgpp"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_0ijyh"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -77,14 +76,6 @@ shadow_mesh = SubResource("ArrayMesh_gpco7")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_58ogr"]
 size = Vector3(3.98749, 6.56696, 2.0683)
-
-[sub_resource type="LabelSettings" id="LabelSettings_hhpv6"]
-font = ExtResource("12_3qwve")
-font_size = 39
-font_color = Color(0.835294, 0, 0, 1)
-outline_color = Color(1, 1, 1, 0)
-shadow_size = 8
-shadow_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node3D"]
 
@@ -158,35 +149,31 @@ script = ExtResource("5_fyvlw")
 [node name="ItemSpots" type="Node" parent="."]
 unique_name_in_owner = true
 
+[node name="Item" parent="ItemSpots" instance=ExtResource("10_reo6c")]
+skeleton = NodePath("../..")
+
+[node name="Painting01" parent="ItemSpots" instance=ExtResource("9_aog87")]
+transform = Transform3D(-3.84052e-08, -0.878609, -0.477542, 1, -4.37114e-08, 0, -2.0874e-08, -0.477542, 0.878609, 1.1629, 0.0119252, -4.61027)
+mesh = SubResource("ArrayMesh_bnidt")
+skeleton = NodePath("../..")
+
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(0.976878, -0.213798, 0, 0.213798, 0.976878, 0, 0, 0, 1, -3.43236, 1.65458, -3)
-mesh = SubResource("ArrayMesh_feq65")
+mesh = SubResource("ArrayMesh_0ijyh")
 skeleton = NodePath("")
+
+[node name="LancerParLaFenetre" type="Area3D" parent="ItemSpots"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ItemSpots/LancerParLaFenetre"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0654, 2.78348, -7.20807)
+shape = SubResource("BoxShape3D_58ogr")
 
 [node name="Hud" parent="." instance=ExtResource("11_t2oe3")]
 
 [node name="Label" parent="Hud/CanvasLayer" index="0" node_paths=PackedStringArray("level")]
-theme_override_fonts/font = ExtResource("12_3qwve")
-label_settings = SubResource("LabelSettings_hhpv6")
 level = NodePath("../../../LevelLogic")
 
-[node name="Items" type="Node" parent="."]
-
-[node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
-transform = Transform3D(-3.84052e-08, -0.878609, -0.477542, 1, -4.37114e-08, 0, -2.0874e-08, -0.477542, 0.878609, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_imgpp")
-skeleton = NodePath("../..")
-
-[node name="Knife" parent="Items" instance=ExtResource("10_sawtw")]
-transform = Transform3D(-1.09278e-05, 1.09278e-05, -250, 250, 4.77669e-13, -1.09278e-05, 0, -250, -1.09278e-05, 0, 0.1265, -1.6878)
-
-[node name="LancerParLaFenetre" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LancerParLaFenetre"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0654, 2.78348, -7.20807)
-shape = SubResource("BoxShape3D_58ogr")
-
-[connection signal="body_entered" from="LancerParLaFenetre" to="Player" method="_on_lancer_par_la_fenetre_body_entered"]
+[connection signal="body_entered" from="ItemSpots/LancerParLaFenetre" to="Player" method="_on_lancer_par_la_fenetre_body_entered"]
 
 [editable path="Cameras"]
 [editable path="VisualScene"]

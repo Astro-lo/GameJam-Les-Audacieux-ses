@@ -150,14 +150,13 @@ func _on_lancer_par_la_fenetre_body_entered(body: Node3D) -> void:
 				
 				#Anim Lancer?
 				
-				_throw(i.object,Vector3(2,3,-20))
+				_throw(i.object,Vector3(2,3,-10))
 				self.inv.Items.remove_at(0)
 
 func _throw(object: PackedScene,tp: Vector3):
 	if isThrowing == false:
 		isThrowing = true
 		var targetPosition = tp
-
 		var thrownObject = THROWNOBJECT.instantiate()
 		
 		thrownObject.StartingPosition = self.position
