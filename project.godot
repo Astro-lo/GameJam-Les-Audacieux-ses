@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://Textures/icon.svg"
 
+[autoload]
+
+SoundManGlobal="*res://Scenes/sound_man.gd"
+
 [display]
 
 window/size/mode=2

@@ -14,6 +14,10 @@ var Sx = self.scale.x
 var Sy = self.scale.y
 var Sz = self.scale.z
 
+func _ready() -> void:
+	var soundMan = SoundManGlobal
+	assert(soundMan)
+
 func _process(_delta: float) -> void:
 	if howToClean == 4:
 		if AnimState == 0:
@@ -80,10 +84,13 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		if howToClean == 0:
 			if body.inv.Items.size() <1:
 				pick_up(body)
+				SoundManGlobal.play(self, SoundManGlobal.pickUp)
 		elif howToClean == 1:
+			SoundManGlobal.play_random_laugh(self)
 			clean()
 		elif howToClean == 2:
 			if body.inv.Items.size() <1:
+				SoundManGlobal.play(self, SoundManGlobal.pickUp)
 				pick_up(body)
 		elif howToClean == 3:
 			pass

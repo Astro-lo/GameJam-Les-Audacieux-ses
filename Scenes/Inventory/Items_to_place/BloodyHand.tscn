@@ -55,7 +55,6 @@ _data = {
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
 script = ExtResource("2_lrgqt")
 howToClean = 4
-objectType = "Vault"
 animationPlayer = NodePath("AnimationPlayer")
 
 [node name="SM_BloodyHand" parent="BH" instance=ExtResource("2_w0jq1")]
