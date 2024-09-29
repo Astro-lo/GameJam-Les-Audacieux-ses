@@ -53,7 +53,9 @@ func _process(_delta: float) -> void:
 			direction = (cam_right * input.x - cam_up * input.z).normalized()
 		else:
 			direction = (-cam_right * input.z + cam_forward * input.x).normalized() 
-			
+	else:
+		velocity = Vector3()
+		direction = Vector3()
 	# Calcule le déplacement du joueur en fonction de la surface sur laquelle il se trouve
 	velocity = calculate_movement(direction)
 	if velocity.length_squared() < 1.:

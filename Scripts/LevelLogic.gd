@@ -1,7 +1,7 @@
 extends Node
 class_name LevelLogic
 
-@export var totalTimeSeconds := 130
+@export var totalTimeSeconds := 5
 @export var Animplayer : AnimationPlayer
 
 signal animNow
@@ -30,9 +30,10 @@ func _process(delta: float) -> void:
 	if gameStarted == true:
 		if timeRemaining > 0:
 			timeRemaining -= delta;
-		else:
+		elif gameEnded == false:
 			gameEnded = true
 			animNow.emit()
+			Animplayer.play("guyOpenDoor")
 			#fait le compte du score
 			
 	

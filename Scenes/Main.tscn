@@ -436,7 +436,8 @@ transform = Transform3D(0.385, 0, 0, 0, -1.68289e-08, 0.385, 0, -0.385, -1.68289
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0654, 2.78348, -7.20807)
 shape = SubResource("BoxShape3D_58ogr")
 
-[connection signal="animNow" from="LevelLogic" to="Player" method="_on_level_logic_anim_now"]
+[connection signal="animNow" from="LevelLogic" to="Cameras" method="_on_level_logic_anim_now"]
+[connection signal="visibility_changed" from="ItemSpots/MagnifierSpot" to="Cameras" method="_on_magnifier_spot_visibility_changed"]
 [connection signal="body_entered" from="LancerParLaFenetre" to="Player" method="_on_lancer_par_la_fenetre_body_entered"]
 
 [editable path="Cameras"]
