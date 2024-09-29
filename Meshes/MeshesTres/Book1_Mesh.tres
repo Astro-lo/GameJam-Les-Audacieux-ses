@@ -1,6 +1,6 @@
 [gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://uk7oivl2n303"]
 
-[ext_resource type="Material" uid="uid://dfnvnp0rlm5d4" path="res://Meshes/MeshesTres/Elements_Material.tres" id="1_4yqmg"]
+[ext_resource type="Material" uid="uid://chre7clw13dkt" path="res://painterlyProps.tres" id="1_eb7s2"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_0oi4e"]
 _surfaces = [{
@@ -24,7 +24,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
-"material": ExtResource("1_4yqmg"),
+"material": ExtResource("1_eb7s2"),
 "name": "Material.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
