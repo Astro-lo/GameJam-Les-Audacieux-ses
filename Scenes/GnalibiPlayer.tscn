@@ -8,7 +8,6 @@
 size = Vector3(1.5, 1.5, 1.5)
 
 [node name="GnalibiPlayer" type="RigidBody3D" node_paths=PackedStringArray("animplayer")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 gravity_scale = 0.0
 lock_rotation = true
 script = ExtResource("1_hcf5a")
@@ -16,11 +15,11 @@ speed = 5
 animplayer = NodePath("Gnalibi/AnimationPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, -2.71398e-15, 0.629667, 0.00160146)
 shape = SubResource("BoxShape3D_tp80m")
 
 [node name="Gnalibi" parent="." instance=ExtResource("2_sbmns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.880141, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104385, -0.0218582, 0.12716)
 
 [node name="Skeleton3D" parent="Gnalibi/Armature" index="0"]
 bones/0/position = Vector3(0, -0.100282, 0)
@@ -52,7 +51,7 @@ bones/19/rotation = Quaternion(0.737364, 0.00837828, 0.645302, -0.199522)
 bones/20/rotation = Quaternion(0.1207, -0.0309609, 0.0177076, 0.992048)
 
 [node name="shadowBlobs" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211677, -0.835262, -0.253545)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107292, 0.0230208, -0.126385)
 
 [node name="ground" type="Decal" parent="shadowBlobs"]
 size = Vector3(0.847805, 0.065155, 0.724598)
