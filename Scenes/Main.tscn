@@ -71,7 +71,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_0en8s"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_moxij"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -97,7 +97,7 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_8agua"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_0wt0y"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -214,7 +214,7 @@ unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
-mesh = SubResource("ArrayMesh_0en8s")
+mesh = SubResource("ArrayMesh_moxij")
 skeleton = NodePath("")
 
 [node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
@@ -281,12 +281,12 @@ level = NodePath("../../../LevelLogic")
 
 [node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
 transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_8agua")
+mesh = SubResource("ArrayMesh_0wt0y")
 skeleton = NodePath("../..")
 ObjectType = "Painting"
 
 [node name="Knife" parent="Items" instance=ExtResource("10_sawtw")]
-transform = Transform3D(-1.09278e-05, 1.09278e-05, -250, 250, 4.77669e-13, -1.09278e-05, 0, -250, -1.09278e-05, 0.454128, 0.1265, 4.8065)
+transform = Transform3D(-1.09278e-05, 1.09278e-05, -250, 250, 4.77669e-13, -1.09278e-05, 0, -250, -1.09278e-05, 0.929512, 0.1265, -5.85909)
 ObjectType = "Knife"
 
 [node name="Book1" parent="Items" instance=ExtResource("14_wmvq4")]
@@ -302,7 +302,7 @@ transform = Transform3D(-8.23212, 7.10543e-15, 99.6606, 99.6606, -4.37114e-06, 8
 ObjectType = "Book"
 
 [node name="Book4" parent="Items" instance=ExtResource("17_a4sqe")]
-transform = Transform3D(-8.23212, 75.8119, 64.69, 99.6606, 6.26217, 5.34349, 4.2582e-06, 64.9103, -76.0701, -0.964051, 0.038035, -5.88441)
+transform = Transform3D(-8.23212, 75.8119, 64.69, 99.6606, 6.26217, 5.34349, 4.2582e-06, 64.9103, -76.0701, 2.92889, 0.038035, 4.92837)
 ObjectType = "Book"
 
 [node name="Book5" parent="Items" instance=ExtResource("16_h2j3x")]
