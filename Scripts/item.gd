@@ -29,6 +29,11 @@ func pick_up(plr):
 	add_to_inv(plr)
 	showSpots()
 	var tween = create_tween()
+	
+	var Sx = self.scale.x
+	var Sy = self.scale.y
+	var Sz = self.scale.z
+	
 	tween.tween_property(self, "scale",Vector3(Sx*1.1, Sy*1.1, Sz*1.1),0.2).set_trans(Tween.TRANS_SINE)
 	tween.tween_property(self, "scale",Vector3(Sx*0.5, Sy*0.5, Sz*0.5),0.1).set_trans(Tween.TRANS_SINE)
 	await get_tree().create_timer(0.25).timeout

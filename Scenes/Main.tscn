@@ -312,7 +312,6 @@ ObjectType = "Painting"
 
 [node name="Knife" parent="Items" instance=ExtResource("10_sawtw")]
 transform = Transform3D(-1.09278e-05, 1.09278e-05, -250, 250, 4.77669e-13, -1.09278e-05, 0, -250, -1.09278e-05, 0.929512, 0.1265, -5.85909)
-howToClean = null
 ObjectType = "Knife"
 
 [node name="Book1" parent="Items" instance=ExtResource("14_wmvq4")]
@@ -362,10 +361,6 @@ ObjectType = "Pillow"
 
 [node name="BloodyHand" parent="Items" instance=ExtResource("35_c71os")]
 transform = Transform3D(0.613506, -0.112112, -0.200165, 0.117745, 0.64433, 3.72529e-09, 0.196904, -0.0359824, 0.623666, -1.09055, -0.4679, 3.54902)
-
-[node name="BH" parent="Items/BloodyHand" index="0"]
-pathToObject = null
-ObjectType = null
 
 [node name="CollisionShape3D" parent="Items/BloodyHand/BH/Area3D" index="0"]
 transform = Transform3D(0.945183, -1.49012e-08, 0.326542, -1.00816e-07, 1, 1.11759e-08, -0.326542, 0, 0.945183, 0.00711849, 0.00935818, 0.00716976)
