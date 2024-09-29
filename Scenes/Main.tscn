@@ -71,7 +71,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_t0x0e"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_mpp31"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -97,7 +97,7 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_gede6"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_cdslq"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -238,7 +238,7 @@ unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
-mesh = SubResource("ArrayMesh_t0x0e")
+mesh = SubResource("ArrayMesh_mpp31")
 skeleton = NodePath("")
 
 [node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
@@ -286,12 +286,12 @@ transform = Transform3D(75, 0, 0, 0, 6.70227, 74.6999, 0, -74.6999, 6.70227, -4.
 skeleton = NodePath("../../Items")
 
 [node name="Painting03Spot" parent="ItemSpots" instance=ExtResource("13_15ex5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.92157, 4.14452, 6.14434)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.68632, 3.78245, 5.9415)
 skeleton = NodePath("../Painting02Spot")
 surface_material_override/0 = null
 
 [node name="Painting02Spot" parent="ItemSpots" instance=ExtResource("13_48ska")]
-transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, -4.61332, 3.85993, 4.32923)
+transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, -4.61332, 3.44655, 3.73764)
 
 [node name="CandleSpot" parent="ItemSpots" instance=ExtResource("17_qdvqb")]
 transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, -1.96364, 1.90671, -7.26305)
@@ -312,7 +312,7 @@ level = NodePath("../../../LevelLogic")
 
 [node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
 transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_gede6")
+mesh = SubResource("ArrayMesh_cdslq")
 skeleton = NodePath("../..")
 ObjectType = "Painting"
 
