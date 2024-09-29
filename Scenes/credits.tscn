@@ -1,0 +1,95 @@
+[gd_scene load_steps=11 format=3 uid="uid://dajm631y4kue5"]
+
+[ext_resource type="Script" path="res://Scripts/creditsControl.gd" id="1_n5ujf"]
+[ext_resource type="Texture2D" uid="uid://bhm3djuyios8u" path="res://textures/baroque_wallpaper_2.png" id="1_sxk6m"]
+[ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="2_8oxty"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_usux5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qwojg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_454jg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04oon"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_grdwl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymhog"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p5k36"]
+
+[node name="credits" type="Node3D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_n5ujf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/CanvasLayer"]
+position = Vector2(593.5, 268.5)
+scale = Vector2(0.8975, 0.881714)
+texture = ExtResource("1_sxk6m")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -322.0
+offset_right = 577.0
+offset_bottom = 188.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextCreditsLabel" type="Label" parent="Control/CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.835294, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8oxty")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_usux5")
+text = "Astrolo
+Delenn
+Louve Hurlante
+Newin
+Loliane"
+horizontal_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="Control/CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -74.0
+offset_top = -208.0
+offset_right = 74.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GoBackButton" type="Button" parent="Control/CanvasLayer/MarginContainer3"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.835294, 0, 0, 1)
+theme_override_colors/font_color = Color(0.6, 0.6, 0, 1)
+theme_override_fonts/font = ExtResource("2_8oxty")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qwojg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_454jg")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_04oon")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_grdwl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ymhog")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p5k36")
+text = "Back
+"
