@@ -7,17 +7,24 @@ extends MeshInstance3D
 #Painting,Item,Livres etc...
 @export var objectType: String
 
+@export var animationPlayer : AnimationPlayer
+var AnimState = 0
+
 var Sx = self.scale.x
 var Sy = self.scale.y
 var Sz = self.scale.z
 
-#When the player walks over the item it will be put into the player's inventory
-func destroyed():
-	#c'est pour les tween et touuut
-	self.queue_free()
+func _process(_delta: float) -> void:
+	if howToClean == 4:
+		if AnimState == 0:
+			animationPlayer.play("Before")
+		elif AnimState == 1:
+			animationPlayer.play("Closed")
+
 func clean():
 	#rajouter score
-	destroyed()
+	self.queue_free()
+
 func pick_up(plr):
 	add_to_inv(plr)
 	showSpots()
@@ -27,6 +34,18 @@ func pick_up(plr):
 	tween.tween_property(self, "scale",Vector3(Sx*0.5, Sy*0.5, Sz*0.5),0.1).set_trans(Tween.TRANS_SINE)
 	await get_tree().create_timer(0.25).timeout
 	self.queue_free()
+
+func put_away():
+	if $Area3D.visible == true:
+		#rajouter score
+		animItem()
+		$Area3D.visible = false
+	
+func animItem():
+	AnimState = 2
+	animationPlayer.play("Move")
+	if not animationPlayer.is_playing():
+		AnimState = 1
 
 func add_to_inv(plr):
 	var theItemInTheInv = InvItem.new()
@@ -48,7 +67,7 @@ func showSpots():
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.get_class() == "RigidBody3D":
-		print("player entered")
+		
 		if howToClean == 0:
 			if body.inv.Items.size() <1:
 				pick_up(body)
@@ -59,3 +78,5 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 				pick_up(body)
 		elif howToClean == 3:
 			pass
+		elif howToClean == 4:
+			put_away()
