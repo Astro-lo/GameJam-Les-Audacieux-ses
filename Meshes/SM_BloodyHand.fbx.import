@@ -3,17 +3,12 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-<<<<<<< HEAD
-uid="uid://dybrvfukwcpme"
-=======
-uid="uid://cx7d4igamd5ye"
->>>>>>> caf6a20d1236035c38770694b813426a01bac135
-path="res://.godot/imported/SM_BloodyHand.fbx-60a91eeec073f94e897a42bc1579b5fc.scn"
+uid="uid://bg7wtrbf63658"
+valid=false
 
 [deps]
 
 source_file="res://Meshes/SM_BloodyHand.fbx"
-dest_files=["res://.godot/imported/SM_BloodyHand.fbx-60a91eeec073f94e897a42bc1579b5fc.scn"]
 
 [params]
 
@@ -36,6 +31,6 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-fbx/importer=0
+fbx/importer=1
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1
