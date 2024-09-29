@@ -76,7 +76,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_piy3y"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_uemot"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -102,7 +102,7 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_7ci2f"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_lghat"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -172,23 +172,25 @@ walls = [NodePath("../Collisions/Node/WallRightArea3D"), NodePath("../Collisions
 [node name="VisualScene" parent="." instance=ExtResource("4_b4wwx")]
 
 [node name="Skeleton3D" parent="VisualScene/mainRoom/Armature_001" index="0"]
-bones/0/position = Vector3(2.13923, 2.24501, -2.64777)
-bones/0/rotation = Quaternion(0.99975, 0.00558575, 0.00558564, 0.020919)
-bones/0/scale = Vector3(1, 1, 1)
+bones/0/position = Vector3(2.30388, 2.55225, -2.59089)
+bones/0/rotation = Quaternion(0.909378, -0.00349192, 0.415407, 0.0213684)
+bones/0/scale = Vector3(1.2, 1.2, 1.2)
 bones/1/rotation = Quaternion(-0.0258626, -0.0833589, 0.0796591, 0.992994)
-bones/2/rotation = Quaternion(-0.506757, -0.311117, -0.311117, 0.741357)
-bones/3/rotation = Quaternion(-0.443367, -0.203713, 0.0921622, 0.868005)
-bones/4/rotation = Quaternion(-0.276918, -0.230808, 0.328121, 0.873144)
-bones/5/rotation = Quaternion(-0.126894, -0.0497531, 0.0788819, 0.987522)
-bones/6/rotation = Quaternion(0.506757, 0.311117, 0.311117, 0.741356)
-bones/7/rotation = Quaternion(-0.767376, -0.113606, -0.113606, 0.620743)
-bones/9/rotation = Quaternion(0.140358, -0.330255, 0.412755, 0.837176)
-bones/10/rotation = Quaternion(-0.181819, 0.673862, 0.673862, 0.242407)
-bones/10/scale = Vector3(1, 1, 1)
-bones/11/rotation = Quaternion(0.232672, -0.634686, 0.731604, -0.0882811)
-bones/12/rotation = Quaternion(-0.141994, -0.066508, 0.0498448, 0.986372)
-bones/14/rotation = Quaternion(0.00618462, 0.172412, 0.247433, 0.953422)
-bones/16/rotation = Quaternion(0.14729, 0.661383, 0.703102, -0.215698)
+bones/2/position = Vector3(2.07455, 2.35847, -2.53844)
+bones/2/rotation = Quaternion(-0.433109, -0.455037, -0.407447, 0.662831)
+bones/3/rotation = Quaternion(-0.311355, -0.253653, 0.634321, 0.660572)
+bones/4/rotation = Quaternion(-0.198421, -0.221644, 0.378851, 0.876342)
+bones/5/rotation = Quaternion(-0.222722, 0.0121426, -0.127646, 0.966413)
+bones/6/rotation = Quaternion(0.44545, 0.434411, 0.393917, 0.676529)
+bones/7/rotation = Quaternion(-0.775737, -0.0230367, -0.00192171, 0.630632)
+bones/9/rotation = Quaternion(0.303725, -0.135752, 0.30548, 0.892191)
+bones/10/rotation = Quaternion(-0.5576, 0.256029, 0.604311, 0.508272)
+bones/10/scale = Vector3(0.825914, 0.825914, 0.825914)
+bones/11/rotation = Quaternion(0.329572, -0.779374, 0.349607, -0.402162)
+bones/12/rotation = Quaternion(0.0741149, -0.170147, 0.153007, 0.970642)
+bones/14/rotation = Quaternion(0.057447, 0.357865, 0.314295, 0.877412)
+bones/15/rotation = Quaternion(0, -0.000886381, 0, 1)
+bones/16/rotation = Quaternion(0.127013, 0.667446, 0.692806, -0.241665)
 
 [node name="Collisions" parent="." instance=ExtResource("5_2qmqt")]
 
@@ -258,7 +260,7 @@ unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
-mesh = SubResource("ArrayMesh_piy3y")
+mesh = SubResource("ArrayMesh_uemot")
 skeleton = NodePath("")
 
 [node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
@@ -330,7 +332,7 @@ level = NodePath("../../../LevelLogic")
 
 [node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
 transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_7ci2f")
+mesh = SubResource("ArrayMesh_lghat")
 skeleton = NodePath("../..")
 ObjectType = "Painting"
 
