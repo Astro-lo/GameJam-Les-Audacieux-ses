@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://batb7vk2do8kj"]
 
-[ext_resource type="ArrayMesh" uid="uid://usinx3kuvfkp" path="res://Meshes/MeshesTres/Bottle1_Mesh.tres" id="1_70fbc"]
+[ext_resource type="ArrayMesh" uid="uid://l7fl5y6xss1h" path="res://Meshes/MeshesTres/Bottle1_Mesh.tres" id="1_70fbc"]
 [ext_resource type="Script" path="res://Scripts/item_spot.gd" id="2_d6emc"]
 [ext_resource type="Material" uid="uid://c2lqvej5qt5ry" path="res://Scenes/Inventory/Item_spots/spot_Material_new.tres" id="2_d8q7i"]
 

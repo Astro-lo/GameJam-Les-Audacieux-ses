@@ -9,32 +9,32 @@
 [ext_resource type="Script" path="res://Scripts/LevelLogic.gd" id="5_fyvlw"]
 [ext_resource type="PackedScene" uid="uid://bxq43uo3ajn3p" path="res://Scenes/Inventory/Item_spots/Painting01_spot.tscn" id="8_lqsvn"]
 [ext_resource type="PackedScene" uid="uid://by8ubact61157" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Pillow_spot.tscn" id="10_dvyls"]
+[ext_resource type="PackedScene" uid="uid://c06os01m0jbu4" path="res://Scenes/Inventory/Item_spots/Pillow_spot.tscn" id="10_dvyls"]
 [ext_resource type="PackedScene" uid="uid://cgsd3sxo0fmgj" path="res://Scenes/Inventory/Items_to_place/Knife.tscn" id="10_sawtw"]
 [ext_resource type="PackedScene" uid="uid://b3gyjw8lfobj5" path="res://Scenes/Hud.tscn" id="11_t2oe3"]
 [ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="12_3qwve"]
-[ext_resource type="PackedScene" uid="uid://ckx104k82dsyl" path="res://Scenes/Inventory/Item_placed/Painting02_placed.tscn" id="12_tnlit"]
 [ext_resource type="PackedScene" uid="uid://da4sq2egbhe4r" path="res://Scenes/Inventory/Item_spots/Painting03_spot.tscn" id="13_15ex5"]
 [ext_resource type="PackedScene" uid="uid://djxqetlagf5dp" path="res://Scenes/Inventory/Item_spots/Painting02_spot.tscn" id="13_48ska"]
 [ext_resource type="PackedScene" uid="uid://di71l8xefs5gg" path="res://Scenes/Inventory/Item_spots/Books_spot.tscn" id="13_cx0g4"]
 [ext_resource type="PackedScene" uid="uid://glyvkbi68252" path="res://Scenes/Inventory/Items_to_place/Book1.tscn" id="14_wmvq4"]
-[ext_resource type="PackedScene" uid="uid://brwvko6m7e45o" path="res://Scenes/Inventory/Item_placed/Painting03_placed.tscn" id="15_j5l1y"]
 [ext_resource type="PackedScene" uid="uid://i6rvnwdiioom" path="res://Scenes/Inventory/Items_to_place/Book2.tscn" id="15_rh1l6"]
 [ext_resource type="PackedScene" uid="uid://dekiu2bkjykoh" path="res://Scenes/Inventory/Items_to_place/Book3.tscn" id="16_h2j3x"]
 [ext_resource type="PackedScene" uid="uid://b8t56y2nos1fu" path="res://Scenes/Inventory/Items_to_place/Book4.tscn" id="17_a4sqe"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Candle_spot.tscn" id="17_qdvqb"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle1.tscn" id="18_qntls"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Magnifier_spot.tscn" id="19_nqabd"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle2.tscn" id="19_pxrk7"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle3.tscn" id="20_5brma"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle4.tscn" id="21_g0upo"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle5.tscn" id="22_xvt32"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Bottle_spot.tscn" id="23_a56hu"]
+[ext_resource type="PackedScene" uid="uid://dflgsg2tjnvfo" path="res://Scenes/Inventory/Item_spots/Candle_spot.tscn" id="17_qdvqb"]
+[ext_resource type="PackedScene" uid="uid://b25i6wxim35fc" path="res://Scenes/Inventory/Items_to_place/Bottle1.tscn" id="18_qntls"]
+[ext_resource type="PackedScene" uid="uid://balr66rylucm3" path="res://Scenes/Inventory/Item_spots/Magnifier_spot.tscn" id="19_nqabd"]
+[ext_resource type="PackedScene" uid="uid://cnvw3fkui6bl4" path="res://Scenes/Inventory/Items_to_place/Bottle2.tscn" id="19_pxrk7"]
+[ext_resource type="PackedScene" uid="uid://c6s4d5wccytop" path="res://Scenes/Inventory/Items_to_place/Bottle3.tscn" id="20_5brma"]
+[ext_resource type="PackedScene" uid="uid://coey255rin5fx" path="res://Scenes/Inventory/Items_to_place/Bottle4.tscn" id="21_g0upo"]
+[ext_resource type="PackedScene" uid="uid://cythgoegber00" path="res://Scenes/Inventory/Items_to_place/Bottle5.tscn" id="22_xvt32"]
+[ext_resource type="PackedScene" uid="uid://batb7vk2do8kj" path="res://Scenes/Inventory/Item_spots/Bottle_spot.tscn" id="23_a56hu"]
+[ext_resource type="PackedScene" uid="uid://p3p5ngtj477r" path="res://Scenes/Inventory/Items_to_place/Painting03.tscn" id="31_53kgm"]
+[ext_resource type="PackedScene" uid="uid://dkbcnxkb4jeyd" path="res://Scenes/Inventory/Items_to_place/Painting02.tscn" id="32_2gima"]
 [ext_resource type="PackedScene" uid="uid://c7c6wl4rj6keu" path="res://Scenes/Inventory/Items_to_place/Vault.tscn" id="32_6n13n"]
 [ext_resource type="PackedScene" uid="uid://do2p43n2b2l8u" path="res://Scenes/Inventory/Items_to_place/Pillow.tscn" id="32_pi7wl"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Candle.tscn" id="33_4q6gf"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Magnifier.tscn" id="33_l8fqn"]
-[ext_resource type="PackedScene" uid="uid://vnrp0os0cm00" path="res://Scenes/Inventory/Items_to_place/BloodyHand.tscn" id="35_c71os"]
+[ext_resource type="PackedScene" uid="uid://cv3b35wfp5tkv" path="res://Scenes/Inventory/Items_to_place/Candle.tscn" id="33_4q6gf"]
+[ext_resource type="PackedScene" uid="uid://bhqmhhi1303nr" path="res://Scenes/Inventory/Items_to_place/Magnifier.tscn" id="33_l8fqn"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/BloodyHand.tscn" id="35_c71os"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
 size = Vector3(14, 7, 8.11)
@@ -71,7 +71,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_7bruk"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_0en8s"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -97,7 +97,7 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ttxgj"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_8agua"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -214,7 +214,7 @@ unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
-mesh = SubResource("ArrayMesh_7bruk")
+mesh = SubResource("ArrayMesh_0en8s")
 skeleton = NodePath("")
 
 [node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
@@ -281,59 +281,82 @@ level = NodePath("../../../LevelLogic")
 
 [node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
 transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_ttxgj")
+mesh = SubResource("ArrayMesh_8agua")
 skeleton = NodePath("../..")
-
-[node name="Painting03" parent="Items" instance=ExtResource("15_j5l1y")]
-transform = Transform3D(0.0130547, -0.994602, 0.10294, 0.999915, 0.0129853, -0.00134396, 0, 0.102949, 0.994687, -0.734934, 0.038035, -1.48371)
-skeleton = NodePath("../../ItemSpots")
-
-[node name="Painting02" parent="Items" instance=ExtResource("12_tnlit")]
-transform = Transform3D(0.0222737, 0.643249, -0.203371, -0.674632, 0.0212376, -0.00671452, 0, 0.203482, 0.643599, -2.2913, 0.0147007, 1.30101)
-skeleton = NodePath("../../ItemSpots")
+ObjectType = "Painting"
 
 [node name="Knife" parent="Items" instance=ExtResource("10_sawtw")]
 transform = Transform3D(-1.09278e-05, 1.09278e-05, -250, 250, 4.77669e-13, -1.09278e-05, 0, -250, -1.09278e-05, 0.454128, 0.1265, 4.8065)
+ObjectType = "Knife"
 
 [node name="Book1" parent="Items" instance=ExtResource("14_wmvq4")]
 transform = Transform3D(-8.23212, -56.2877, 82.2431, 99.6606, -4.64946, 6.7934, 4.0718e-06, 82.5232, 56.4794, -2.41682, 0.038035, -0.6323)
+ObjectType = "Book"
 
 [node name="Book2" parent="Items" instance=ExtResource("15_rh1l6")]
 transform = Transform3D(-8.23212, 67.0188, 73.7612, 99.6606, 5.53585, 6.09279, 4.65472e-06, 74.0124, -67.247, 1.4776, 0.038035, -1.44022)
+ObjectType = "Book"
 
 [node name="Book3" parent="Items" instance=ExtResource("16_h2j3x")]
 transform = Transform3D(-8.23212, 7.10543e-15, 99.6606, 99.6606, -4.37114e-06, 8.23212, 4.3563e-06, 100, 3.59838e-07, -0.291781, 0.038035, -3.30512)
+ObjectType = "Book"
 
 [node name="Book4" parent="Items" instance=ExtResource("17_a4sqe")]
 transform = Transform3D(-8.23212, 75.8119, 64.69, 99.6606, 6.26217, 5.34349, 4.2582e-06, 64.9103, -76.0701, -0.964051, 0.038035, -5.88441)
+ObjectType = "Book"
 
 [node name="Book5" parent="Items" instance=ExtResource("16_h2j3x")]
 transform = Transform3D(-8.23212, -21.4142, 97.3328, 99.6606, -1.76885, 8.03983, 4.13025e-06, 97.6642, 21.4872, -2.49968, 0.038035, -2.2656)
+ObjectType = "Book"
 
 [node name="Bottle1" parent="Items" instance=ExtResource("18_qntls")]
 transform = Transform3D(76.44, 0, 0, 0, 1.17933, 76.4309, 0, -76.4309, 1.17933, 0.290576, 0.275896, -0.810036)
+ObjectType = "Bottle"
 
 [node name="Bottle2" parent="Items" instance=ExtResource("19_pxrk7")]
 transform = Transform3D(76.44, 0, 0, 0, 76.44, 0, 0, 0, 76.44, -0.240204, 0.038035, -6.45191)
+ObjectType = "Bottle"
 
 [node name="Bottle3" parent="Items" instance=ExtResource("20_5brma")]
 transform = Transform3D(56.0673, 0, 51.9571, 0, 76.44, 0, -51.9571, 0, 56.0673, -0.530544, 0.038035, 6.47715)
+ObjectType = "Bottle"
 
 [node name="Bottle4" parent="Items" instance=ExtResource("21_g0upo")]
 transform = Transform3D(-15.7074, 0, -74.8088, 0, 76.44, 0, 74.8088, 0, -15.7074, 2.13557, 0.038035, 3.79854)
+ObjectType = "Bottle"
 
 [node name="Bottle5" parent="Items" instance=ExtResource("22_xvt32")]
 transform = Transform3D(76.44, 0, 0, 0, 76.44, 0, 0, 0, 76.44, -3.48545, 0.038035, -3.41379)
+ObjectType = "Bottle"
 
 [node name="Pillow" parent="Items" instance=ExtResource("32_pi7wl")]
 transform = Transform3D(59.1586, -13.9494, -42.21, 42.2699, -4.10794, 60.6002, -13.7666, -72.5571, 4.68405, -0.85719, 0.42257, 3.36494)
 skeleton = NodePath("")
+ObjectType = "Pillow"
 
 [node name="BloodyHand" parent="Items" instance=ExtResource("35_c71os")]
 transform = Transform3D(0.613506, -0.112112, -0.200165, 0.117745, 0.64433, 3.72529e-09, 0.196904, -0.0359824, 0.623666, -1.09055, -0.4679, 3.54902)
 
 [node name="CollisionShape3D" parent="Items/BloodyHand/BH/Area3D" index="0"]
 transform = Transform3D(0.945183, -1.49012e-08, 0.326542, -1.00816e-07, 1, 1.11759e-08, -0.326542, 0, 0.945183, 0.00711849, 0.00935818, 0.00716976)
+
+[node name="Painting03" parent="Items" instance=ExtResource("31_53kgm")]
+transform = Transform3D(0.0123317, -0.994626, 0.102792, 0.999924, 0.012217, -0.00174533, 0.000480131, 0.102806, 0.994701, -0.735, 0.038, -1.484)
+ObjectType = "Painting"
+
+[node name="Painting02" parent="Items" instance=ExtResource("32_2gima")]
+transform = Transform3D(0.0223454, 0.643375, -0.202965, -0.67463, 0.0212011, -0.00706845, -0.000362341, 0.203088, 0.643724, -2.291, 0.015, 1.301)
+ObjectType = "Painting"
+
+[node name="Candle" parent="Items" instance=ExtResource("33_4q6gf")]
+transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, -3.07192, 0.038035, -5.85654)
+skeleton = NodePath("../..")
+ObjectType = "Candle"
+
+[node name="Magnifier" parent="Items" instance=ExtResource("33_l8fqn")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 16.2, -2.18712, 0.038035, -4.8275)
+skeleton = NodePath("../..")
+ObjectType = "Magnifier"
 
 [node name="Vault" parent="." instance=ExtResource("32_6n13n")]
 transform = Transform3D(0.385, 0, 0, 0, -1.68289e-08, 0.385, 0, -0.385, -1.68289e-08, -3.97203, -0.0565786, -1.63212)
@@ -343,12 +366,6 @@ transform = Transform3D(0.385, 0, 0, 0, -1.68289e-08, 0.385, 0, -0.385, -1.68289
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LancerParLaFenetre"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0654, 2.78348, -7.20807)
 shape = SubResource("BoxShape3D_58ogr")
-
-[node name="Candle" parent="." instance=ExtResource("33_4q6gf")]
-transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, -3.07192, 0.038035, -5.85654)
-
-[node name="Magnifier" parent="." instance=ExtResource("33_l8fqn")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 16.2, -2.18712, 0.038035, -4.8275)
 
 [connection signal="body_entered" from="LancerParLaFenetre" to="Player" method="_on_lancer_par_la_fenetre_body_entered"]
 
