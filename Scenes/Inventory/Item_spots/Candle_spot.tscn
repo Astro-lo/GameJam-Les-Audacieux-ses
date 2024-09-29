@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dflgsg2tjnvfo"]
 
 [ext_resource type="ArrayMesh" uid="uid://cn3maqw64nfsm" path="res://Meshes/MeshesTres/Candle_Mesh.tres" id="1_klftu"]
-[ext_resource type="Script" path="res://Scripts/item_spot.gd" id="2_2g5vb"]
+[ext_resource type="Script" path="res://scripts/item_spot.gd" id="2_2g5vb"]
 [ext_resource type="Material" uid="uid://c2lqvej5qt5ry" path="res://Scenes/Inventory/Item_spots/spot_Material_new.tres" id="2_e0qls"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sj5es"]

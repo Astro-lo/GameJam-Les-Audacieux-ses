@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cesti054pd1oa"]
 
 [ext_resource type="ArrayMesh" uid="uid://dg0jshadvcmsj" path="res://Meshes/MeshesTres/Magnifier_Mesh.tres" id="1_mv8b4"]
-[ext_resource type="Script" path="res://Scripts/item_placed.gd" id="3_aj7x1"]
+[ext_resource type="Script" path="res://scripts/item_placed.gd" id="3_aj7x1"]
 
 [node name="Magnifier_placed" type="MeshInstance3D"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 16.2, 0, 0, 0)

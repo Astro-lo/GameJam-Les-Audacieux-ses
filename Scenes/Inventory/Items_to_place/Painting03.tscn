@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://cdi4arbow6n1c" path="res://Meshes/MeshesTres/Painting03_Mesh.tres" id="1_o8ul2"]
 [ext_resource type="Texture2D" uid="uid://cm1m0ptvncis5" path="res://Textures/T_Paintings.png" id="2_3vhcy"]
-[ext_resource type="Script" path="res://Scripts/item.gd" id="3_2aall"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="3_2aall"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5nxo8"]
 resource_name = "Material.001"

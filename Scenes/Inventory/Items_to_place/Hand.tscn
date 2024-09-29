@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=4 uid="uid://g24n7x6j1bhu"]
 
 [ext_resource type="ArrayMesh" uid="uid://bandkd5uhxwuq" path="res://Meshes/MeshesTres/Vault_Mesh.tres" id="1_a2ags"]
-[ext_resource type="Script" path="res://Scripts/item.gd" id="2_i2yyr"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="2_i2yyr"]
 [ext_resource type="ArrayMesh" uid="uid://crleaddj05omi" path="res://Meshes/MeshesTres/VaultDoor_Mesh.tres" id="3_3ac3r"]
 [ext_resource type="Animation" uid="uid://c44h1xgnsp8yh" path="res://Animation/Vault_before.res" id="4_s6atq"]
 [ext_resource type="Animation" uid="uid://djdulu3a2xb54" path="res://Animation/Vault_Closed.res" id="5_clio2"]

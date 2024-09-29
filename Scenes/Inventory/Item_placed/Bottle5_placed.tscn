@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d10dbx4coskpg"]
 
 [ext_resource type="ArrayMesh" uid="uid://b3hsga7dm1ips" path="res://Meshes/MeshesTres/Bottle5_Mesh.tres" id="1_5xe4i"]
-[ext_resource type="Script" path="res://Scripts/item_placed.gd" id="2_8oo6i"]
+[ext_resource type="Script" path="res://scripts/item_placed.gd" id="2_8oo6i"]
 
 [node name="bottle5_placed" type="MeshInstance3D"]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)

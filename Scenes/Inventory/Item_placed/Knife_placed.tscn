@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bh37cxmft778y"]
 
 [ext_resource type="ArrayMesh" uid="uid://y8c1v4culn23" path="res://Meshes/MeshesTres/Knife_Mesh.tres" id="1_cab8b"]
-[ext_resource type="Script" path="res://Scripts/item_placed.gd" id="3_2rone"]
+[ext_resource type="Script" path="res://scripts/item_placed.gd" id="3_2rone"]
 
 [node name="Knife_placed" type="MeshInstance3D"]
 transform = Transform3D(200, 0, 0, 0, -200, 1.74846e-05, 0, -1.74846e-05, -200, 0, 0, 0)

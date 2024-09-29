@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://crmm0dgi3ytxs"]
 
 [ext_resource type="Texture2D" uid="uid://dfk6i00l7v36c" path="res://sourceData/puddle.png" id="1_xn8p8"]
-[ext_resource type="Script" path="res://Scripts/item.gd" id="2_npnvt"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="2_npnvt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3gwks"]
 size = Vector3(2.62122, 2.52441, 1.28333)

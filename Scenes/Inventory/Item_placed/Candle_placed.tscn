@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bto0ep4t16xsg"]
 
 [ext_resource type="ArrayMesh" uid="uid://cn3maqw64nfsm" path="res://Meshes/MeshesTres/Candle_Mesh.tres" id="1_syu7r"]
-[ext_resource type="Script" path="res://Scripts/item_placed.gd" id="2_djue4"]
+[ext_resource type="Script" path="res://scripts/item_placed.gd" id="2_djue4"]
 
 [node name="Candle_placed" type="MeshInstance3D"]
 transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, 0, 0, 0)

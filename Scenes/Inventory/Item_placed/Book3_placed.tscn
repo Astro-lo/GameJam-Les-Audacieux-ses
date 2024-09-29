@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://4qpt8h10m5u4"]
 
 [ext_resource type="ArrayMesh" uid="uid://dld8v4c6dryjw" path="res://Meshes/MeshesTres/Book3_Mesh.tres" id="1_qf8a8"]
-[ext_resource type="Script" path="res://Scripts/item_placed.gd" id="2_xvcjr"]
+[ext_resource type="Script" path="res://scripts/item_placed.gd" id="2_xvcjr"]
 
 [node name="item_placed" type="MeshInstance3D"]
 transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, 0, 0, 0)

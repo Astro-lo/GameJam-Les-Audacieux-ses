@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cythgoegber00"]
 
 [ext_resource type="ArrayMesh" uid="uid://b3hsga7dm1ips" path="res://Meshes/MeshesTres/Bottle5_Mesh.tres" id="1_od77y"]
-[ext_resource type="Script" path="res://Scripts/item.gd" id="2_1h0g0"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="2_1h0g0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kpmcs"]
 size = Vector3(0.00756836, 0.00756836, 0.0158691)
