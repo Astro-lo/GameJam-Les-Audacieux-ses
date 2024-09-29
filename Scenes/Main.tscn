@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://d1exo1njgamaf"]
+[gd_scene load_steps=22 format=4 uid="uid://d1exo1njgamaf"]
 
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
 [ext_resource type="Script" path="res://Scripts/CameraMan.gd" id="2_52ic4"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://by8ubact61157" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
 [ext_resource type="PackedScene" uid="uid://cgsd3sxo0fmgj" path="res://Scenes/Inventory/Items_to_place/Knife.tscn" id="10_sawtw"]
 [ext_resource type="PackedScene" uid="uid://b3gyjw8lfobj5" path="res://Scenes/Hud.tscn" id="11_t2oe3"]
+[ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="12_3qwve"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
 size = Vector3(14, 7, 8.11)
@@ -76,6 +77,14 @@ shadow_mesh = SubResource("ArrayMesh_gpco7")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_58ogr"]
 size = Vector3(3.98749, 6.56696, 2.0683)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hhpv6"]
+font = ExtResource("12_3qwve")
+font_size = 39
+font_color = Color(0.835294, 0, 0, 1)
+outline_color = Color(1, 1, 1, 0)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node3D"]
 
@@ -157,6 +166,8 @@ skeleton = NodePath("")
 [node name="Hud" parent="." instance=ExtResource("11_t2oe3")]
 
 [node name="Label" parent="Hud/CanvasLayer" index="0" node_paths=PackedStringArray("level")]
+theme_override_fonts/font = ExtResource("12_3qwve")
+label_settings = SubResource("LabelSettings_hhpv6")
 level = NodePath("../../../LevelLogic")
 
 [node name="Items" type="Node" parent="."]

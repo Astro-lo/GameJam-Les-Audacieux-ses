@@ -10,22 +10,55 @@ light_color = Color(0.266667, 0.376471, 0.137255, 1)
 light_energy = 0.0
 
 [node name="FirePlace" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.89556, 0.706602, 0.332907)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.03585, 0.706602, 0.15843)
 light_color = Color(1, 0.556863, 0.2, 1)
 light_energy = 12.083
 shadow_enabled = true
-omni_range = 4.04609
+shadow_bias = 0.188
+shadow_opacity = 0.84
+shadow_blur = 10.0
+omni_range = 12.5211
 
 [node name="Candle00" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.41098, 3.92249, -7.09201)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.41379, 4.36273, -7.09201)
 light_color = Color(1, 0.556863, 0.2, 1)
-light_energy = 12.083
-omni_range = 2.21109
+light_energy = 3.522
+shadow_enabled = true
+shadow_opacity = 0.49
+omni_range = 7.71616
 
 [node name="Candle01" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.03351, 4.46079, -6.94019)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71489, 4.53226, -7.08445)
 light_color = Color(1, 0.556863, 0.2, 1)
-light_energy = 12.083
-omni_range = 2.1538
+light_energy = 1.416
+shadow_enabled = true
+shadow_bias = 0.0
+shadow_opacity = 0.63
+shadow_blur = 6.667
+omni_range = 5.94882
 
 [node name="mainRoom" parent="." instance=ExtResource("5_k453v")]
+
+[node name="chandelier01" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29716, 6.63056, -3.39401)
+light_color = Color(1, 0.979, 0.82, 1)
+light_energy = 6.977
+light_size = 1.0
+shadow_enabled = true
+omni_range = 9.00269
+
+[node name="chandelier02" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.80983, 6.63056, 4.28095)
+light_color = Color(1, 0.979, 0.82, 1)
+light_energy = 6.977
+light_size = 1.0
+shadow_enabled = true
+omni_range = 9.00269
+
+[node name="Candle02" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.32058, 5.28791, 7.10128)
+light_color = Color(1, 0.556863, 0.2, 1)
+light_energy = 3.522
+shadow_enabled = true
+shadow_opacity = 0.49
+omni_range = 7.71616

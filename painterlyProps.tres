@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://chre7clw13dkt"]
+
+[ext_resource type="Shader" path="res://kuwaharaPaint.gdshader" id="1_dbw2i"]
+[ext_resource type="Texture2D" uid="uid://b3ifgktch5dap" path="res://textures/T_Props.png" id="2_3g8ua"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_dbw2i")
+shader_parameter/radius = 5
+shader_parameter/offset = Vector3(0, 0, 0)
+shader_parameter/diffuseTexture = ExtResource("2_3g8ua")
