@@ -53,4 +53,6 @@ func entered_area_right(_node: Node3D) ->void:
 	_swapRoom(chimney, true)
 	_swapRoom(frontBox, true)
 	_swapRoom(ground, true, false)
-	
+
+func _on_level_logic_anim_now() -> void:
+	cameraLeft.make_current()
