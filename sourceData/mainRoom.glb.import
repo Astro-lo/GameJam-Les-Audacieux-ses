@@ -41,9 +41,9 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://environmentMaterialRight.tres"
 },
-"screen": {
+"guyMat": {
 "use_external/enabled": true,
-"use_external/path": "res://environmentMaterialScreen.tres"
+"use_external/path": "res://blacksilouette.tres"
 },
 "shared": {
 "use_external/enabled": true,
