@@ -22,16 +22,18 @@
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_n5ujf")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Control"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Control/CanvasLayer"]
-position = Vector2(593.5, 268.5)
-scale = Vector2(0.8975, 0.881714)
+position = Vector2(732.5, 268.5)
+scale = Vector2(1.0365, 0.881714)
 texture = ExtResource("1_sxk6m")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/CanvasLayer"]

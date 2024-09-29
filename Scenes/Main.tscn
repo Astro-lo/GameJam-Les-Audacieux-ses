@@ -8,27 +8,27 @@
 [ext_resource type="PackedScene" uid="uid://cprsl7dsv6aho" path="res://Scenes/Collisions.tscn" id="5_2qmqt"]
 [ext_resource type="Script" path="res://Scripts/LevelLogic.gd" id="5_fyvlw"]
 [ext_resource type="PackedScene" uid="uid://bxq43uo3ajn3p" path="res://Scenes/Inventory/Item_spots/Painting01_spot.tscn" id="8_lqsvn"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
-[ext_resource type="PackedScene" uid="uid://c06os01m0jbu4" path="res://Scenes/Inventory/Item_spots/Pillow_spot.tscn" id="10_dvyls"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Knife.tscn" id="10_sawtw"]
+[ext_resource type="PackedScene" uid="uid://by8ubact61157" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Pillow_spot.tscn" id="10_dvyls"]
+[ext_resource type="PackedScene" uid="uid://cgsd3sxo0fmgj" path="res://Scenes/Inventory/Items_to_place/Knife.tscn" id="10_sawtw"]
 [ext_resource type="PackedScene" uid="uid://b3gyjw8lfobj5" path="res://Scenes/Hud.tscn" id="11_t2oe3"]
 [ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="12_3qwve"]
 [ext_resource type="PackedScene" uid="uid://ckx104k82dsyl" path="res://Scenes/Inventory/Item_placed/Painting02_placed.tscn" id="12_tnlit"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Painting03_spot.tscn" id="13_15ex5"]
+[ext_resource type="PackedScene" uid="uid://da4sq2egbhe4r" path="res://Scenes/Inventory/Item_spots/Painting03_spot.tscn" id="13_15ex5"]
 [ext_resource type="PackedScene" uid="uid://djxqetlagf5dp" path="res://Scenes/Inventory/Item_spots/Painting02_spot.tscn" id="13_48ska"]
 [ext_resource type="PackedScene" uid="uid://di71l8xefs5gg" path="res://Scenes/Inventory/Item_spots/Books_spot.tscn" id="13_cx0g4"]
 [ext_resource type="PackedScene" uid="uid://glyvkbi68252" path="res://Scenes/Inventory/Items_to_place/Book1.tscn" id="14_wmvq4"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_placed/Painting03_placed.tscn" id="15_j5l1y"]
+[ext_resource type="PackedScene" uid="uid://brwvko6m7e45o" path="res://Scenes/Inventory/Item_placed/Painting03_placed.tscn" id="15_j5l1y"]
 [ext_resource type="PackedScene" uid="uid://i6rvnwdiioom" path="res://Scenes/Inventory/Items_to_place/Book2.tscn" id="15_rh1l6"]
 [ext_resource type="PackedScene" uid="uid://dekiu2bkjykoh" path="res://Scenes/Inventory/Items_to_place/Book3.tscn" id="16_h2j3x"]
 [ext_resource type="PackedScene" uid="uid://b8t56y2nos1fu" path="res://Scenes/Inventory/Items_to_place/Book4.tscn" id="17_a4sqe"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle1.tscn" id="18_qntls"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle2.tscn" id="19_pxrk7"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle3.tscn" id="20_5brma"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle4.tscn" id="21_g0upo"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle5.tscn" id="22_xvt32"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Bottle_spot.tscn" id="23_a56hu"]
-[ext_resource type="PackedScene" uid="uid://tuugmxl08kc0" path="res://Scenes/Inventory/Item_placed/Pillow_placed.tscn" id="24_sx74o"]
+[ext_resource type="PackedScene" uid="uid://b25i6wxim35fc" path="res://Scenes/Inventory/Items_to_place/Bottle1.tscn" id="18_qntls"]
+[ext_resource type="PackedScene" uid="uid://cnvw3fkui6bl4" path="res://Scenes/Inventory/Items_to_place/Bottle2.tscn" id="19_pxrk7"]
+[ext_resource type="PackedScene" uid="uid://c6s4d5wccytop" path="res://Scenes/Inventory/Items_to_place/Bottle3.tscn" id="20_5brma"]
+[ext_resource type="PackedScene" uid="uid://coey255rin5fx" path="res://Scenes/Inventory/Items_to_place/Bottle4.tscn" id="21_g0upo"]
+[ext_resource type="PackedScene" uid="uid://cythgoegber00" path="res://Scenes/Inventory/Items_to_place/Bottle5.tscn" id="22_xvt32"]
+[ext_resource type="PackedScene" uid="uid://batb7vk2do8kj" path="res://Scenes/Inventory/Item_spots/Bottle_spot.tscn" id="23_a56hu"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_placed/Pillow_placed.tscn" id="24_sx74o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
 size = Vector3(14, 7, 8.11)
@@ -56,7 +56,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wi7pr"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_j6afa"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -82,7 +82,7 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_n1khl"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jxhuw"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -177,7 +177,7 @@ unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
-mesh = SubResource("ArrayMesh_wi7pr")
+mesh = SubResource("ArrayMesh_j6afa")
 skeleton = NodePath("")
 
 [node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
@@ -244,7 +244,7 @@ level = NodePath("../../../LevelLogic")
 
 [node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
 transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_n1khl")
+mesh = SubResource("ArrayMesh_jxhuw")
 skeleton = NodePath("../..")
 
 [node name="Knife" parent="Items" instance=ExtResource("10_sawtw")]
