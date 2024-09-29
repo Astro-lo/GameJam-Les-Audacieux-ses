@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://Scripts/LevelLogic.gd" id="5_fyvlw"]
 [ext_resource type="PackedScene" uid="uid://bxq43uo3ajn3p" path="res://Scenes/Inventory/Item_spots/Painting01_spot.tscn" id="8_lqsvn"]
 [ext_resource type="PackedScene" uid="uid://by8ubact61157" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
-[ext_resource type="PackedScene" uid="uid://c06os01m0jbu4" path="res://Scenes/Inventory/Item_spots/Pillow_spot.tscn" id="10_dvyls"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Pillow_spot.tscn" id="10_dvyls"]
 [ext_resource type="PackedScene" uid="uid://cgsd3sxo0fmgj" path="res://Scenes/Inventory/Items_to_place/Knife.tscn" id="10_sawtw"]
 [ext_resource type="PackedScene" uid="uid://b3gyjw8lfobj5" path="res://Scenes/Hud.tscn" id="11_t2oe3"]
 [ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="12_3qwve"]
@@ -30,11 +30,11 @@
 [ext_resource type="PackedScene" uid="uid://batb7vk2do8kj" path="res://Scenes/Inventory/Item_spots/Bottle_spot.tscn" id="23_a56hu"]
 [ext_resource type="PackedScene" uid="uid://p3p5ngtj477r" path="res://Scenes/Inventory/Items_to_place/Painting03.tscn" id="31_53kgm"]
 [ext_resource type="PackedScene" uid="uid://dkbcnxkb4jeyd" path="res://Scenes/Inventory/Items_to_place/Painting02.tscn" id="32_2gima"]
-[ext_resource type="PackedScene" uid="uid://c7c6wl4rj6keu" path="res://Scenes/Inventory/Items_to_place/Vault.tscn" id="32_6n13n"]
-[ext_resource type="PackedScene" uid="uid://do2p43n2b2l8u" path="res://Scenes/Inventory/Items_to_place/Pillow.tscn" id="32_pi7wl"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Vault.tscn" id="32_6n13n"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Pillow.tscn" id="32_pi7wl"]
 [ext_resource type="PackedScene" uid="uid://cv3b35wfp5tkv" path="res://Scenes/Inventory/Items_to_place/Candle.tscn" id="33_4q6gf"]
 [ext_resource type="PackedScene" uid="uid://bhqmhhi1303nr" path="res://Scenes/Inventory/Items_to_place/Magnifier.tscn" id="33_l8fqn"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/BloodyHand.tscn" id="35_c71os"]
+[ext_resource type="PackedScene" uid="uid://vnrp0os0cm00" path="res://Scenes/Inventory/Items_to_place/BloodyHand.tscn" id="35_c71os"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
 size = Vector3(14, 7, 8.11)
@@ -71,7 +71,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_moxij"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ndb14"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -97,7 +97,7 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_0wt0y"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_wow0p"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -214,7 +214,7 @@ unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
-mesh = SubResource("ArrayMesh_moxij")
+mesh = SubResource("ArrayMesh_ndb14")
 skeleton = NodePath("")
 
 [node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
@@ -281,7 +281,7 @@ level = NodePath("../../../LevelLogic")
 
 [node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
 transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_0wt0y")
+mesh = SubResource("ArrayMesh_wow0p")
 skeleton = NodePath("../..")
 ObjectType = "Painting"
 
