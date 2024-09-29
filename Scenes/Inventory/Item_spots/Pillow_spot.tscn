@@ -2,7 +2,8 @@
 
 [ext_resource type="ArrayMesh" uid="uid://3cun1bgqb3uw" path="res://Meshes/MeshesTres/Pillow_Mesh.tres" id="1_or35q"]
 [ext_resource type="Material" uid="uid://c2lqvej5qt5ry" path="res://Scenes/Inventory/Item_spots/spot_Material_new.tres" id="2_ysr27"]
-[ext_resource type="Script" path="res://Scripts/item_spot.gd" id="3_34vku"]
+[ext_resource type="Script" path="res://scripts/item_spot.gd" id="3_34vku"]
+
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nb3mx"]
 size = Vector3(0.0178223, 0.0332031, 0.0224609)

@@ -1,12 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://c7c6wl4rj6keu"]
 
 [ext_resource type="ArrayMesh" uid="uid://bandkd5uhxwuq" path="res://Meshes/MeshesTres/Vault_Mesh.tres" id="1_p23tn"]
-[ext_resource type="Script" path="res://Scripts/item.gd" id="2_73p4o"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="2_73p4o"]
 [ext_resource type="Material" uid="uid://chre7clw13dkt" path="res://painterlyProps.tres" id="2_hdjvn"]
 [ext_resource type="ArrayMesh" uid="uid://crleaddj05omi" path="res://Meshes/MeshesTres/VaultDoor_Mesh.tres" id="3_m18yj"]
-[ext_resource type="Animation" uid="uid://c44h1xgnsp8yh" path="res://Animation/Vault_before.res" id="3_pm23u"]
-[ext_resource type="Animation" uid="uid://ddp6u1ai3cuwr" path="res://Animation/Vault_Move.res" id="4_vv73g"]
-[ext_resource type="Animation" uid="uid://djdulu3a2xb54" path="res://Animation/Vault_Closed.res" id="5_4miht"]
+[ext_resource type="Animation" uid="uid://xixsla622tsq" path="res://Animation/Vault_before.res" id="3_pm23u"]
+[ext_resource type="Animation" uid="uid://bbkagqgkkqkhl" path="res://Animation/Vault_Move.res" id="4_vv73g"]
+[ext_resource type="Animation" uid="uid://4j3wdfafo3s3" path="res://Animation/Vault_Closed.res" id="5_4miht"]
+
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_664sx"]
 size = Vector3(0.0236816, 0.0332031, 0.0390625)

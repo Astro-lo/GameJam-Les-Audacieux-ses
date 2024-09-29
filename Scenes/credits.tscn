@@ -1,8 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://dajm631y4kue5"]
 
 [ext_resource type="Script" path="res://Scripts/creditsControl.gd" id="1_n5ujf"]
-[ext_resource type="Texture2D" uid="uid://bhm3djuyios8u" path="res://textures/baroque_wallpaper_2.png" id="1_sxk6m"]
+[ext_resource type="Texture2D" uid="uid://bhm3djuyios8u" path="res://Textures/baroque_wallpaper_2.png" id="1_sxk6m"]
 [ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="2_8oxty"]
+
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_usux5"]
 

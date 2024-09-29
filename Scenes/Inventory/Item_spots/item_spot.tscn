@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4nxirh3dkuge"]
 
 [ext_resource type="Material" uid="uid://c2lqvej5qt5ry" path="res://Scenes/Inventory/Item_spots/spot_Material_new.tres" id="1_nybxw"]
-[ext_resource type="Script" path="res://Scripts/item_spot.gd" id="1_u60ut"]
+[ext_resource type="Script" path="res://scripts/item_spot.gd" id="1_u60ut"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ugujm"]
 material = ExtResource("1_nybxw")

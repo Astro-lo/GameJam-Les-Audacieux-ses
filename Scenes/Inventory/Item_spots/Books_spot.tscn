@@ -1,8 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://di71l8xefs5gg"]
 
 [ext_resource type="ArrayMesh" uid="uid://uk7oivl2n303" path="res://Meshes/MeshesTres/Book1_Mesh.tres" id="1_v2w0v"]
-[ext_resource type="Script" path="res://Scripts/item_spot.gd" id="2_ewq0v"]
+[ext_resource type="Script" path="res://scripts/item_spot.gd" id="2_ewq0v"]
 [ext_resource type="Material" uid="uid://c2lqvej5qt5ry" path="res://Scenes/Inventory/Item_spots/spot_Material_new.tres" id="2_u0wex"]
+
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sj5es"]
 size = Vector3(0.00756836, 0.0114746, 0.0146484)

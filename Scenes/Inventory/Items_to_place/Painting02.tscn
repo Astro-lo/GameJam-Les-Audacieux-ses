@@ -1,7 +1,8 @@
 [gd_scene load_steps=6 format=4 uid="uid://dkbcnxkb4jeyd"]
 
 [ext_resource type="Material" uid="uid://dw2l786jjthou" path="res://Meshes/MeshesTres/Painting01_Material.tres" id="1_4kp8o"]
-[ext_resource type="Script" path="res://Scripts/item.gd" id="3_hhu6q"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="3_hhu6q"]
+
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_1gkf4"]
 _surfaces = [{

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ymg8ovdjk8my"]
 
-[ext_resource type="Script" path="res://Scripts/GnalibiPlayer.gd" id="1_hcf5a"]
+[ext_resource type="Script" path="res://scripts/GnalibiPlayer.gd" id="1_hcf5a"]
 [ext_resource type="PackedScene" uid="uid://db0hc8by5ni61" path="res://sourceData/Gnalibi.glb" id="2_sbmns"]
 [ext_resource type="Texture2D" uid="uid://b2dlgsd0msngx" path="res://sourceData/shadowBlob.png" id="3_bk4qt"]
 

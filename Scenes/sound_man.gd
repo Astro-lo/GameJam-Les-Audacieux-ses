@@ -1,16 +1,16 @@
 extends Node
 class_name SoundMan
 
-var music : AudioStream= load("res://Sound/bgm_theme.ogg")
+var music : AudioStream= load("res://sound/bgm_theme.ogg")
 var laughs : Array
 
-var pickUp : AudioStream = load("res://Sound/sfx_pick_up.ogg")
-var putGlass : AudioStream= load("res://Sound/sfx_put_buttle.ogg")
-var putHeavy : AudioStream= load("res://Sound/sfx_put_heayv.ogg")
-var putMetal : AudioStream= load("res://Sound/sfx_put_metal.ogg")
-var putWood : AudioStream= load("res://Sound/sfx_put_wooden.ogg")
-var cleanUp : AudioStream= load("res://Sound/sfx_clean.ogg")
-var doorOpen : AudioStream= load("res://Sound/sfx_door_open.ogg")
+var pickUp = load("res://sound/sfx_pick_up.ogg",)
+var putGlass = load("res://sound/sfx_put_buttle.ogg")
+var putHeavy = load("res://sound/sfx_put_heavy.ogg")
+var putMetal = load("res://sound/sfx_put_metal.ogg")
+var putWood = load("res://sound/sfx_put_wooden.ogg")
+var cleanUp = load("res://sound/sfx_clean.ogg")
+var doorOpen = load("res://sound/sfx_door_open.ogg")
 
 var musicPlayer : AudioStreamPlayer
 
@@ -19,10 +19,10 @@ func _ready() -> void:
 	
 	musicPlayer = AudioStreamPlayer.new()
 	
-	laughs.push_front(load("res://Sound/sfx_laugh_1.ogg"))
-	laughs.push_front(load("res://Sound/sfx_laugh_2.ogg"))
-	laughs.push_front(load("res://Sound/sfx_laugh_3.ogg"))
-	laughs.push_front(load("res://Sound/sfx_laugh_4.ogg"))
+	laughs.push_front(load("res://sound/sfx_laugh_1.ogg"))
+	laughs.push_front(load("res://sound/sfx_laugh_2.ogg"))
+	laughs.push_front(load("res://sound/sfx_laugh_3.ogg"))
+	laughs.push_front(load("res://sound/sfx_laugh_4.ogg"))
 	
 func play_random_laugh(parent : Node) -> void:
 	var laugh = laughs.pick_random()
