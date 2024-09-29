@@ -19,8 +19,6 @@ config/icon="res://Textures/icon.svg"
 
 window/size/mode=2
 window/size/resizable=false
-window/size/window_width_override=1600
-window/size/window_height_override=900
 window/stretch/aspect="expand"
 
 [dotnet]

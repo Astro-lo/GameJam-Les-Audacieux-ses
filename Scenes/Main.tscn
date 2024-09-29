@@ -17,11 +17,11 @@ size = Vector3(14, 7, 8.11)
 [sub_resource type="BoxShape3D" id="BoxShape3D_vo8c8"]
 size = Vector3(14, 7, 8.11)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ssh1j"]
-size = Vector3(1, 10, 10)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_nfl00"]
-size = Vector3(20, 1, 20)
+size = Vector3(15.625, 1, 17.825)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ssh1j"]
+size = Vector3(10, 1, 10)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gpco7"]
 _surfaces = [{
@@ -37,7 +37,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_qfwcs"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jrwge"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -55,7 +55,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gpco7")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_6lf2e"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_d8b26"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -79,6 +79,7 @@ size = Vector3(3.98749, 6.56696, 2.0683)
 [node name="Main" type="Node3D"]
 
 [node name="Cameras" parent="." node_paths=PackedStringArray("cameraLeft", "cameraRight", "triggerLeft", "triggerRight", "fireplace", "chimney", "ground", "frontBox") instance=ExtResource("1_jxroj")]
+visible = false
 script = ExtResource("2_52ic4")
 cameraLeft = NodePath("CameraLeft")
 cameraRight = NodePath("CameraRight")
@@ -117,48 +118,57 @@ collision_layer = 3
 collision_mask = 3
 inv = ExtResource("4_6iq4u")
 level = NodePath("../LevelLogic")
-ground = NodePath("../Collisions/LevelCollisions/FloorArea3D")
-wall = NodePath("../Collisions/LevelCollisions/WallRightArea3D")
+ground = NodePath("../Collisions/Node/FloorArea3D")
+wall = NodePath("../Collisions/Node/WallRightArea3D")
 
 [node name="VisualScene" parent="." instance=ExtResource("4_b4wwx")]
 
 [node name="Collisions" parent="." instance=ExtResource("5_2qmqt")]
+visible = false
 
-[node name="WallRightArea3D" type="Area3D" parent="Collisions/LevelCollisions" index="7"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.847, 1.69741, -7.634)
+[node name="Node" type="Node" parent="Collisions"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/LevelCollisions/WallRightArea3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.91703)
-shape = SubResource("BoxShape3D_ssh1j")
+[node name="FloorArea3D" type="Area3D" parent="Collisions/Node"]
 
-[node name="FloorArea3D" type="Area3D" parent="Collisions/LevelCollisions" index="8"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/LevelCollisions/FloorArea3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/Node/FloorArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00382803, 1.98588e-08)
 shape = SubResource("BoxShape3D_nfl00")
+
+[node name="WallRightArea3D" type="Area3D" parent="Collisions/Node"]
+transform = Transform3D(0, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 4.847, 1.69741, -7.634)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/Node/WallRightArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.388663, 0, -2.91703)
+shape = SubResource("BoxShape3D_ssh1j")
 
 [node name="LevelLogic" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("5_fyvlw")
 
 [node name="ItemSpots" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="Item" parent="ItemSpots" instance=ExtResource("10_reo6c")]
+skeleton = NodePath("../..")
+howToClean = null
+
+[node name="Painting01" parent="ItemSpots" instance=ExtResource("9_aog87")]
+transform = Transform3D(-3.84052e-08, -0.878609, -0.477542, 1, -4.37114e-08, 0, -2.0874e-08, -0.477542, 0.878609, 1.1629, 0.0119252, -4.61027)
+mesh = SubResource("ArrayMesh_jrwge")
+skeleton = NodePath("../..")
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(0.976878, -0.213798, 0, 0.213798, 0.976878, 0, 0, 0, 1, -3.43236, 1.65458, -3)
-mesh = SubResource("ArrayMesh_qfwcs")
+mesh = SubResource("ArrayMesh_d8b26")
+skeleton = NodePath("")
 
-[node name="Painting01" parent="." instance=ExtResource("9_aog87")]
-transform = Transform3D(-3.84052e-08, -0.878609, -0.477542, 1, -4.37114e-08, 0, -2.0874e-08, -0.477542, 0.878609, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_6lf2e")
+[node name="LancerParLaFenetre" type="Area3D" parent="ItemSpots"]
 
-[node name="LancerParLaFenetre" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LancerParLaFenetre"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ItemSpots/LancerParLaFenetre"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0654, 2.78348, -7.20807)
 shape = SubResource("BoxShape3D_58ogr")
 
-[node name="Item" parent="." instance=ExtResource("10_reo6c")]
-
-[connection signal="body_entered" from="LancerParLaFenetre" to="Player" method="_on_lancer_par_la_fenetre_body_entered"]
+[connection signal="body_entered" from="ItemSpots/LancerParLaFenetre" to="Player" method="_on_lancer_par_la_fenetre_body_entered"]
 
 [editable path="Cameras"]
 [editable path="VisualScene"]

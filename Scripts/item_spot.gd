@@ -1,4 +1,5 @@
 extends MeshInstance3D
+class_name item_spot
 
 @export var object : String
 

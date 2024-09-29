@@ -7,7 +7,7 @@ extends RigidBody3D
 var velocity: Vector3
 var direction: Vector3
 var on_wall: bool = false  # Variable pour savoir si le joueur est contre un mur
-var current_surface_normal: Vector3 = Vector3.UP  # Normale de la surface actuelle (sol ou mur)
+var current_movement_area: Area3D
 
 @export var ground : Area3D
 @export var wall : Area3D
@@ -33,29 +33,41 @@ func _process(_delta: float) -> void:
 
 	# Récupère la caméra
 	var camera = get_viewport().get_camera_3d()
-	var cam_forward: Vector3 = -camera.transform.basis.z  # Utilise le vecteur avant inversé
+	var cam_forward: Vector3 = camera.transform.basis.z  # Utilise le vecteur avant inversé
 	var cam_right: Vector3 = camera.transform.basis.x
+	var cam_up: Vector3 = camera.transform.basis.y
 
 	# Calcule la direction de mouvement par rapport à la caméra
-	direction = (cam_right * input.x + cam_forward * -input.z).normalized()  # Inversion de l'axe Z
-
+	if on_wall:
+		print(input)
+		direction = (cam_right * input.x - cam_up * input.z).normalized()
+	else:
+		direction = (-cam_right * input.z + cam_forward * input.x).normalized() 
+		
 	# Calcule le déplacement du joueur en fonction de la surface sur laquelle il se trouve
-	velocity = calculate_movement(input)
+	velocity = calculate_movement(direction)
 
 # Calcule le mouvement du joueur en fonction de la normale de la surface
 func calculate_movement(input: Vector3) -> Vector3:
-	var move_velocity: Vector3
-
-	# Calculer le mouvement en fonction de la surface (sol ou mur)
-	if current_surface_normal == Vector3.UP:
-		# Le joueur est sur le sol, mouvement standard
-		move_velocity = Vector3(input.x, 0, input.z).normalized() * speed
-	else:
-		# Le joueur est sur un mur, ajuster le mouvement en fonction du mur
-		var wall_tangent: Vector3 = current_surface_normal.cross(Vector3.UP).normalized()
-		move_velocity = (wall_tangent * input.x + current_surface_normal.cross(wall_tangent) * input.z).normalized() * speed
-
-	return move_velocity
+	
+	return input * speed
+	#
+	#var move_velocity: Vector3
+#
+	## Calculer le mouvement en fonction de la surface (sol ou mur)
+	#if current_movement_area == ground:
+		## Le joueur est sur le sol, mouvement standard
+		#move_velocity = Vector3(input.x, 0, input.z).normalized() * speed
+	#else:
+		#if current_movement_area:
+			## Le joueur est sur un mur, ajuster le mouvement en fonction du mur
+			#var current_surface_normal = get_current_surface_normal()
+			#var wall_tangent: Vector3 = current_surface_normal.cross(Vector3.UP).normalized()
+			#move_velocity = (wall_tangent * input.x + current_surface_normal.cross(wall_tangent) * input.z).normalized() * speed
+		#else:
+			#pass
+#
+	#return move_velocity
 
 # Appelle la méthode _physics_process chaque frame
 func _physics_process(delta: float) -> void:
@@ -64,9 +76,25 @@ func _physics_process(delta: float) -> void:
 	# Déplacer le joueur avec glissement sur les surfaces
 	move(delta)
 
+func get_current_area_transform() -> Transform3D:
+	return (current_movement_area.get_child(0) as CollisionShape3D).global_transform
+
+func get_current_surface_normal() -> Vector3:
+		return get_current_area_transform().basis.y
+
 func move(delta: float) -> void:
 	# Applique le mouvement basé sur la vélocité
-	position += velocity * delta
+	var target_position = global_position + velocity * delta
+	
+	if current_movement_area:
+		var area_transform = get_current_area_transform()
+		var matrix = area_transform.affine_inverse()
+		var position_on_plane = matrix * target_position
+		position_on_plane.y = 0
+		
+		target_position = area_transform * position_on_plane;
+	
+	global_position = target_position;
 	velocity = Vector3.ZERO
 
 func look_at_direction(_delta: float) -> void:
@@ -74,13 +102,13 @@ func look_at_direction(_delta: float) -> void:
 	if direction.length() > 0:
 		# Tourner le personnage vers la direction de mouvement
 		# Aligner le joueur selon la normale de la surface (pour se "coller" au mur)
-		look_at(global_transform.origin - direction, current_surface_normal)
+		look_at(global_transform.origin - direction, get_current_surface_normal())
 
 # Appelée lorsque le joueur entre dans l'Area3D (sol)
 func floor_entered(body: Node3D) -> void:
 	if body == self:
+		current_movement_area = ground
 		on_wall = false  # Le joueur est au sol
-		current_surface_normal = Vector3.UP  # Réinitialiser la normale à celle du sol
 		print("Entering floor")
 
 # Appelée lorsque le joueur sort de l'Area3D (sol)
@@ -91,15 +119,13 @@ func floor_exited(body: Node3D) -> void:
 # Appelée lorsque le joueur entre dans l'Area3D (mur)
 func wall_entered(body: Node3D) -> void:
 	if body == self:
+		current_movement_area = wall
 		on_wall = true  # Le joueur est sur le mur
-		current_surface_normal = body.global_transform.basis.y.normalized()  # Définir la normale du mur
 		print("Entering wall")
 
 # Appelée lorsque le joueur sort de l'Area3D (mur)
 func wall_exited(body: Node3D) -> void:
 	if body == self:
-		on_wall = false  # Le joueur quitte le mur
-		current_surface_normal = Vector3.UP  # Réinitialiser la normale à celle du sol
 		print("Leaving wall")
 
 func _on_lancer_par_la_fenetre_body_entered(body: Node3D) -> void:

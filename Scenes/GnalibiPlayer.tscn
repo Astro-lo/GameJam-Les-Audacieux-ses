@@ -4,18 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://db0hc8by5ni61" path="res://sourceData/Gnalibi.glb" id="2_sbmns"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tp80m"]
-size = Vector3(1.5, 1.5, 1.5)
+size = Vector3(1.5, 1.25684, 1.11804)
 
 [node name="GnalibiPlayer" type="RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 gravity_scale = 0.0
 lock_rotation = true
 script = ExtResource("1_hcf5a")
 speed = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, -2.71398e-15, 0.629667, 0.00160146)
 shape = SubResource("BoxShape3D_tp80m")
 
 [node name="Gnalibi" parent="." instance=ExtResource("2_sbmns")]
-transform = Transform3D(1, 0, 4.26326e-14, 0, 1, 0, -4.26326e-14, 0, 1, 0, -0.519162, 0)
+transform = Transform3D(1, 0, 4.26326e-14, 0, 1, 0, -4.26326e-14, 0, 1, 0.131119, -0.0151748, 0.19258)
