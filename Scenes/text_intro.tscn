@@ -24,22 +24,21 @@ texture = ExtResource("1_rj162")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 54.0
-offset_top = 50.0
-offset_right = -60.0
-offset_bottom = -46.0
+offset_left = 79.0
+offset_top = -19.0
+offset_right = -92.0
+offset_bottom = 23.0
 grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.6, 0.6, 0, 1)
 theme_override_fonts/font = ExtResource("2_6x0ag")
-theme_override_font_sizes/font_size = 35
-text = "Un crime sanglant a été commis au palais!
+theme_override_font_sizes/font_size = 55
+text = "Un crime sanglant a été commis au palais !
 
-Le coupable a prié Gnalibi, la fée des meurtres, de couvrir ses traces
+Le coupable a prié Gnalibi, la fée des meurtres, de couvrir ses traces.
 
-A vous de jouer!
-
-Vous avez TROIS MINUTES pour nettoyer la scène de crime avant l'arrivée des gardes
-"
+A vous de jouer !
+Vous avez TROIS MINUTES pour nettoyer la scène de crime avant l'arrivée des gardes."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
