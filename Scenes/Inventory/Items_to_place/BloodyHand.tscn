@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://vnrp0os0cm00"]
+
+[ext_resource type="Script" path="res://Scripts/item.gd" id="2_lrgqt"]
+[ext_resource type="PackedScene" uid="uid://c2kvvr3k0bm4n" path="res://Meshes/SM_BloodyHand.fbx" id="2_w0jq1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_664sx"]
+size = Vector3(0.0494995, 0.0109253, 0.0102844)
+
+[sub_resource type="Animation" id="Animation_ifkx0"]
+resource_name = "BloodyHandAnim"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SM_BloodyHand")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SM_BloodyHand:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.0343921, -0.00197632, 0.00926482)]
+}
+
+[sub_resource type="Animation" id="Animation_a4206"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SM_BloodyHand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_atfxo"]
+_data = {
+"BloodyHandAnim": SubResource("Animation_ifkx0"),
+"RESET": SubResource("Animation_a4206")
+}
+
+[node name="BloodyHand" type="Node3D"]
+
+[node name="BH" type="MeshInstance3D" parent="." node_paths=PackedStringArray("animationPlayer")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+script = ExtResource("2_lrgqt")
+howToClean = 4
+objectType = "Vault"
+animationPlayer = NodePath("AnimationPlayer")
+
+[node name="SM_BloodyHand" parent="BH" instance=ExtResource("2_w0jq1")]
+transform = Transform3D(0.00442523, 0.00896757, 9.31323e-11, -0.00187135, 0.000923458, 0.00977984, 0.00877014, -0.00432781, 0.0020868, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="BH"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.020219)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BH/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012909, -0.0111389, -0.00332641)
+shape = SubResource("BoxShape3D_664sx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BH"]
+active = false
+libraries = {
+"": SubResource("AnimationLibrary_atfxo")
+}
+
+[connection signal="body_entered" from="BH/Area3D" to="BH" method="_on_area_3d_body_entered"]
+
+[editable path="BH/SM_BloodyHand"]

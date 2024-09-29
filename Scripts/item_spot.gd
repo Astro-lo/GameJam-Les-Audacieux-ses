@@ -2,13 +2,19 @@ extends MeshInstance3D
 
 @export var object : String
 
+
 func _ready() -> void:
 	self.visible = false
 
+
 #Takes an item out of the player's inventory and puts it back in its place if it's the right item
 func put_back_item(plr):
-	check_plr_inv(plr)
-	self.queue_free()
+	if plr.inv.Items.size() > 0:
+		check_plr_inv(plr)
+		for i in get_parent().get_children():
+			i.visible = false
+		self.queue_free()
+
 
 func check_plr_inv(plr):
 	if plr.inv.Items[0].objectType == object:
@@ -17,8 +23,6 @@ func check_plr_inv(plr):
 		get_tree().root.add_child(Item_instance)
 		Item_instance.position = self.position
 		Item_instance.rotation = self.rotation
-		Item_instance.scale = self.scale
-		
 		plr.inv.Items.remove_at(0)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:

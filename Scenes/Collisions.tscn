@@ -1,13 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://cprsl7dsv6aho"]
+[gd_scene load_steps=9 format=3 uid="uid://cprsl7dsv6aho"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_md6o5"]
 size = Vector3(17, 1, 17.4287)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tkvj0"]
+size = Vector3(21.5349, 0.750977, 9.26233)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8oe60"]
 size = Vector3(4.153, 1, 6.48)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_25i6c"]
 size = Vector3(4.63397, 8.77625, 2.67795)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_koged"]
+size = Vector3(3.64331, 1.41748, 2.7755)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_et383"]
 size = Vector3(3.71689, 9.97546, 1.7481)
@@ -27,8 +33,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.461965, 0)
 shape = SubResource("BoxShape3D_md6o5")
 
 [node name="WallRight" type="CollisionShape3D" parent="LevelCollisions"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.461965, -8)
-shape = SubResource("BoxShape3D_md6o5")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.6692, -8.12451)
+shape = SubResource("BoxShape3D_tkvj0")
 
 [node name="WallOpposite" type="CollisionShape3D" parent="LevelCollisions"]
 transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -6.33626, -0.461965, 0.126785)
@@ -53,6 +59,10 @@ shape = SubResource("BoxShape3D_md6o5")
 [node name="Bookshelf" type="CollisionShape3D" parent="LevelCollisions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.13838, 3.42616, -3.90592)
 shape = SubResource("BoxShape3D_25i6c")
+
+[node name="Bookshelf2" type="CollisionShape3D" parent="LevelCollisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81672, 6.80603, -3.96382)
+shape = SubResource("BoxShape3D_koged")
 
 [node name="Chimney" type="CollisionShape3D" parent="LevelCollisions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.28986, 3.43928, 0.0437043)

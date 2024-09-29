@@ -1,4 +1,8 @@
-[gd_scene load_steps=48 format=4 uid="uid://d1exo1njgamaf"]
+<<<<<<< HEAD
+[gd_scene load_steps=35 format=4 uid="uid://d1exo1njgamaf"]
+=======
+[gd_scene load_steps=23 format=4 uid="uid://d1exo1njgamaf"]
+>>>>>>> 236b85dbe38a8afd194822046ad4e3e6141b8b4a
 
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
 [ext_resource type="Script" path="res://Scripts/CameraMan.gd" id="2_52ic4"]
@@ -8,33 +12,23 @@
 [ext_resource type="PackedScene" uid="uid://cprsl7dsv6aho" path="res://Scenes/Collisions.tscn" id="5_2qmqt"]
 [ext_resource type="Script" path="res://Scripts/LevelLogic.gd" id="5_fyvlw"]
 [ext_resource type="PackedScene" uid="uid://bxq43uo3ajn3p" path="res://Scenes/Inventory/Item_spots/Painting01_spot.tscn" id="8_lqsvn"]
-[ext_resource type="PackedScene" uid="uid://by8ubact61157" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Painting01.tscn" id="9_aog87"]
 [ext_resource type="PackedScene" uid="uid://c06os01m0jbu4" path="res://Scenes/Inventory/Item_spots/Pillow_spot.tscn" id="10_dvyls"]
-[ext_resource type="PackedScene" uid="uid://cgsd3sxo0fmgj" path="res://Scenes/Inventory/Items_to_place/Knife.tscn" id="10_sawtw"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Knife.tscn" id="10_sawtw"]
 [ext_resource type="PackedScene" uid="uid://b3gyjw8lfobj5" path="res://Scenes/Hud.tscn" id="11_t2oe3"]
 [ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="12_3qwve"]
-[ext_resource type="PackedScene" uid="uid://da4sq2egbhe4r" path="res://Scenes/Inventory/Item_spots/Painting03_spot.tscn" id="13_15ex5"]
-[ext_resource type="PackedScene" uid="uid://djxqetlagf5dp" path="res://Scenes/Inventory/Item_spots/Painting02_spot.tscn" id="13_48ska"]
 [ext_resource type="PackedScene" uid="uid://di71l8xefs5gg" path="res://Scenes/Inventory/Item_spots/Books_spot.tscn" id="13_cx0g4"]
 [ext_resource type="PackedScene" uid="uid://glyvkbi68252" path="res://Scenes/Inventory/Items_to_place/Book1.tscn" id="14_wmvq4"]
 [ext_resource type="PackedScene" uid="uid://i6rvnwdiioom" path="res://Scenes/Inventory/Items_to_place/Book2.tscn" id="15_rh1l6"]
 [ext_resource type="PackedScene" uid="uid://dekiu2bkjykoh" path="res://Scenes/Inventory/Items_to_place/Book3.tscn" id="16_h2j3x"]
 [ext_resource type="PackedScene" uid="uid://b8t56y2nos1fu" path="res://Scenes/Inventory/Items_to_place/Book4.tscn" id="17_a4sqe"]
-[ext_resource type="PackedScene" uid="uid://dflgsg2tjnvfo" path="res://Scenes/Inventory/Item_spots/Candle_spot.tscn" id="17_qdvqb"]
-[ext_resource type="PackedScene" uid="uid://b25i6wxim35fc" path="res://Scenes/Inventory/Items_to_place/Bottle1.tscn" id="18_qntls"]
-[ext_resource type="PackedScene" uid="uid://balr66rylucm3" path="res://Scenes/Inventory/Item_spots/Magnifier_spot.tscn" id="19_nqabd"]
-[ext_resource type="PackedScene" uid="uid://cnvw3fkui6bl4" path="res://Scenes/Inventory/Items_to_place/Bottle2.tscn" id="19_pxrk7"]
-[ext_resource type="PackedScene" uid="uid://c6s4d5wccytop" path="res://Scenes/Inventory/Items_to_place/Bottle3.tscn" id="20_5brma"]
-[ext_resource type="PackedScene" uid="uid://coey255rin5fx" path="res://Scenes/Inventory/Items_to_place/Bottle4.tscn" id="21_g0upo"]
-[ext_resource type="PackedScene" uid="uid://cythgoegber00" path="res://Scenes/Inventory/Items_to_place/Bottle5.tscn" id="22_xvt32"]
-[ext_resource type="PackedScene" uid="uid://batb7vk2do8kj" path="res://Scenes/Inventory/Item_spots/Bottle_spot.tscn" id="23_a56hu"]
-[ext_resource type="PackedScene" uid="uid://p3p5ngtj477r" path="res://Scenes/Inventory/Items_to_place/Painting03.tscn" id="31_53kgm"]
-[ext_resource type="PackedScene" uid="uid://dkbcnxkb4jeyd" path="res://Scenes/Inventory/Items_to_place/Painting02.tscn" id="32_2gima"]
-[ext_resource type="PackedScene" uid="uid://c7c6wl4rj6keu" path="res://Scenes/Inventory/Items_to_place/Vault.tscn" id="32_6n13n"]
-[ext_resource type="PackedScene" uid="uid://do2p43n2b2l8u" path="res://Scenes/Inventory/Items_to_place/Pillow.tscn" id="32_pi7wl"]
-[ext_resource type="PackedScene" uid="uid://cv3b35wfp5tkv" path="res://Scenes/Inventory/Items_to_place/Candle.tscn" id="33_4q6gf"]
-[ext_resource type="PackedScene" uid="uid://bhqmhhi1303nr" path="res://Scenes/Inventory/Items_to_place/Magnifier.tscn" id="33_l8fqn"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/BloodyHand.tscn" id="35_c71os"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle1.tscn" id="18_qntls"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle2.tscn" id="19_pxrk7"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle3.tscn" id="20_5brma"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle4.tscn" id="21_g0upo"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle5.tscn" id="22_xvt32"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Bottle_spot.tscn" id="23_a56hu"]
+[ext_resource type="PackedScene" uid="uid://tuugmxl08kc0" path="res://Scenes/Inventory/Item_placed/Pillow_placed.tscn" id="24_sx74o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
 size = Vector3(14, 7, 8.11)
@@ -42,20 +36,13 @@ size = Vector3(14, 7, 8.11)
 [sub_resource type="BoxShape3D" id="BoxShape3D_vo8c8"]
 size = Vector3(14, 7, 8.11)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_md6o5"]
-size = Vector3(17, 1, 17.4287)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_yd8mo"]
-size = Vector3(1.05813, 4.94031, 1)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_nfl00"]
 size = Vector3(15.625, 1, 17.825)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ssh1j"]
 size = Vector3(10, 1, 10)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ooddw"]
-size = Vector3(5.15735, 1, 16.4656)
+[sub_resource type="BoxShape3D" id="BoxShape3D_kvcfi"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gpco7"]
 _surfaces = [{
@@ -71,7 +58,15 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_0en8s"]
+<<<<<<< HEAD
+[sub_resource type="ArrayMesh" id="ArrayMesh_b7k56"]
+=======
+<<<<<<< HEAD
+[sub_resource type="ArrayMesh" id="ArrayMesh_bwp4u"]
+=======
+[sub_resource type="ArrayMesh" id="ArrayMesh_6dl7b"]
+>>>>>>> caf6a20d1236035c38770694b813426a01bac135
+>>>>>>> 236b85dbe38a8afd194822046ad4e3e6141b8b4a
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -97,7 +92,15 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_8agua"]
+<<<<<<< HEAD
+[sub_resource type="ArrayMesh" id="ArrayMesh_ut4lh"]
+=======
+<<<<<<< HEAD
+[sub_resource type="ArrayMesh" id="ArrayMesh_i6yt5"]
+=======
+[sub_resource type="ArrayMesh" id="ArrayMesh_rwsxx"]
+>>>>>>> caf6a20d1236035c38770694b813426a01bac135
+>>>>>>> 236b85dbe38a8afd194822046ad4e3e6141b8b4a
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -133,10 +136,10 @@ ground = NodePath("../VisualScene/mainRoom/Plane_006")
 frontBox = NodePath("../VisualScene/mainRoom/Cube_006")
 
 [node name="CameraLeft" parent="Cameras" index="0"]
-current = true
 fov = 22.6
 
 [node name="CameraRight" parent="Cameras" index="1"]
+current = true
 fov = 22.7
 
 [node name="LeftTrigger" type="Area3D" parent="Cameras"]
@@ -155,26 +158,18 @@ collision_mask = 2
 shape = SubResource("BoxShape3D_vo8c8")
 
 [node name="Player" parent="." node_paths=PackedStringArray("level", "ground", "walls") instance=ExtResource("3_m8kfh")]
-unique_name_in_owner = true
-transform = Transform3D(-0.293089, 0, 0.956085, 0, 1, 0, -0.956085, 0, -0.293089, 1.32889, 0, 6.33802)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.12708, 0, -4.47058)
 collision_layer = 3
 collision_mask = 3
 inv = ExtResource("4_6iq4u")
 level = NodePath("../LevelLogic")
 ground = NodePath("../Collisions/Node/FloorArea3D")
-walls = [NodePath("../Collisions/Node/WallRightArea3D"), NodePath("../Collisions/Node/WallLeftArea3D"), NodePath("../Collisions/Node/WallFrontArea3D")]
+walls = [NodePath("../Collisions/Node/WallRightArea3D")]
 
 [node name="VisualScene" parent="." instance=ExtResource("4_b4wwx")]
 
 [node name="Collisions" parent="." instance=ExtResource("5_2qmqt")]
-
-[node name="Floor2" type="CollisionShape3D" parent="Collisions/LevelCollisions" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.00019, 0)
-shape = SubResource("BoxShape3D_md6o5")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/LevelCollisions" index="8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.16608, 1.97015, -1.65051)
-shape = SubResource("BoxShape3D_yd8mo")
+visible = false
 
 [node name="Node" type="Node" parent="Collisions"]
 
@@ -191,19 +186,9 @@ transform = Transform3D(0, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.388663, 0, -2.91703)
 shape = SubResource("BoxShape3D_ssh1j")
 
-[node name="WallLeftArea3D" type="Area3D" parent="Collisions/Node"]
-transform = Transform3D(0, 4.37114e-08, -1, 1, 4.37114e-08, -8.47033e-22, 4.37114e-08, -1, -4.37114e-08, -2.70243, 1.69741, 8.08029)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/Node/WallLeftArea3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.388663, 0, -2.91703)
-shape = SubResource("BoxShape3D_ssh1j")
-
-[node name="WallFrontArea3D" type="Area3D" parent="Collisions/Node"]
-transform = Transform3D(0, 4.37114e-08, -1, 1, 4.37114e-08, -8.47033e-22, 4.37114e-08, -1, -4.37114e-08, -14.0911, 1.69741, 3.14404)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/Node/WallFrontArea3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.69001, 2.75207, -9.26364)
-shape = SubResource("BoxShape3D_ooddw")
+[node name="Bookshelf" type="CollisionShape3D" parent="Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.94037, -0.461965, 0)
+shape = SubResource("BoxShape3D_kvcfi")
 
 [node name="LevelLogic" type="Node" parent="."]
 unique_name_in_owner = true
@@ -213,8 +198,18 @@ script = ExtResource("5_fyvlw")
 unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
+<<<<<<< HEAD
 transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
-mesh = SubResource("ArrayMesh_0en8s")
+mesh = SubResource("ArrayMesh_b7k56")
+=======
+<<<<<<< HEAD
+transform = Transform3D(0.976878, -0.213798, 0, 0.213798, 0.976878, 0, 0, 0, 1, -3.43236, 1.65458, -3)
+mesh = SubResource("ArrayMesh_bwp4u")
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69874, 3.33775, 3.227)
+mesh = SubResource("ArrayMesh_6dl7b")
+>>>>>>> caf6a20d1236035c38770694b813426a01bac135
+>>>>>>> 236b85dbe38a8afd194822046ad4e3e6141b8b4a
 skeleton = NodePath("")
 
 [node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
@@ -257,19 +252,6 @@ skeleton = NodePath("../../Items")
 transform = Transform3D(75, 0, 0, 0, 6.70227, 74.6999, 0, -74.6999, 6.70227, -4.21116, 2.38616, 1.48212)
 skeleton = NodePath("../../Items")
 
-[node name="Painting03Spot" parent="ItemSpots" instance=ExtResource("13_15ex5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.92157, 4.14452, 6.14434)
-skeleton = NodePath("../Painting02Spot")
-
-[node name="Painting02Spot" parent="ItemSpots" instance=ExtResource("13_48ska")]
-transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, -4.61332, 3.85993, 4.32923)
-
-[node name="CandleSpot" parent="ItemSpots" instance=ExtResource("17_qdvqb")]
-transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, -1.96364, 1.90671, -7.26305)
-
-[node name="MagnifierSpot" parent="ItemSpots" instance=ExtResource("19_nqabd")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 16.2, -2.11364, 1.71847, -7.13921)
-
 [node name="Hud" parent="." instance=ExtResource("11_t2oe3")]
 
 [node name="Label" parent="Hud/CanvasLayer" index="0" node_paths=PackedStringArray("level")]
@@ -280,86 +262,54 @@ level = NodePath("../../../LevelLogic")
 [node name="Items" type="Node" parent="."]
 
 [node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
+<<<<<<< HEAD
 transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_8agua")
+mesh = SubResource("ArrayMesh_ut4lh")
+=======
+transform = Transform3D(-3.84052e-08, -0.878609, -0.477542, 1, -4.37114e-08, 0, -2.0874e-08, -0.477542, 0.878609, 1.1629, 0.0119252, -4.61027)
+<<<<<<< HEAD
+mesh = SubResource("ArrayMesh_i6yt5")
+=======
+mesh = SubResource("ArrayMesh_rwsxx")
+>>>>>>> caf6a20d1236035c38770694b813426a01bac135
+>>>>>>> 236b85dbe38a8afd194822046ad4e3e6141b8b4a
 skeleton = NodePath("../..")
-ObjectType = "Painting"
 
 [node name="Knife" parent="Items" instance=ExtResource("10_sawtw")]
 transform = Transform3D(-1.09278e-05, 1.09278e-05, -250, 250, 4.77669e-13, -1.09278e-05, 0, -250, -1.09278e-05, 0.454128, 0.1265, 4.8065)
-ObjectType = "Knife"
 
 [node name="Book1" parent="Items" instance=ExtResource("14_wmvq4")]
 transform = Transform3D(-8.23212, -56.2877, 82.2431, 99.6606, -4.64946, 6.7934, 4.0718e-06, 82.5232, 56.4794, -2.41682, 0.038035, -0.6323)
-ObjectType = "Book"
 
 [node name="Book2" parent="Items" instance=ExtResource("15_rh1l6")]
 transform = Transform3D(-8.23212, 67.0188, 73.7612, 99.6606, 5.53585, 6.09279, 4.65472e-06, 74.0124, -67.247, 1.4776, 0.038035, -1.44022)
-ObjectType = "Book"
 
 [node name="Book3" parent="Items" instance=ExtResource("16_h2j3x")]
 transform = Transform3D(-8.23212, 7.10543e-15, 99.6606, 99.6606, -4.37114e-06, 8.23212, 4.3563e-06, 100, 3.59838e-07, -0.291781, 0.038035, -3.30512)
-ObjectType = "Book"
 
 [node name="Book4" parent="Items" instance=ExtResource("17_a4sqe")]
 transform = Transform3D(-8.23212, 75.8119, 64.69, 99.6606, 6.26217, 5.34349, 4.2582e-06, 64.9103, -76.0701, -0.964051, 0.038035, -5.88441)
-ObjectType = "Book"
 
 [node name="Book5" parent="Items" instance=ExtResource("16_h2j3x")]
 transform = Transform3D(-8.23212, -21.4142, 97.3328, 99.6606, -1.76885, 8.03983, 4.13025e-06, 97.6642, 21.4872, -2.49968, 0.038035, -2.2656)
-ObjectType = "Book"
 
 [node name="Bottle1" parent="Items" instance=ExtResource("18_qntls")]
 transform = Transform3D(76.44, 0, 0, 0, 1.17933, 76.4309, 0, -76.4309, 1.17933, 0.290576, 0.275896, -0.810036)
-ObjectType = "Bottle"
 
 [node name="Bottle2" parent="Items" instance=ExtResource("19_pxrk7")]
 transform = Transform3D(76.44, 0, 0, 0, 76.44, 0, 0, 0, 76.44, -0.240204, 0.038035, -6.45191)
-ObjectType = "Bottle"
 
 [node name="Bottle3" parent="Items" instance=ExtResource("20_5brma")]
 transform = Transform3D(56.0673, 0, 51.9571, 0, 76.44, 0, -51.9571, 0, 56.0673, -0.530544, 0.038035, 6.47715)
-ObjectType = "Bottle"
 
 [node name="Bottle4" parent="Items" instance=ExtResource("21_g0upo")]
 transform = Transform3D(-15.7074, 0, -74.8088, 0, 76.44, 0, 74.8088, 0, -15.7074, 2.13557, 0.038035, 3.79854)
-ObjectType = "Bottle"
 
 [node name="Bottle5" parent="Items" instance=ExtResource("22_xvt32")]
 transform = Transform3D(76.44, 0, 0, 0, 76.44, 0, 0, 0, 76.44, -3.48545, 0.038035, -3.41379)
-ObjectType = "Bottle"
 
-[node name="Pillow" parent="Items" instance=ExtResource("32_pi7wl")]
-transform = Transform3D(59.1586, -13.9494, -42.21, 42.2699, -4.10794, 60.6002, -13.7666, -72.5571, 4.68405, -0.85719, 0.42257, 3.36494)
-skeleton = NodePath("")
-ObjectType = "Pillow"
-
-[node name="BloodyHand" parent="Items" instance=ExtResource("35_c71os")]
-transform = Transform3D(0.613506, -0.112112, -0.200165, 0.117745, 0.64433, 3.72529e-09, 0.196904, -0.0359824, 0.623666, -1.09055, -0.4679, 3.54902)
-
-[node name="CollisionShape3D" parent="Items/BloodyHand/BH/Area3D" index="0"]
-transform = Transform3D(0.945183, -1.49012e-08, 0.326542, -1.00816e-07, 1, 1.11759e-08, -0.326542, 0, 0.945183, 0.00711849, 0.00935818, 0.00716976)
-
-[node name="Painting03" parent="Items" instance=ExtResource("31_53kgm")]
-transform = Transform3D(0.0123317, -0.994626, 0.102792, 0.999924, 0.012217, -0.00174533, 0.000480131, 0.102806, 0.994701, -0.735, 0.038, -1.484)
-ObjectType = "Painting"
-
-[node name="Painting02" parent="Items" instance=ExtResource("32_2gima")]
-transform = Transform3D(0.0223454, 0.643375, -0.202965, -0.67463, 0.0212011, -0.00706845, -0.000362341, 0.203088, 0.643724, -2.291, 0.015, 1.301)
-ObjectType = "Painting"
-
-[node name="Candle" parent="Items" instance=ExtResource("33_4q6gf")]
-transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, -3.07192, 0.038035, -5.85654)
-skeleton = NodePath("../..")
-ObjectType = "Candle"
-
-[node name="Magnifier" parent="Items" instance=ExtResource("33_l8fqn")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 16.2, -2.18712, 0.038035, -4.8275)
-skeleton = NodePath("../..")
-ObjectType = "Magnifier"
-
-[node name="Vault" parent="." instance=ExtResource("32_6n13n")]
-transform = Transform3D(0.385, 0, 0, 0, -1.68289e-08, 0.385, 0, -0.385, -1.68289e-08, -3.97203, -0.0565786, -1.63212)
+[node name="Pillow_placed" parent="Items" instance=ExtResource("24_sx74o")]
+transform = Transform3D(61.0812, -17.3173, -42.5079, 43.6437, -3.33786e-06, 62.7132, -14.214, -74.4166, 9.89189, -0.85719, 0.42257, 3.36494)
 
 [node name="LancerParLaFenetre" type="Area3D" parent="."]
 
@@ -374,5 +324,3 @@ shape = SubResource("BoxShape3D_58ogr")
 [editable path="VisualScene/mainRoom"]
 [editable path="Collisions"]
 [editable path="Hud"]
-[editable path="Items/BloodyHand"]
-[editable path="Items/BloodyHand/BH/SM_BloodyHand"]

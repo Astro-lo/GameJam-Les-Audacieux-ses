@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bg7wtrbf63658"
-valid=false
+uid="uid://c2kvvr3k0bm4n"
+path="res://.godot/imported/SM_BloodyHand.fbx-60a91eeec073f94e897a42bc1579b5fc.scn"
 
 [deps]
 
 source_file="res://Meshes/SM_BloodyHand.fbx"
+dest_files=["res://.godot/imported/SM_BloodyHand.fbx-60a91eeec073f94e897a42bc1579b5fc.scn"]
 
 [params]
 
@@ -30,7 +31,14 @@ animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
-fbx/importer=1
+_subresources={
+"materials": {
+"Material.002": {
+"use_external/enabled": true,
+"use_external/path": "res://Meshes/MeshesTres/Elements_Material.tres"
+}
+}
+}
+fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1
