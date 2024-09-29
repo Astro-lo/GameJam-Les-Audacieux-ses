@@ -2,19 +2,21 @@
 
 [ext_resource type="ArrayMesh" uid="uid://uk7oivl2n303" path="res://Meshes/MeshesTres/Book1_Mesh.tres" id="1_v2w0v"]
 [ext_resource type="Script" path="res://Scripts/item_spot.gd" id="2_ewq0v"]
-[ext_resource type="Script" path="res://Scripts/item.gd" id="3_6osiv"]
+[ext_resource type="Material" uid="uid://c2lqvej5qt5ry" path="res://Scenes/Inventory/Item_spots/spot_Material_new.tres" id="2_u0wex"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sj5es"]
 size = Vector3(0.00756836, 0.0114746, 0.0146484)
 
-[node name="ItemSpot" type="MeshInstance3D"]
+[node name="BookSpot" type="MeshInstance3D"]
 transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, 0, 0, 0)
 mesh = ExtResource("1_v2w0v")
+surface_material_override/0 = ExtResource("2_u0wex")
 script = ExtResource("2_ewq0v")
 object = "Book"
 
 [node name="Area3D" type="Area3D" parent="."]
-script = ExtResource("3_6osiv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_sj5es")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

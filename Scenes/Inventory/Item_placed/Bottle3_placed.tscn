@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://swfhxsqaljip"]
+
+[ext_resource type="ArrayMesh" uid="uid://3ultyqmlsm8e" path="res://Meshes/MeshesTres/Bottle3_Mesh.tres" id="1_0k3dr"]
+[ext_resource type="Script" path="res://Scripts/item_placed.gd" id="2_mobmt"]
+
+[node name="bottle3_placed" type="MeshInstance3D"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+mesh = ExtResource("1_0k3dr")
+script = ExtResource("2_mobmt")

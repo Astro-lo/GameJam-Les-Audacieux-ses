@@ -3,6 +3,7 @@ extends RigidBody3D
 @export var inv: Inv
 @export var speed := 1200
 @export var level: LevelLogic
+@export var animplayer : AnimationPlayer
 
 var velocity: Vector3
 var direction: Vector3
@@ -24,6 +25,9 @@ func _ready() -> void:
 	ground.body_exited.connect(floor_exited)
 	wall.body_entered.connect(wall_entered)
 	wall.body_exited.connect(wall_exited)
+	animplayer.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
+	animplayer.get_animation("slidin").loop_mode = Animation.LOOP_LINEAR
+
 
 # Appelé chaque frame (pour l'input)
 func _process(_delta: float) -> void:
@@ -46,6 +50,11 @@ func _process(_delta: float) -> void:
 		
 	# Calcule le déplacement du joueur en fonction de la surface sur laquelle il se trouve
 	velocity = calculate_movement(direction)
+	if velocity.length_squared() < 1.:
+		animplayer.play("idle")
+	else:
+		animplayer.play("slidin")
+
 
 # Calcule le mouvement du joueur en fonction de la normale de la surface
 func calculate_movement(input: Vector3) -> Vector3:
@@ -132,20 +141,23 @@ func _on_lancer_par_la_fenetre_body_entered(body: Node3D) -> void:
 	if body.get_class() == "RigidBody3D":
 		for i in self.inv.Items:
 			if i.HowToClean == 0:
-				_throw(i.object,Vector3(0,3,-20))
+				
+				#Anim Lancer?
+				
+				_throw(i.object,Vector3(2,3,-20))
 				self.inv.Items.remove_at(0)
 
 func _throw(object: PackedScene,tp: Vector3):
 	if isThrowing == false:
-		print("C LANCEE")
 		isThrowing = true
 		var targetPosition = tp
 
 		var thrownObject = THROWNOBJECT.instantiate()
 		
+		thrownObject.StartingPosition = self.position
 		thrownObject.TargetPosition = targetPosition
 		thrownObject.thrownItem = object
 		
 		get_parent().add_child(thrownObject)
 		
-		thrownObject.position = self.position
+		thrownObject.position = Vector3()

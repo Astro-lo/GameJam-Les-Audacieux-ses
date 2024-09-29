@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6s4d5wccytop"]
+
+[ext_resource type="ArrayMesh" uid="uid://3ultyqmlsm8e" path="res://Meshes/MeshesTres/Bottle3_Mesh.tres" id="1_cgoci"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="2_etcq8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kpmcs"]
+size = Vector3(0.00756836, 0.00756836, 0.0158691)
+
+[node name="Bottle3" type="MeshInstance3D"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+mesh = ExtResource("1_cgoci")
+script = ExtResource("2_etcq8")
+pathToObject = "res://Scenes/Inventory/Item_placed/Bottle3_placed.tscn"
+howToClean = 2
+objectType = "Bottle"
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.05188e-05, 0.00476075)
+shape = SubResource("BoxShape3D_kpmcs")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
