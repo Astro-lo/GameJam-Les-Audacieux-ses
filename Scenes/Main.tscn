@@ -22,18 +22,18 @@
 [ext_resource type="PackedScene" uid="uid://i6rvnwdiioom" path="res://Scenes/Inventory/Items_to_place/Book2.tscn" id="15_rh1l6"]
 [ext_resource type="PackedScene" uid="uid://dekiu2bkjykoh" path="res://Scenes/Inventory/Items_to_place/Book3.tscn" id="16_h2j3x"]
 [ext_resource type="PackedScene" uid="uid://b8t56y2nos1fu" path="res://Scenes/Inventory/Items_to_place/Book4.tscn" id="17_a4sqe"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Candle_spot.tscn" id="17_qdvqb"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle1.tscn" id="18_qntls"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Magnifier_spot.tscn" id="19_nqabd"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle2.tscn" id="19_pxrk7"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle3.tscn" id="20_5brma"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle4.tscn" id="21_g0upo"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle5.tscn" id="22_xvt32"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Bottle_spot.tscn" id="23_a56hu"]
-[ext_resource type="PackedScene" uid="uid://k4o262aprdok" path="res://Scenes/Inventory/Items_to_place/Vault.tscn" id="32_6n13n"]
-[ext_resource type="PackedScene" uid="uid://do2p43n2b2l8u" path="res://Scenes/Inventory/Items_to_place/Pillow.tscn" id="32_pi7wl"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Candle.tscn" id="33_4q6gf"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Magnifier.tscn" id="33_l8fqn"]
+[ext_resource type="PackedScene" uid="uid://dflgsg2tjnvfo" path="res://Scenes/Inventory/Item_spots/Candle_spot.tscn" id="17_qdvqb"]
+[ext_resource type="PackedScene" uid="uid://b25i6wxim35fc" path="res://Scenes/Inventory/Items_to_place/Bottle1.tscn" id="18_qntls"]
+[ext_resource type="PackedScene" uid="uid://balr66rylucm3" path="res://Scenes/Inventory/Item_spots/Magnifier_spot.tscn" id="19_nqabd"]
+[ext_resource type="PackedScene" uid="uid://cnvw3fkui6bl4" path="res://Scenes/Inventory/Items_to_place/Bottle2.tscn" id="19_pxrk7"]
+[ext_resource type="PackedScene" uid="uid://c6s4d5wccytop" path="res://Scenes/Inventory/Items_to_place/Bottle3.tscn" id="20_5brma"]
+[ext_resource type="PackedScene" uid="uid://coey255rin5fx" path="res://Scenes/Inventory/Items_to_place/Bottle4.tscn" id="21_g0upo"]
+[ext_resource type="PackedScene" uid="uid://cythgoegber00" path="res://Scenes/Inventory/Items_to_place/Bottle5.tscn" id="22_xvt32"]
+[ext_resource type="PackedScene" uid="uid://batb7vk2do8kj" path="res://Scenes/Inventory/Item_spots/Bottle_spot.tscn" id="23_a56hu"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Vault.tscn" id="32_6n13n"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Pillow.tscn" id="32_pi7wl"]
+[ext_resource type="PackedScene" uid="uid://cv3b35wfp5tkv" path="res://Scenes/Inventory/Items_to_place/Candle.tscn" id="33_4q6gf"]
+[ext_resource type="PackedScene" uid="uid://bhqmhhi1303nr" path="res://Scenes/Inventory/Items_to_place/Magnifier.tscn" id="33_l8fqn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
 size = Vector3(14, 7, 8.11)
@@ -67,7 +67,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_cjp04"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_s8onj"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -93,7 +93,7 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_dcyi3"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_bimkm"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -207,7 +207,7 @@ unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
-mesh = SubResource("ArrayMesh_cjp04")
+mesh = SubResource("ArrayMesh_s8onj")
 skeleton = NodePath("")
 
 [node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
@@ -274,7 +274,7 @@ level = NodePath("../../../LevelLogic")
 
 [node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
 transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_dcyi3")
+mesh = SubResource("ArrayMesh_bimkm")
 skeleton = NodePath("../..")
 
 [node name="Painting03" parent="Items" instance=ExtResource("15_j5l1y")]
