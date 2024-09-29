@@ -196,9 +196,15 @@ bones/16/scale = Vector3(1, 1, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.00019, 0)
 shape = SubResource("BoxShape3D_md6o5")
 
+[node name="WallOpposite" parent="Collisions/LevelCollisions" index="3"]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -6.33626, -0.461965, 0.126785)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/LevelCollisions" index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.16608, 1.97015, -1.65051)
 shape = SubResource("BoxShape3D_yd8mo")
+
+[node name="Bed" parent="Collisions/LevelCollisions" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.12654, 1.68804, 6.40525)
 
 [node name="Node" type="Node" parent="Collisions"]
 
