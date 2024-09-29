@@ -11,6 +11,7 @@ func _ready() -> void:
 func put_back_item(plr):
 	if plr.inv.Items.size() > 0:
 		check_plr_inv(plr)
+		SoundManGlobal.play_random_laugh(get_tree().root)
 		for i in get_parent().get_children():
 			i.visible = false
 		self.queue_free()

@@ -12,7 +12,6 @@ mesh = ExtResource("1_encqh")
 script = ExtResource("3_hf46c")
 pathToObject = "res://Scenes/Inventory/Item_placed/Magnifier_placed.tscn"
 howToClean = 2
-objectType = "Magnifier"
 
 [node name="Area3D" type="Area3D" parent="."]
 

@@ -18,6 +18,8 @@ func get_time_seconds() -> float:
 func begin_game() -> void:
 	timeRemaining = totalTimeSeconds
 	gameStarted = true
+	
+	SoundManGlobal.play_level_music(self)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
