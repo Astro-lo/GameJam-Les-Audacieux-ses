@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://balr66rylucm3"]
+
+[ext_resource type="ArrayMesh" uid="uid://dg0jshadvcmsj" path="res://Meshes/MeshesTres/Magnifier_Mesh.tres" id="1_twf4n"]
+[ext_resource type="Material" uid="uid://c2lqvej5qt5ry" path="res://Scenes/Inventory/Item_spots/spot_Material_new.tres" id="2_prajb"]
+[ext_resource type="Script" path="res://Scripts/item_spot.gd" id="3_ovomg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mdie6"]
+size = Vector3(0.19165, 0.118164, 0.0619507)
+
+[node name="MagnifierSpot" type="MeshInstance3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 16.2, 0, 0, 0)
+mesh = ExtResource("1_twf4n")
+surface_material_override/0 = ExtResource("2_prajb")
+script = ExtResource("3_ovomg")
+object = "Magnifier"
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00916775, 0.011261)
+shape = SubResource("BoxShape3D_mdie6")
