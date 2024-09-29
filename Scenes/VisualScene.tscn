@@ -62,3 +62,13 @@ light_energy = 3.522
 shadow_enabled = true
 shadow_opacity = 0.49
 omni_range = 7.71616
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.778539, 0.627596, 0, -0.627596, -0.778539, 1.4413, 5.2722, -9.39375)
+light_color = Color(0.5, 0.833333, 1, 1)
+light_energy = 6.264
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+shadow_blur = 5.377
+spot_range = 17.1765
+spot_angle = 38.3614

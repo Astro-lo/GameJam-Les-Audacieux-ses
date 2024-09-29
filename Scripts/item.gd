@@ -17,9 +17,11 @@ var Sz = self.scale.z
 func _process(_delta: float) -> void:
 	if howToClean == 4:
 		if AnimState == 0:
-			animationPlayer.play("Before")
+			if animationPlayer.has_animation("Before"):
+				animationPlayer.play("Before")
 		elif AnimState == 1:
-			animationPlayer.play("Closed")
+			if animationPlayer.has_animation("Closed"):
+				animationPlayer.play("Closed")
 
 func clean():
 	#rajouter score
@@ -42,8 +44,15 @@ func put_away():
 		$Area3D.visible = false
 	
 func animItem():
+	print("anim item")
 	AnimState = 2
-	animationPlayer.play("Move")
+	animationPlayer.active = true
+	if animationPlayer.has_animation("Move"):
+		animationPlayer.play("Move")
+		
+	if animationPlayer.has_animation("BloodyHandAnim"):
+		animationPlayer.play("BloodyHandAnim")
+		
 	if not animationPlayer.is_playing():
 		AnimState = 1
 

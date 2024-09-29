@@ -36,50 +36,22 @@
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
-offset_bottom = 645.0
+offset_bottom = 648.0
 script = ExtResource("1_67icd")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Control"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Control/CanvasLayer"]
-position = Vector2(593.5, 268.5)
-scale = Vector2(0.8975, 0.881714)
+position = Vector2(732.5, 268.5)
+scale = Vector2(1.0365, 0.881714)
 texture = ExtResource("1_yoj58")
 
-[node name="MarginContainer4" type="MarginContainer" parent="Control/CanvasLayer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -577.0
-offset_top = -323.0
-offset_right = 576.0
-offset_bottom = 47.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SubtitleLabel" type="Label" parent="Control/CanvasLayer/MarginContainer4"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_colors/font_color = Color(0, 0.65098, 0.372549, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 12
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_v4jqw")
-theme_override_font_sizes/font_size = 55
-text = "The crime cleaning feary"
-horizontal_alignment = 1
-
 [node name="MarginContainer2" type="MarginContainer" parent="Control/CanvasLayer"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -576.5
-offset_right = 576.5
-offset_bottom = 331.0
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_right = 1.0
+offset_bottom = 3.0
 grow_horizontal = 2
 
 [node name="TitleLabel" type="Label" parent="Control/CanvasLayer/MarginContainer2"]
@@ -95,7 +67,7 @@ theme_override_constants/shadow_offset_y = 15
 theme_override_constants/outline_size = 15
 theme_override_constants/shadow_outline_size = 7
 theme_override_fonts/font = ExtResource("2_v4jqw")
-theme_override_font_sizes/font_size = 200
+theme_override_font_sizes/font_size = 250
 text = "GnaLiBi"
 horizontal_alignment = 1
 
@@ -106,7 +78,7 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -575.0
-offset_top = -215.0
+offset_top = -196.0
 offset_right = 575.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -136,7 +108,7 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -576.0
-offset_top = -142.0
+offset_top = -120.0
 offset_right = 576.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -156,3 +128,26 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_to1wn")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_yrs60")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_srlbl")
 text = "Credits"
+
+[node name="MarginContainer4" type="MarginContainer" parent="Control/CanvasLayer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.559
+offset_right = 1.0
+offset_bottom = -0.231995
+grow_horizontal = 2
+
+[node name="SubtitleLabel" type="Label" parent="Control/CanvasLayer/MarginContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0.65098, 0.372549, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 12
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_v4jqw")
+theme_override_font_sizes/font_size = 60
+text = "The crime cleaning feary"
+horizontal_alignment = 1

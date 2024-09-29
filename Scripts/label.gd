@@ -6,8 +6,6 @@ extends Label
 func _ready() -> void:
 	assert(level) # check its here
 	
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	
