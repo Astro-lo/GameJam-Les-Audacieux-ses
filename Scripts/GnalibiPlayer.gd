@@ -49,7 +49,6 @@ func _process(_delta: float) -> void:
 
 	# Calcule la direction de mouvement par rapport à la caméra
 	if on_wall:
-		print(input)
 		direction = (cam_right * input.x - cam_up * input.z).normalized()
 	else:
 		direction = (-cam_right * input.z + cam_forward * input.x).normalized() 
