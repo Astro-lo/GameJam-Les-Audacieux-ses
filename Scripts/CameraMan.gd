@@ -19,6 +19,8 @@ func _ready() -> void:
 	assert(cameraLeft)
 	assert(cameraRight)
 	
+	cameraLeft.make_current()
+	
 	triggerLeft.body_entered.connect(entered_area_left);
 	triggerRight.body_entered.connect(entered_area_right);
 
@@ -33,6 +35,9 @@ func _swapRoom(input: MeshInstance3D, rightSide: bool, screenmode: bool = false)
 	m.set_shader_parameter("screenMode", screenmode)
 
 func entered_area_left(_node: Node3D) ->void:
+	if _node != %Player:
+		return
+		
 	cameraRight.make_current()
 	_swapRoom(fireplace, false)
 	_swapRoom(chimney, false)
@@ -40,6 +45,9 @@ func entered_area_left(_node: Node3D) ->void:
 	_swapRoom(ground, false, false)
 	
 func entered_area_right(_node: Node3D) ->void:
+	if _node != %Player:
+		return
+		
 	cameraLeft.make_current();
 	_swapRoom(fireplace, true)
 	_swapRoom(chimney, true)

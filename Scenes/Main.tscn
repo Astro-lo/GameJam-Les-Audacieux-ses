@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://d1exo1njgamaf"]
+[gd_scene load_steps=46 format=4 uid="uid://d1exo1njgamaf"]
 
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
 [ext_resource type="Script" path="res://Scripts/CameraMan.gd" id="2_52ic4"]
@@ -22,13 +22,18 @@
 [ext_resource type="PackedScene" uid="uid://i6rvnwdiioom" path="res://Scenes/Inventory/Items_to_place/Book2.tscn" id="15_rh1l6"]
 [ext_resource type="PackedScene" uid="uid://dekiu2bkjykoh" path="res://Scenes/Inventory/Items_to_place/Book3.tscn" id="16_h2j3x"]
 [ext_resource type="PackedScene" uid="uid://b8t56y2nos1fu" path="res://Scenes/Inventory/Items_to_place/Book4.tscn" id="17_a4sqe"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Candle_spot.tscn" id="17_qdvqb"]
 [ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle1.tscn" id="18_qntls"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Magnifier_spot.tscn" id="19_nqabd"]
 [ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle2.tscn" id="19_pxrk7"]
 [ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle3.tscn" id="20_5brma"]
 [ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle4.tscn" id="21_g0upo"]
 [ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Bottle5.tscn" id="22_xvt32"]
 [ext_resource type="PackedScene" path="res://Scenes/Inventory/Item_spots/Bottle_spot.tscn" id="23_a56hu"]
-[ext_resource type="PackedScene" uid="uid://tuugmxl08kc0" path="res://Scenes/Inventory/Item_placed/Pillow_placed.tscn" id="24_sx74o"]
+[ext_resource type="PackedScene" uid="uid://k4o262aprdok" path="res://Scenes/Inventory/Items_to_place/Vault.tscn" id="32_6n13n"]
+[ext_resource type="PackedScene" uid="uid://do2p43n2b2l8u" path="res://Scenes/Inventory/Items_to_place/Pillow.tscn" id="32_pi7wl"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Candle.tscn" id="33_4q6gf"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/Magnifier.tscn" id="33_l8fqn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
 size = Vector3(14, 7, 8.11)
@@ -36,11 +41,17 @@ size = Vector3(14, 7, 8.11)
 [sub_resource type="BoxShape3D" id="BoxShape3D_vo8c8"]
 size = Vector3(14, 7, 8.11)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_md6o5"]
+size = Vector3(17, 1, 17.4287)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_nfl00"]
 size = Vector3(15.625, 1, 17.825)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ssh1j"]
 size = Vector3(10, 1, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ooddw"]
+size = Vector3(5.15735, 1, 16.4656)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gpco7"]
 _surfaces = [{
@@ -118,10 +129,10 @@ ground = NodePath("../VisualScene/mainRoom/Plane_006")
 frontBox = NodePath("../VisualScene/mainRoom/Cube_006")
 
 [node name="CameraLeft" parent="Cameras" index="0"]
+current = true
 fov = 22.6
 
 [node name="CameraRight" parent="Cameras" index="1"]
-current = true
 fov = 22.7
 
 [node name="LeftTrigger" type="Area3D" parent="Cameras"]
@@ -140,18 +151,23 @@ collision_mask = 2
 shape = SubResource("BoxShape3D_vo8c8")
 
 [node name="Player" parent="." node_paths=PackedStringArray("level", "ground", "walls") instance=ExtResource("3_m8kfh")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.12708, 0, -4.47058)
+unique_name_in_owner = true
+transform = Transform3D(-0.293089, 0, 0.956085, 0, 1, 0, -0.956085, 0, -0.293089, 1.32889, 0, 6.33802)
 collision_layer = 3
 collision_mask = 3
 inv = ExtResource("4_6iq4u")
 level = NodePath("../LevelLogic")
 ground = NodePath("../Collisions/Node/FloorArea3D")
-walls = [NodePath("../Collisions/Node/WallRightArea3D")]
+walls = [NodePath("../Collisions/Node/WallRightArea3D"), NodePath("../Collisions/Node/WallLeftArea3D"), NodePath("../Collisions/Node/WallFrontArea3D")]
 
 [node name="VisualScene" parent="." instance=ExtResource("4_b4wwx")]
 
 [node name="Collisions" parent="." instance=ExtResource("5_2qmqt")]
 visible = false
+
+[node name="Floor2" type="CollisionShape3D" parent="Collisions/LevelCollisions" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.00019, 0)
+shape = SubResource("BoxShape3D_md6o5")
 
 [node name="Node" type="Node" parent="Collisions"]
 
@@ -167,6 +183,20 @@ transform = Transform3D(0, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/Node/WallRightArea3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.388663, 0, -2.91703)
 shape = SubResource("BoxShape3D_ssh1j")
+
+[node name="WallLeftArea3D" type="Area3D" parent="Collisions/Node"]
+transform = Transform3D(0, 4.37114e-08, -1, 1, 4.37114e-08, -8.47033e-22, 4.37114e-08, -1, -4.37114e-08, -2.70243, 1.69741, 8.08029)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/Node/WallLeftArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.388663, 0, -2.91703)
+shape = SubResource("BoxShape3D_ssh1j")
+
+[node name="WallFrontArea3D" type="Area3D" parent="Collisions/Node"]
+transform = Transform3D(0, 4.37114e-08, -1, 1, 4.37114e-08, -8.47033e-22, 4.37114e-08, -1, -4.37114e-08, -14.0911, 1.69741, 3.14404)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/Node/WallFrontArea3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.69001, 2.75207, -9.26364)
+shape = SubResource("BoxShape3D_ooddw")
 
 [node name="LevelLogic" type="Node" parent="."]
 unique_name_in_owner = true
@@ -220,9 +250,6 @@ skeleton = NodePath("../../Items")
 transform = Transform3D(75, 0, 0, 0, 6.70227, 74.6999, 0, -74.6999, 6.70227, -4.21116, 2.38616, 1.48212)
 skeleton = NodePath("../../Items")
 
-[node name="Painting02" parent="ItemSpots" instance=ExtResource("12_tnlit")]
-transform = Transform3D(0.0222737, 0.643249, -0.203371, -0.674632, 0.0212376, -0.00671452, 0, 0.203482, 0.643599, -2.2913, 0.0147007, 1.30101)
-
 [node name="Painting03Spot" parent="ItemSpots" instance=ExtResource("13_15ex5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.92157, 4.14452, 6.14434)
 skeleton = NodePath("../Painting02Spot")
@@ -230,8 +257,11 @@ skeleton = NodePath("../Painting02Spot")
 [node name="Painting02Spot" parent="ItemSpots" instance=ExtResource("13_48ska")]
 transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, -4.61332, 3.85993, 4.32923)
 
-[node name="Painting03" parent="ItemSpots" instance=ExtResource("15_j5l1y")]
-transform = Transform3D(0.0130547, -0.994602, 0.10294, 0.999915, 0.0129853, -0.00134396, 0, 0.102949, 0.994687, -0.734934, 0.038035, -1.48371)
+[node name="CandleSpot" parent="ItemSpots" instance=ExtResource("17_qdvqb")]
+transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, -1.96364, 1.90671, -7.26305)
+
+[node name="MagnifierSpot" parent="ItemSpots" instance=ExtResource("19_nqabd")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 16.2, -2.11364, 1.71847, -7.13921)
 
 [node name="Hud" parent="." instance=ExtResource("11_t2oe3")]
 
@@ -246,6 +276,14 @@ level = NodePath("../../../LevelLogic")
 transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
 mesh = SubResource("ArrayMesh_n1khl")
 skeleton = NodePath("../..")
+
+[node name="Painting03" parent="Items" instance=ExtResource("15_j5l1y")]
+transform = Transform3D(0.0130547, -0.994602, 0.10294, 0.999915, 0.0129853, -0.00134396, 0, 0.102949, 0.994687, -0.734934, 0.038035, -1.48371)
+skeleton = NodePath("../../ItemSpots")
+
+[node name="Painting02" parent="Items" instance=ExtResource("12_tnlit")]
+transform = Transform3D(0.0222737, 0.643249, -0.203371, -0.674632, 0.0212376, -0.00671452, 0, 0.203482, 0.643599, -2.2913, 0.0147007, 1.30101)
+skeleton = NodePath("../../ItemSpots")
 
 [node name="Knife" parent="Items" instance=ExtResource("10_sawtw")]
 transform = Transform3D(-1.09278e-05, 1.09278e-05, -250, 250, 4.77669e-13, -1.09278e-05, 0, -250, -1.09278e-05, 0.454128, 0.1265, 4.8065)
@@ -280,14 +318,24 @@ transform = Transform3D(-15.7074, 0, -74.8088, 0, 76.44, 0, 74.8088, 0, -15.7074
 [node name="Bottle5" parent="Items" instance=ExtResource("22_xvt32")]
 transform = Transform3D(76.44, 0, 0, 0, 76.44, 0, 0, 0, 76.44, -3.48545, 0.038035, -3.41379)
 
-[node name="Pillow_placed" parent="Items" instance=ExtResource("24_sx74o")]
-transform = Transform3D(61.0812, -17.3173, -42.5079, 43.6437, -3.33786e-06, 62.7132, -14.214, -74.4166, 9.89189, -0.85719, 0.42257, 3.36494)
+[node name="Pillow" parent="Items" instance=ExtResource("32_pi7wl")]
+transform = Transform3D(59.1586, -13.9494, -42.21, 42.2699, -4.10794, 60.6002, -13.7666, -72.5571, 4.68405, -0.85719, 0.42257, 3.36494)
+skeleton = NodePath("")
+
+[node name="Vault" parent="." instance=ExtResource("32_6n13n")]
+transform = Transform3D(0.385, 0, 0, 0, -1.68289e-08, 0.385, 0, -0.385, -1.68289e-08, -3.97203, -0.0565786, -1.63212)
 
 [node name="LancerParLaFenetre" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LancerParLaFenetre"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0654, 2.78348, -7.20807)
 shape = SubResource("BoxShape3D_58ogr")
+
+[node name="Candle" parent="." instance=ExtResource("33_4q6gf")]
+transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, -3.07192, 0.038035, -5.85654)
+
+[node name="Magnifier" parent="." instance=ExtResource("33_l8fqn")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 16.2, -2.18712, 0.038035, -4.8275)
 
 [connection signal="body_entered" from="LancerParLaFenetre" to="Player" method="_on_lancer_par_la_fenetre_body_entered"]
 
