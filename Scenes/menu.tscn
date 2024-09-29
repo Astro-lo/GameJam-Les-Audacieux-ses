@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://cn44dctxh0krp"]
 
 [ext_resource type="Script" path="res://scripts/menuControl.gd" id="1_67icd"]
-[ext_resource type="Texture2D" uid="uid://bhm3djuyios8u" path="res://Textures/baroque_wallpaper_2.png" id="1_yoj58"]
+[ext_resource type="Texture2D" uid="uid://bhm3djuyios8u" path="res://textures/baroque_wallpaper_2.png" id="1_yoj58"]
 [ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="2_v4jqw"]
 
 [sub_resource type="Theme" id="Theme_4fsmu"]
@@ -127,7 +127,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yrl1f")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_to1wn")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_yrs60")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_srlbl")
-text = "Credits"
+text = "Crédits"
 
 [node name="MarginContainer4" type="MarginContainer" parent="Control/CanvasLayer"]
 anchors_preset = -1
@@ -149,5 +149,5 @@ theme_override_constants/shadow_offset_y = 12
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_v4jqw")
 theme_override_font_sizes/font_size = 60
-text = "The crime cleaning feary"
+text = "La fée des meurtres"
 horizontal_alignment = 1
