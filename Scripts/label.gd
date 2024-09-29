@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	# https://forum.godotengine.org/t/formatting-a-timer/6482
 	var minutes = timeRemaining / 60
 	var seconds = fmod(timeRemaining, 60)
-	var time_string = "%02d:%02d" % [minutes, seconds]
+	var time_string = "%2d:%02d" % [minutes, seconds]
 	
 	text = time_string
 	
