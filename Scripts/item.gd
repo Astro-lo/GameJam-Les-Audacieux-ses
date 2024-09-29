@@ -10,9 +10,6 @@ extends MeshInstance3D
 @export var animationPlayer : AnimationPlayer
 var AnimState = 0
 
-var Sx = self.scale.x
-var Sy = self.scale.y
-var Sz = self.scale.z
 
 func _ready() -> void:
 	var soundMan = SoundManGlobal
@@ -28,22 +25,37 @@ func _process(_delta: float) -> void:
 				animationPlayer.play("Closed")
 
 func clean():
-	#rajouter score
+	Score.Objets_nettoyés_score =+ 10
+	Score.Objets_nettoyés_combiens =+ 1
 	self.queue_free()
 
 func pick_up(plr):
 	add_to_inv(plr)
 	showSpots()
-	#rajouter score
 	var tween = create_tween()
+	
+	var Sx = self.scale.x
+	var Sy = self.scale.y
+	var Sz = self.scale.z
+	
 	tween.tween_property(self, "scale",Vector3(Sx*1.1, Sy*1.1, Sz*1.1),0.2).set_trans(Tween.TRANS_SINE)
 	tween.tween_property(self, "scale",Vector3(Sx*0.5, Sy*0.5, Sz*0.5),0.1).set_trans(Tween.TRANS_SINE)
 	await get_tree().create_timer(0.25).timeout
 	self.queue_free()
 
+func pick_up_ranger(plr):
+	Score.Objets_rangés_score =+ 10
+	Score.Objets_rangés_combiens =+ 1
+	pick_up(plr)
+func pick_up_lancer(plr):
+	Score.Objets_lancés_score =+ 15
+	Score.Objets_lancés_combiens =+ 1
+	pick_up(plr)
+
 func put_away():
 	if $Area3D.visible == true:
-		#rajouter score
+		Score.Objets_bonus_score =+ 25
+		Score.Objets_bonus_combiens =+ 1
 		animItem()
 		$Area3D.visible = false
 	
@@ -71,6 +83,10 @@ func add_to_inv(plr):
 func showSpots():
 	for i in get_parent().get_node("../ItemSpots").get_children():
 		if i.object == ObjectType:
+			var Sx = self.scale.x
+			var Sy = self.scale.y
+			var Sz = self.scale.z
+			
 			i.scale = Vector3()
 			i.visible = true
 			var tween = create_tween()
@@ -83,7 +99,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		
 		if howToClean == 0:
 			if body.inv.Items.size() <1:
-				pick_up(body)
+				pick_up_lancer(body)
 				SoundManGlobal.play(self, SoundManGlobal.pickUp)
 		elif howToClean == 1:
 			SoundManGlobal.play_random_laugh(self)

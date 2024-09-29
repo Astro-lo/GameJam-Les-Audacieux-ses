@@ -18,6 +18,7 @@ config/icon="res://Textures/icon.svg"
 [autoload]
 
 SoundManGlobal="*res://Scenes/sound_man.gd"
+Score="*res://Scripts/Score.gd"
 
 [display]
 
