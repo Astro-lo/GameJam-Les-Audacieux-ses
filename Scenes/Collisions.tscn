@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cprsl7dsv6aho"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_md6o5"]
-size = Vector3(23.4273, 1, 14.5035)
+size = Vector3(23.4273, 1.02234, 14.5035)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tkvj0"]
 size = Vector3(21.5349, 0.750977, 9.26233)
