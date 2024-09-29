@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://d1exo1njgamaf"]
+[gd_scene load_steps=51 format=4 uid="uid://d1exo1njgamaf"]
 
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
 [ext_resource type="Script" path="res://Scripts/CameraMan.gd" id="2_52ic4"]
@@ -34,7 +34,9 @@
 [ext_resource type="PackedScene" uid="uid://do2p43n2b2l8u" path="res://Scenes/Inventory/Items_to_place/Pillow.tscn" id="32_pi7wl"]
 [ext_resource type="PackedScene" uid="uid://cv3b35wfp5tkv" path="res://Scenes/Inventory/Items_to_place/Candle.tscn" id="33_4q6gf"]
 [ext_resource type="PackedScene" uid="uid://bhqmhhi1303nr" path="res://Scenes/Inventory/Items_to_place/Magnifier.tscn" id="33_l8fqn"]
+[ext_resource type="PackedScene" uid="uid://crmm0dgi3ytxs" path="res://Scenes/Inventory/Items_to_place/PuddleBlood.tscn" id="35_2kmx1"]
 [ext_resource type="PackedScene" path="res://Scenes/Inventory/Items_to_place/BloodyHand.tscn" id="35_c71os"]
+[ext_resource type="PackedScene" uid="uid://56sxk86hsokf" path="res://Scenes/Inventory/Items_to_place/PuddleWater.tscn" id="36_maa2v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijq4h"]
 size = Vector3(14, 7, 8.11)
@@ -384,6 +386,24 @@ ObjectType = "Candle"
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 16.2, -2.18712, 0.038035, -4.8275)
 skeleton = NodePath("../..")
 ObjectType = "Magnifier"
+
+[node name="PuddleBlood" parent="Items" instance=ExtResource("35_2kmx1")]
+transform = Transform3D(0.835328, 0.549752, 2.40304e-08, 0, -4.37114e-08, 1, 0.549752, -0.835328, -3.65134e-08, 0, 0.0696945, 1.75963)
+
+[node name="PuddleBlood3" parent="Items" instance=ExtResource("35_2kmx1")]
+transform = Transform3D(-0.326426, 0.945223, 4.1317e-08, 0, -4.37114e-08, 1, 0.945223, 0.326426, 1.42685e-08, 3.65651, 0.0696945, -7.41933)
+
+[node name="PuddleBlood2" parent="Items" instance=ExtResource("35_2kmx1")]
+transform = Transform3D(-3.65133e-08, -6.77418e-08, 1, -0.835328, -0.549752, -6.77418e-08, 0.549752, -0.835328, -3.65134e-08, -4.6671, 2.34771, 2.66296)
+
+[node name="PuddleBlood4" parent="Items" instance=ExtResource("36_maa2v")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.90583, 0.0813832, -2.62078)
+
+[node name="PuddleBlood5" parent="Items" instance=ExtResource("36_maa2v")]
+transform = Transform3D(1, 0, 0, 0, 0.00310664, 0.999995, 0, -0.999995, 0.00310664, 3.4666, 0.0813832, 5.17682)
+
+[node name="PuddleBlood6" parent="Items" instance=ExtResource("36_maa2v")]
+transform = Transform3D(1, 0, 0, 0, 0.999995, -0.00310668, 0, 0.00310668, 0.999995, -3.36893, 2.45665, -7.64823)
 
 [node name="Vault" parent="." instance=ExtResource("32_6n13n")]
 transform = Transform3D(0.385, 0, 0, 0, -1.68289e-08, 0.385, 0, -0.385, -1.68289e-08, -3.97203, -0.0565786, -1.63212)
