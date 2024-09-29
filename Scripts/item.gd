@@ -25,8 +25,9 @@ func _process(_delta: float) -> void:
 				animationPlayer.play("Closed")
 
 func clean():
-	Score.Objets_nettoyés_score =+ 10
-	Score.Objets_nettoyés_combiens =+ 1
+	Score.Objets_nettoyés_score += 10
+	Score.Objets_nettoyés_combiens += 1
+	SoundManGlobal.play(self, SoundManGlobal.cleanUp)
 	self.queue_free()
 
 func pick_up(plr):
@@ -44,18 +45,18 @@ func pick_up(plr):
 	self.queue_free()
 
 func pick_up_ranger(plr):
-	Score.Objets_rangés_score =+ 10
-	Score.Objets_rangés_combiens =+ 1
+	Score.Objets_rangés_score += 10
+	Score.Objets_rangés_combiens += 1
 	pick_up(plr)
 func pick_up_lancer(plr):
-	Score.Objets_lancés_score =+ 15
-	Score.Objets_lancés_combiens =+ 1
+	Score.Objets_lancés_score += 15
+	Score.Objets_lancés_combiens += 1
 	pick_up(plr)
 
 func put_away():
 	if $Area3D.visible == true:
-		Score.Objets_bonus_score =+ 25
-		Score.Objets_bonus_combiens =+ 1
+		Score.Objets_bonus_score += 25
+		Score.Objets_bonus_combiens += 1
 		animItem()
 		$Area3D.visible = false
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://d1exo1njgamaf"]
+[gd_scene load_steps=48 format=4 uid="uid://d1exo1njgamaf"]
 
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
 [ext_resource type="Script" path="res://Scripts/CameraMan.gd" id="2_52ic4"]
@@ -52,13 +52,10 @@ size = Vector3(1.05813, 4.94031, 1)
 size = Vector3(15.625, 1, 17.825)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ssh1j"]
-size = Vector3(10, 1, 11.5381)
+size = Vector3(10, 1, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ooddw"]
-size = Vector3(5.15735, 0.91333, 19.0835)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_86stl"]
-size = Vector3(4.12323, 0.812531, 3.24786)
+size = Vector3(5.15735, 1, 16.4656)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gpco7"]
 _surfaces = [{
@@ -74,7 +71,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_nhwkj"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_0n8qr"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -100,7 +97,7 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_dyyif"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_c1if1"]
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -165,9 +162,33 @@ collision_mask = 3
 inv = ExtResource("4_6iq4u")
 level = NodePath("../LevelLogic")
 ground = NodePath("../Collisions/Node/FloorArea3D")
-walls = [NodePath("../Collisions/Node/WallRightArea3D"), NodePath("../Collisions/Node/WallLeftArea3D"), NodePath("../Collisions/Node/WallFrontArea3D"), NodePath("../Collisions/Node/Bookshelf")]
+walls = [NodePath("../Collisions/Node/WallRightArea3D"), NodePath("../Collisions/Node/WallLeftArea3D"), NodePath("../Collisions/Node/WallFrontArea3D")]
 
 [node name="VisualScene" parent="." instance=ExtResource("4_b4wwx")]
+
+[node name="Skeleton3D" parent="VisualScene/mainRoom/Armature_001" index="0"]
+bones/0/scale = Vector3(1, 1, 1)
+bones/2/rotation = Quaternion(-0.506757, -0.311117, -0.311117, 0.741356)
+bones/3/rotation = Quaternion(-0.443367, -0.203713, 0.0921622, 0.868005)
+bones/3/scale = Vector3(1, 1, 1)
+bones/4/rotation = Quaternion(-0.276918, -0.230808, 0.328121, 0.873144)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/rotation = Quaternion(-0.126894, -0.0497531, 0.0788819, 0.987522)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/rotation = Quaternion(0.506757, 0.311117, 0.311117, 0.741356)
+bones/6/scale = Vector3(1, 1, 1)
+bones/8/rotation = Quaternion(-0.524192, -0.102773, 0.160658, 0.82997)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/rotation = Quaternion(0.140358, -0.330255, 0.412755, 0.837176)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(-0.181819, 0.673862, 0.673862, 0.242407)
+bones/10/scale = Vector3(1, 1, 1)
+bones/12/rotation = Quaternion(-0.141994, -0.0665081, 0.0498448, 0.986372)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/rotation = Quaternion(-0.174352, 0.0428819, 0.042882, 0.982814)
+bones/14/rotation = Quaternion(0.00618459, 0.172412, 0.247433, 0.953422)
+bones/16/rotation = Quaternion(0.14729, 0.661383, 0.703102, -0.215698)
+bones/16/scale = Vector3(1, 1, 1)
 
 [node name="Collisions" parent="." instance=ExtResource("5_2qmqt")]
 
@@ -175,21 +196,9 @@ walls = [NodePath("../Collisions/Node/WallRightArea3D"), NodePath("../Collisions
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.00019, 0)
 shape = SubResource("BoxShape3D_md6o5")
 
-[node name="WallOpposite" parent="Collisions/LevelCollisions" index="3"]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -5.64662, -1.92455, -0.149246)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/LevelCollisions" index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.16608, 1.97015, -1.65051)
 shape = SubResource("BoxShape3D_yd8mo")
-
-[node name="Bookshelf" parent="Collisions/LevelCollisions" index="9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3265, 2.51231, -3.85261)
-
-[node name="Bookshelf2" parent="Collisions/LevelCollisions" index="10"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.63701, 5.22763, -3.72972)
-
-[node name="Drawer1" parent="Collisions/LevelCollisions" index="11"]
-transform = Transform3D(0.9982, 0.0599684, 0, -0.0599684, 0.9982, 0, 0, 0, 1, -3.70131, 0.804133, -6.91028)
 
 [node name="Node" type="Node" parent="Collisions"]
 
@@ -203,7 +212,7 @@ shape = SubResource("BoxShape3D_nfl00")
 transform = Transform3D(0, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 4.847, 1.69741, -7.634)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/Node/WallRightArea3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.388663, 0, -3.68607)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.388663, 0, -2.91703)
 shape = SubResource("BoxShape3D_ssh1j")
 
 [node name="WallLeftArea3D" type="Area3D" parent="Collisions/Node"]
@@ -214,18 +223,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.388663, 0, -2.91703)
 shape = SubResource("BoxShape3D_ssh1j")
 
 [node name="WallFrontArea3D" type="Area3D" parent="Collisions/Node"]
-transform = Transform3D(0, 4.37114e-08, -1, 1, 4.37114e-08, -8.47033e-22, 4.37114e-08, -1, -4.37114e-08, -5.12472, 2.96734, 3.14404)
+transform = Transform3D(0, 4.37114e-08, -1, 1, 4.37114e-08, -8.47033e-22, 4.37114e-08, -1, -4.37114e-08, -14.0911, 1.69741, 3.14404)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/Node/WallFrontArea3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4.76837e-07, 1.30895, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.69001, 2.75207, -9.26364)
 shape = SubResource("BoxShape3D_ooddw")
-
-[node name="Bookshelf" type="Area3D" parent="Collisions/Node"]
-transform = Transform3D(4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 3.82137e-15, 8.74228e-08, -1, -3.63707, 2.75904, -3.89512)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/Node/Bookshelf"]
-transform = Transform3D(1, 3.34075e-22, 0, 3.34075e-22, 1, 0, 0, 0, 1, 0, -0.0332794, -0.0663147)
-shape = SubResource("BoxShape3D_86stl")
 
 [node name="LevelLogic" type="Node" parent="."]
 unique_name_in_owner = true
@@ -236,24 +238,28 @@ unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
 transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
-mesh = SubResource("ArrayMesh_nhwkj")
+mesh = SubResource("ArrayMesh_0n8qr")
 skeleton = NodePath("")
 
 [node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
 transform = Transform3D(-2.76169e-06, -63.18, 2.76169e-06, 0, -2.76169e-06, -63.18, 63.18, -2.76169e-06, 1.20717e-13, -3.92157, 3.40158, -3.42752)
 skeleton = NodePath("../../Items")
+surface_material_override/0 = null
 
 [node name="BookSpot3" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
 transform = Transform3D(-2.76169e-06, -63.18, 2.76169e-06, 0, -2.76169e-06, -63.18, 63.18, -2.76169e-06, 1.20717e-13, -3.92157, 4.12077, -4.94133)
 skeleton = NodePath("../../Items")
+surface_material_override/0 = null
 
 [node name="BookSpot4" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
 transform = Transform3D(-2.76169e-06, -63.18, 2.76169e-06, 0, -2.76169e-06, -63.18, 63.18, -2.76169e-06, 1.20717e-13, -3.92157, 2.06082, -2.85615)
 skeleton = NodePath("../../Items")
+surface_material_override/0 = null
 
 [node name="BookSpot5" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
 transform = Transform3D(-2.76169e-06, -63.18, 2.76169e-06, 0, -2.76169e-06, -63.18, 63.18, -2.76169e-06, 1.20717e-13, -3.92157, 4.09025, -3.57806)
 skeleton = NodePath("../../Items")
+surface_material_override/0 = null
 
 [node name="PillowSpot" parent="ItemSpots" instance=ExtResource("10_dvyls")]
 transform = Transform3D(-7.15801, -73.6979, 1.73435, 17.4409, -3.21865e-06, 71.9822, -71.6254, 7.36512, 17.3545, -2.4163, 1.76493, 7.38517)
@@ -306,12 +312,12 @@ level = NodePath("../../../LevelLogic")
 
 [node name="Painting01" parent="Items" instance=ExtResource("9_aog87")]
 transform = Transform3D(-2.13149e-08, -0.487628, -0.265036, 0.555, -2.42598e-08, -7.88702e-15, -1.15851e-08, -0.265036, 0.487628, 1.1629, 0.0119252, -4.61027)
-mesh = SubResource("ArrayMesh_dyyif")
+mesh = SubResource("ArrayMesh_c1if1")
 skeleton = NodePath("../..")
 ObjectType = "Painting"
 
 [node name="Knife" parent="Items" instance=ExtResource("10_sawtw")]
-transform = Transform3D(-1.09278e-05, 1.09278e-05, -250, 250, 4.77669e-13, -1.09278e-05, 0, -250, -1.09278e-05, 0.929512, 0.1265, -5.85909)
+transform = Transform3D(-1.09278e-05, 1.09278e-05, -250, 250, 4.77669e-13, -1.09278e-05, 0, -250, -1.09278e-05, 0.454128, 0.1265, 4.8065)
 ObjectType = "Knife"
 
 [node name="Book1" parent="Items" instance=ExtResource("14_wmvq4")]
@@ -327,7 +333,7 @@ transform = Transform3D(-8.23212, 7.10543e-15, 99.6606, 99.6606, -4.37114e-06, 8
 ObjectType = "Book"
 
 [node name="Book4" parent="Items" instance=ExtResource("17_a4sqe")]
-transform = Transform3D(-8.23212, 75.8119, 64.69, 99.6606, 6.26217, 5.34349, 4.2582e-06, 64.9103, -76.0701, 2.92889, 0.038035, 4.92837)
+transform = Transform3D(-8.23212, 75.8119, 64.69, 99.6606, 6.26217, 5.34349, 4.2582e-06, 64.9103, -76.0701, -0.964051, 0.038035, -5.88441)
 ObjectType = "Book"
 
 [node name="Book5" parent="Items" instance=ExtResource("16_h2j3x")]
