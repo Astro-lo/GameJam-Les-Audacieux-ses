@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3pntfkovryg8"]
+
+[ext_resource type="ArrayMesh" uid="uid://y8c1v4culn23" path="res://Meshes/MeshesTres/Knife_Mesh.tres" id="1_cab8b"]
+[ext_resource type="Script" path="res://Scripts/item_placed.gd" id="3_2rone"]
+
+[node name="Knife" type="Node3D"]
+script = ExtResource("3_2rone")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(198.66, 0, 0, 0, -8.6837e-06, 198.66, 0, -198.66, -8.6837e-06, 0, 0, 0)
+mesh = ExtResource("1_cab8b")

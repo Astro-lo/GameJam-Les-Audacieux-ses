@@ -4,16 +4,15 @@
 
 [sub_resource type="Curve3D" id="Curve3D_reqyf"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 1, 0.5, 0, 0, 0, 0, 0, 0, -5.16775, 0.29982, 5.32227, 0, 0, 1),
+"points": PackedVector3Array(0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 2, 0, -5.16775, 0.29982, 5.32227, 0, 0, 0.5),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [node name="ThrowedObject" type="Path3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.036804, 0, 0)
 curve = SubResource("Curve3D_reqyf")
 script = ExtResource("1_4egmw")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="."]
-transform = Transform3D(-0.999999, -7.81931e-08, -3.90965e-08, 0, 0.447212, -0.894425, 8.74227e-08, -0.894425, -0.447212, 0, 0, 0)
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91068e-15, 0, 0, 0)
 loop = false

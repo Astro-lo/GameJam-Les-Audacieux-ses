@@ -115,20 +115,23 @@ func _on_lancer_par_la_fenetre_body_entered(body: Node3D) -> void:
 	if body.get_class() == "RigidBody3D":
 		for i in self.inv.Items:
 			if i.HowToClean == 0:
-				_throw(i.object,Vector3(0,3,-20))
+				
+				#Anim Lancer?
+				
+				_throw(i.object,Vector3(2,3,-20))
 				self.inv.Items.remove_at(0)
 
 func _throw(object: PackedScene,tp: Vector3):
 	if isThrowing == false:
-		print("C LANCEE")
 		isThrowing = true
 		var targetPosition = tp
 
 		var thrownObject = THROWNOBJECT.instantiate()
 		
+		thrownObject.StartingPosition = self.position
 		thrownObject.TargetPosition = targetPosition
 		thrownObject.thrownItem = object
 		
 		get_parent().add_child(thrownObject)
 		
-		thrownObject.position = self.position
+		thrownObject.position = Vector3()

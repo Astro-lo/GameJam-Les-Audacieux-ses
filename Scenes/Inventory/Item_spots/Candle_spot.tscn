@@ -5,7 +5,7 @@
 [ext_resource type="Material" uid="uid://c2lqvej5qt5ry" path="res://Scenes/Inventory/Item_spots/spot_Material_new.tres" id="2_e0qls"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sj5es"]
-size = Vector3(0.00756836, 0.00756836, 0.0158691)
+size = Vector3(0.0507813, 0.0490723, 0.0284424)
 
 [node name="CandleSpot" type="MeshInstance3D"]
 transform = Transform3D(-0.529036, 6.0469, 8.81091e-07, 0, -2.65328e-07, 20.234, 6.0469, 0.529036, 7.70855e-08, 0, 0, 0)
@@ -17,7 +17,7 @@ object = "Candle"
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.05188e-05, 0.00476075)
+transform = Transform3D(0.999998, -2.23517e-08, 9.85878e-14, 2.23517e-08, 0.999998, 5.82534e-12, 3.33067e-16, -5.66193e-13, 1, 5.24754e-17, 3.10196e-15, 0.000549316)
 shape = SubResource("BoxShape3D_sj5es")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
