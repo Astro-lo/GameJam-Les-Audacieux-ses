@@ -1,0 +1,27 @@
+[gd_scene load_steps=14 format=3 uid="uid://sm16ol63krgf"]
+
+[ext_resource type="Script" path="res://Scenes/sound_man.gd" id="1_2j06h"]
+[ext_resource type="AudioStream" uid="uid://crqgxt8xemsra" path="res://Sound/bgm_theme.ogg" id="2_7fg7b"]
+[ext_resource type="AudioStream" uid="uid://mg3kkc58w4js" path="res://Sound/sfx_laugh_1.ogg" id="3_vqr2r"]
+[ext_resource type="AudioStream" uid="uid://bmwu3mmfbldyy" path="res://Sound/sfx_laugh_2.ogg" id="4_bgs1h"]
+[ext_resource type="AudioStream" uid="uid://b3161bbdypfb2" path="res://Sound/sfx_laugh_3.ogg" id="5_rgjrk"]
+[ext_resource type="AudioStream" uid="uid://cffokr0g72kry" path="res://Sound/sfx_laugh_4.ogg" id="6_dwyhm"]
+[ext_resource type="AudioStream" uid="uid://bgpxoj4j2te2e" path="res://Sound/sfx_pick_up.ogg" id="7_ytjwc"]
+[ext_resource type="AudioStream" uid="uid://4txeki0ldesl" path="res://Sound/sfx_put_buttle.ogg" id="8_fiaik"]
+[ext_resource type="AudioStream" uid="uid://datua10qa5alx" path="res://Sound/sfx_put_heavy.ogg" id="9_3co05"]
+[ext_resource type="AudioStream" uid="uid://3kx47s0vyy7q" path="res://Sound/sfx_put_metal.ogg" id="10_ynyj6"]
+[ext_resource type="AudioStream" uid="uid://bmiheri42oxsq" path="res://Sound/sfx_put_wooden.ogg" id="11_uqy26"]
+[ext_resource type="AudioStream" uid="uid://b7o2yom3l2ikc" path="res://Sound/sfx_clean.ogg" id="12_5y8w1"]
+[ext_resource type="AudioStream" uid="uid://bjw70pwdfwxp7" path="res://Sound/sfx_door_open.ogg" id="13_6olrq"]
+
+[node name="SoundMan" type="Node"]
+script = ExtResource("1_2j06h")
+music = ExtResource("2_7fg7b")
+laughs = [ExtResource("3_vqr2r"), ExtResource("4_bgs1h"), ExtResource("5_rgjrk"), ExtResource("6_dwyhm")]
+pickUp = ExtResource("7_ytjwc")
+putGlass = ExtResource("8_fiaik")
+putHeavy = ExtResource("9_3co05")
+putMetal = ExtResource("10_ynyj6")
+putWood = ExtResource("11_uqy26")
+cleanUp = ExtResource("12_5y8w1")
+doorOpen = ExtResource("13_6olrq")
