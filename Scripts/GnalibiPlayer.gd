@@ -37,22 +37,23 @@ func _ready() -> void:
 
 # Appelé chaque frame (pour l'input)
 func _process(_delta: float) -> void:
-	var input := Vector3.ZERO
-	input.z = Input.get_axis("move_right","move_left")  # Axe horizontal
-	input.x = Input.get_axis("move_forward","move_back")  # Axe vertical
+	if %LevelLogic.gameEnded == false:
+		var input := Vector3.ZERO
+		input.z = Input.get_axis("move_right","move_left")  # Axe horizontal
+		input.x = Input.get_axis("move_forward","move_back")  # Axe vertical
 
-	# Récupère la caméra
-	var camera = get_viewport().get_camera_3d()
-	var cam_forward: Vector3 = camera.transform.basis.z  # Utilise le vecteur avant inversé
-	var cam_right: Vector3 = camera.transform.basis.x
-	var cam_up: Vector3 = camera.transform.basis.y
+		# Récupère la caméra
+		var camera = get_viewport().get_camera_3d()
+		var cam_forward: Vector3 = camera.transform.basis.z  # Utilise le vecteur avant inversé
+		var cam_right: Vector3 = camera.transform.basis.x
+		var cam_up: Vector3 = camera.transform.basis.y
 
-	# Calcule la direction de mouvement par rapport à la caméra
-	if on_wall:
-		direction = (cam_right * input.x - cam_up * input.z).normalized()
-	else:
-		direction = (-cam_right * input.z + cam_forward * input.x).normalized() 
-		
+		# Calcule la direction de mouvement par rapport à la caméra
+		if on_wall:
+			direction = (cam_right * input.x - cam_up * input.z).normalized()
+		else:
+			direction = (-cam_right * input.z + cam_forward * input.x).normalized() 
+			
 	# Calcule le déplacement du joueur en fonction de la surface sur laquelle il se trouve
 	velocity = calculate_movement(direction)
 	if velocity.length_squared() < 1.:

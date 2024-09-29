@@ -1,9 +1,13 @@
 extends Node
 class_name LevelLogic
 
-@export var totalTimeSeconds := 180
+@export var totalTimeSeconds := 5
+@export var Animplayer : AnimationPlayer
+
+signal animNow
 
 var gameStarted := false
+var gameEnded = false
 var timeRemaining : float = 0
 
 
@@ -24,7 +28,13 @@ func begin_game() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if gameStarted == true:
-		timeRemaining -= delta;
+		if timeRemaining > 0:
+			timeRemaining -= delta;
+		else:
+			gameEnded = true
+			animNow.emit()
+			#fait le compte du score
+			
 	
 	
 	
