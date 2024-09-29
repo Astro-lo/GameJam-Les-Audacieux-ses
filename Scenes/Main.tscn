@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://d1exo1njgamaf"]
+[gd_scene load_steps=23 format=4 uid="uid://d1exo1njgamaf"]
 
 [ext_resource type="PackedScene" uid="uid://clkak3deabqd4" path="res://sourceData/Cameras.glb" id="1_jxroj"]
 [ext_resource type="Script" path="res://Scripts/CameraMan.gd" id="2_52ic4"]
@@ -38,6 +38,8 @@ size = Vector3(15.625, 1, 17.825)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ssh1j"]
 size = Vector3(10, 1, 10)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kvcfi"]
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_gpco7"]
 _surfaces = [{
 "aabb": AABB(-0.0558218, -1.65, -1.3, 0.111644, 3.3, 2.6),
@@ -52,7 +54,11 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_b7k56"]
+<<<<<<< HEAD
+[sub_resource type="ArrayMesh" id="ArrayMesh_bwp4u"]
+=======
+[sub_resource type="ArrayMesh" id="ArrayMesh_6dl7b"]
+>>>>>>> caf6a20d1236035c38770694b813426a01bac135
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -78,7 +84,11 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ut4lh"]
+<<<<<<< HEAD
+[sub_resource type="ArrayMesh" id="ArrayMesh_i6yt5"]
+=======
+[sub_resource type="ArrayMesh" id="ArrayMesh_rwsxx"]
+>>>>>>> caf6a20d1236035c38770694b813426a01bac135
 resource_local_to_scene = true
 resource_name = "Cube_003"
 _surfaces = [{
@@ -164,6 +174,10 @@ transform = Transform3D(0, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.388663, 0, -2.91703)
 shape = SubResource("BoxShape3D_ssh1j")
 
+[node name="Bookshelf" type="CollisionShape3D" parent="Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.94037, -0.461965, 0)
+shape = SubResource("BoxShape3D_kvcfi")
+
 [node name="LevelLogic" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("5_fyvlw")
@@ -172,8 +186,9 @@ script = ExtResource("5_fyvlw")
 unique_name_in_owner = true
 
 [node name="Painting01Spot" parent="ItemSpots" instance=ExtResource("8_lqsvn")]
-transform = Transform3D(-2.42598e-08, 0.000706941, -0.555, 5.82077e-11, 0.555, 0.000706941, 0.555, 5.82077e-11, -2.42598e-08, 3.56667, 3.18638, -7.55533)
-mesh = SubResource("ArrayMesh_b7k56")
+<<<<<<< HEAD
+(??)transform = Transform3D(0.976878, -0.213798, 0, 0.213798, 0.976878, 0, 0, 0, 1, -3.43236, 1.65458, -3)
+(??)mesh = SubResource("ArrayMesh_feq65")
 skeleton = NodePath("")
 
 [node name="BookSpot2" parent="ItemSpots" instance=ExtResource("13_cx0g4")]
