@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://57o8yfalkast"]
 
 [ext_resource type="Script" path="res://Scenes/text_intro.gd" id="1_lskwd"]
-[ext_resource type="Texture2D" uid="uid://bhm3djuyios8u" path="res://textures/baroque_wallpaper_2.png" id="1_rj162"]
+[ext_resource type="Texture2D" uid="uid://bhm3djuyios8u" path="res://Textures/baroque_wallpaper_2.png" id="1_rj162"]
 [ext_resource type="FontFile" uid="uid://c38t8ifivletu" path="res://fonts/Super Mystery.ttf" id="2_6x0ag"]
 
 [node name="textIntro" type="Node3D"]
